@@ -1,0 +1,42 @@
+[
+  {
+    "scenario_en": "Guddu got a birthday present!",
+    "scenario_hi": "गुड्डू को जन्मदिन का तोहफा मिला!",
+    "correct": "happy",
+    "options": ["happy", "sad", "angry"],
+    "body_cue": "jumping, arms up",
+    "emotion_visual": "big smile, eyes crinkled"
+  },
+  {
+    "scenario_en": "Guddu's ice cream fell on the ground!",
+    "scenario_hi": "गुड्डू की आइसक्रीम ज़मीन पर गिर गई!",
+    "correct": "sad",
+    "options": ["happy", "sad", "scared"],
+    "body_cue": "shoulders drooped, head down",
+    "emotion_visual": "turned-down mouth, droopy eyes"
+  },
+  {
+    "scenario_en": "Someone took Guddu's favorite toy without asking!",
+    "scenario_hi": "किसी ने बिना पूछे गुड्डू का पसंदीदा खिलौना ले लिया!",
+    "correct": "angry",
+    "options": ["angry", "happy", "surprised"],
+    "body_cue": "fists clenched, stomping",
+    "emotion_visual": "furrowed brows, tight mouth"
+  },
+  {
+    "scenario_en": "Guddu heard a very loud BOOM in the sky!",
+    "scenario_hi": "गुड्डू ने आसमान में ज़ोर की धमाक सुनी!",
+    "correct": "scared",
+    "options": ["scared", "angry", "happy"],
+    "body_cue": "hiding behind object, trembling",
+    "emotion_visual": "wide eyes, mouth open small"
+  },
+  {
+    "scenario_en": "Guddu's friend jumped out and said BOO!",
+    "scenario_hi": "गुड्डू के दोस्त ने अचानक आकर 'बू!' कहा!",
+    "correct": "surprised",
+    "options": ["surprised", "sad", "angry"],
+    "body_cue": "jumped back, hands up",
+    "emotion_visual": "wide eyes, open mouth, raised eyebrows"
+  }
+]

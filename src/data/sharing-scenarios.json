@@ -1,0 +1,54 @@
+[
+  {
+    "id": "sharing_food",
+    "scene_en": "Guddu has 4 mangoes. Chidiya arrived looking hungry!",
+    "scene_hi": "गुड्डू के पास 4 आम हैं। चिड़िया भूखी आई है!",
+    "kind_option_en": "Share a mango",
+    "kind_option_hi": "एक आम बाँटो",
+    "other_option_en": "Keep all",
+    "other_option_hi": "सब रख लो",
+    "kind_response_en": "Chidiya chirps happily! When we share, everyone is happy!",
+    "kind_response_hi": "चिड़िया खुशी से चहकती है! जब हम बाँटते हैं, सब खुश होते हैं!",
+    "nudge_en": "Guddu has so many mangoes... Chidiya is so hungry... what if we share just one?",
+    "nudge_hi": "गुड्डू के पास इतने आम हैं... चिड़िया इतनी भूखी है... अगर हम एक बाँट दें?"
+  },
+  {
+    "id": "taking_turns",
+    "scene_en": "Guddu is on the swing. Titli wants to try too!",
+    "scene_hi": "गुड्डू झूले पर है। तितली भी झूलना चाहती है!",
+    "kind_option_en": "Swing a bit more, then let Titli try",
+    "kind_option_hi": "थोड़ा और झूलो, फिर तितली को दे दो",
+    "other_option_en": "Keep swinging",
+    "other_option_hi": "झूलते रहो",
+    "kind_response_en": "Titli gets on the swing! Taking turns means everyone gets to play!",
+    "kind_response_hi": "तितली झूले पर आई! बारी-बारी से सबको खेलने को मिलता है!",
+    "nudge_en": "Titli waited so patiently. Should Guddu let her have a turn now?",
+    "nudge_hi": "तितली इतने सब्र से इंतज़ार कर रही है। क्या गुड्डू उसे बारी दे?"
+  },
+  {
+    "id": "including_others",
+    "scene_en": "Guddu and Chidiya are playing. Machli is watching from the pond, looking left out.",
+    "scene_hi": "गुड्डू और चिड़िया खेल रहे हैं। मछली तालाब से देख रही है, अकेली लग रही है।",
+    "kind_option_en": "Invite Machli to play",
+    "kind_option_hi": "मछली को खेलने के लिए बुलाओ",
+    "other_option_en": "Keep playing with Chidiya",
+    "other_option_hi": "चिड़िया के साथ खेलते रहो",
+    "kind_response_en": "Machli splashes with joy! The more friends, the more fun!",
+    "kind_response_hi": "मछली खुशी से उछलती है! जितने ज़्यादा दोस्त, उतना ज़्यादा मज़ा!",
+    "nudge_en": "How would Guddu feel if no one invited him?",
+    "nudge_hi": "गुड्डू को कैसा लगता अगर कोई उसे न बुलाता?"
+  },
+  {
+    "id": "saying_sorry",
+    "scene_en": "Oops! Guddu bumped into Chidiya by accident! She fell down!",
+    "scene_hi": "उफ़! गुड्डू गलती से चिड़िया से टकरा गया! वह गिर गई!",
+    "kind_option_en": "Say sorry and help her up",
+    "kind_option_hi": "सॉरी कहो और उठने में मदद करो",
+    "other_option_en": "Run away",
+    "other_option_hi": "भाग जाओ",
+    "kind_response_en": "Chidiya smiles and they hug! Saying sorry makes everything better!",
+    "kind_response_hi": "चिड़िया मुस्कुराती है और वे गले मिलते हैं! सॉरी कहने से सब ठीक हो जाता है!",
+    "nudge_en": "Guddu didn't mean to hurt Chidiya. What if he goes back and says sorry?",
+    "nudge_hi": "गुड्डू चिड़िया को चोट नहीं पहुँचाना चाहता था। अगर वह वापस जाकर सॉरी कहे?"
+  }
+]

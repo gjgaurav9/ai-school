@@ -1,0 +1,47 @@
+[
+  {
+    "picture": "house",
+    "description_en": "A house! But the roof is missing!",
+    "description_hi": "एक घर! लेकिन छत गायब है!",
+    "missing_shape": "triangle",
+    "options": ["triangle", "circle", "square"],
+    "completion_en": "The house has a roof now! A family lives here!",
+    "completion_hi": "अब घर की छत है! यहाँ एक परिवार रहता है!"
+  },
+  {
+    "picture": "car",
+    "description_en": "A car! But the wheels are missing!",
+    "description_hi": "एक कार! लेकिन पहिए गायब हैं!",
+    "missing_shape": "circle",
+    "options": ["circle", "triangle", "rectangle"],
+    "completion_en": "The car has wheels! Vroom vroom!",
+    "completion_hi": "कार को पहिए मिल गए! वूम वूम!"
+  },
+  {
+    "picture": "train",
+    "description_en": "A train! But the window is missing!",
+    "description_hi": "एक ट्रेन! लेकिन खिड़की गायब है!",
+    "missing_shape": "square",
+    "options": ["square", "circle", "triangle"],
+    "completion_en": "The train has a window! Someone is waving!",
+    "completion_hi": "ट्रेन में खिड़की आ गई! कोई हाथ हिला रहा है!"
+  },
+  {
+    "picture": "kite",
+    "description_en": "A kite! But the kite shape is missing!",
+    "description_hi": "एक पतंग! लेकिन पतंग का आकार गायब है!",
+    "missing_shape": "diamond",
+    "options": ["diamond", "square", "circle"],
+    "completion_en": "The kite is flying high in the sky!",
+    "completion_hi": "पतंग आसमान में ऊँची उड़ रही है!"
+  },
+  {
+    "picture": "icecream",
+    "description_en": "An ice cream! But the cone is missing!",
+    "description_hi": "एक आइसक्रीम! लेकिन कोन गायब है!",
+    "missing_shape": "triangle",
+    "options": ["triangle", "rectangle", "circle"],
+    "completion_en": "Yummy ice cream! Guddu loves it!",
+    "completion_hi": "स्वादिष्ट आइसक्रीम! गुड्डू को बहुत पसंद है!"
+  }
+]
