@@ -1,0 +1,62 @@
+{
+  "morning": {
+    "title_en": "Good morning, Guddu! Help him get ready!",
+    "title_hi": "सुप्रभात, गुड्डू! उसे तैयार होने में मदद करो!",
+    "steps": [
+      {
+        "id": "wake",
+        "label_en": "Wake up & stretch",
+        "label_hi": "उठो और स्ट्रेच करो",
+        "order": 1
+      },
+      {
+        "id": "brush",
+        "label_en": "Brush teeth",
+        "label_hi": "दाँत साफ़ करो",
+        "order": 2
+      },
+      {
+        "id": "breakfast",
+        "label_en": "Eat breakfast",
+        "label_hi": "नाश्ता करो",
+        "order": 3
+      },
+      {
+        "id": "school",
+        "label_en": "Wave bye, go to school",
+        "label_hi": "अलविदा कहो, स्कूल जाओ",
+        "order": 4
+      }
+    ]
+  },
+  "evening": {
+    "title_en": "Guddu is home! Help him with evening!",
+    "title_hi": "गुड्डू घर आ गया! शाम में उसकी मदद करो!",
+    "steps": [
+      {
+        "id": "wash",
+        "label_en": "Wash hands",
+        "label_hi": "हाथ धोओ",
+        "order": 1
+      },
+      {
+        "id": "play",
+        "label_en": "Play time",
+        "label_hi": "खेलने का समय",
+        "order": 2
+      },
+      {
+        "id": "dinner",
+        "label_en": "Eat dinner",
+        "label_hi": "रात का खाना खाओ",
+        "order": 3
+      },
+      {
+        "id": "sleep",
+        "label_en": "Story time & sleep",
+        "label_hi": "कहानी और नींद",
+        "order": 4
+      }
+    ]
+  }
+}

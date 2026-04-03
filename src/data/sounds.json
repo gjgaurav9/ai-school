@@ -1,0 +1,37 @@
+[
+  {
+    "sound": "cow_moo",
+    "correct": "cow",
+    "options": ["cow", "dog", "cat"],
+    "fact_en": "Cows say moo! Cows give us milk that we drink every day.",
+    "fact_hi": "गाय 'मू' बोलती है! गाय हमें दूध देती है जो हम रोज़ पीते हैं।"
+  },
+  {
+    "sound": "bird_chirp",
+    "correct": "sparrow",
+    "options": ["sparrow", "fish", "elephant"],
+    "fact_en": "That's a sparrow singing! Sparrows are one of the most common birds in India.",
+    "fact_hi": "यह चिड़िया गा रही है! गौरैया भारत में सबसे आम पक्षियों में से एक है।"
+  },
+  {
+    "sound": "rain_drops",
+    "correct": "rain",
+    "options": ["rain", "drum", "river"],
+    "fact_en": "That's rain falling! Rain helps trees and flowers grow.",
+    "fact_hi": "यह बारिश है! बारिश पेड़ों और फूलों को बढ़ने में मदद करती है।"
+  },
+  {
+    "sound": "dog_bark",
+    "correct": "dog",
+    "options": ["dog", "lion", "cow"],
+    "fact_en": "That's a dog barking! Dogs are loyal friends to humans.",
+    "fact_hi": "यह कुत्ता भौंक रहा है! कुत्ते इंसानों के वफादार दोस्त हैं।"
+  },
+  {
+    "sound": "thunder",
+    "correct": "thunder",
+    "options": ["thunder", "drum", "elephant"],
+    "fact_en": "That's thunder! It's the sound clouds make. It's loud but can't hurt you!",
+    "fact_hi": "यह बादलों की गरज है! यह ज़ोर की आवाज़ है लेकिन आपको नुकसान नहीं पहुँचा सकती!"
+  }
+]
