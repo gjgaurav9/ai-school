@@ -488,7 +488,7 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
     const resp = language === 'hi' ? scenario.kind_response_hi : scenario.kind_response_en;
     setResponseText(resp);
     setGameState('response');
-    speak(scenario.kind_response_en, scenario.kind_response_hi);
+    const speechDone = speak(scenario.kind_response_en, scenario.kind_response_hi);
 
     // After response, move to next round or celebration
     schedule(() => {
@@ -496,23 +496,25 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
       setShowCelebration(true);
     }, 2000);
 
-    schedule(() => {
-      setShowCelebration(false);
-      setShowHearts(false);
-      setAnimalHappy(false);
-      setResponseText('');
+    speechDone.then(() => {
+      schedule(() => {
+        setShowCelebration(false);
+        setShowHearts(false);
+        setAnimalHappy(false);
+        setResponseText('');
 
-      if (currentRound < TOTAL_ROUNDS - 1) {
-        setCurrentRound(prev => prev + 1);
-        setGameState('playing');
-      } else {
-        // All rounds complete - celebration
-        setGameState('celebration');
-        setGudduEmotion('celebrating');
-        celebrate();
-        setEarnedBadges(BADGES.map(b => b.id));
-      }
-    }, 3500);
+        if (currentRound < TOTAL_ROUNDS - 1) {
+          setCurrentRound(prev => prev + 1);
+          setGameState('playing');
+        } else {
+          // All rounds complete - celebration
+          setGameState('celebration');
+          setGudduEmotion('celebrating');
+          celebrate();
+          setEarnedBadges(BADGES.map(b => b.id));
+        }
+      }, 500);
+    });
   }, [disabled, tap, success, celebrate, language, scenario, currentRound, schedule, speak]);
 
   /* ────────── Handle Other Choice (nudge) ────────── */
@@ -527,44 +529,48 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
     const nudge = language === 'hi' ? scenario.nudge_hi : scenario.nudge_en;
     setNudgeText(nudge);
     setGameState('nudge');
-    speak(scenario.nudge_en, scenario.nudge_hi);
+    const nudgeDone = speak(scenario.nudge_en, scenario.nudge_hi);
 
-    // After nudge, auto-guide to kind response (second chance)
-    schedule(() => {
-      setGudduEmotion('happy');
-      setAnimalHappy(true);
-      success();
-      setShowHearts(true);
-
-      const resp = language === 'hi' ? scenario.kind_response_hi : scenario.kind_response_en;
-      setResponseText(resp);
-      setNudgeText('');
-      setGameState('response');
-      speak(scenario.kind_response_en, scenario.kind_response_hi);
-
-      schedule(() => setShowHearts(false), 2500);
-
+    // After nudge speech finishes, auto-guide to kind response (second chance)
+    nudgeDone.then(() => {
       schedule(() => {
-        setShowCelebration(true);
-        setGudduEmotion('celebrating');
-      }, 2000);
+        setGudduEmotion('happy');
+        setAnimalHappy(true);
+        success();
+        setShowHearts(true);
 
-      schedule(() => {
-        setShowCelebration(false);
-        setAnimalHappy(false);
-        setResponseText('');
+        const resp = language === 'hi' ? scenario.kind_response_hi : scenario.kind_response_en;
+        setResponseText(resp);
+        setNudgeText('');
+        setGameState('response');
+        const responseDone = speak(scenario.kind_response_en, scenario.kind_response_hi);
 
-        if (currentRound < TOTAL_ROUNDS - 1) {
-          setCurrentRound(prev => prev + 1);
-          setGameState('playing');
-        } else {
-          setGameState('celebration');
+        schedule(() => setShowHearts(false), 2500);
+
+        schedule(() => {
+          setShowCelebration(true);
           setGudduEmotion('celebrating');
-          celebrate();
-          setEarnedBadges(BADGES.map(b => b.id));
-        }
-      }, 3500);
-    }, 3000);
+        }, 2000);
+
+        responseDone.then(() => {
+          schedule(() => {
+            setShowCelebration(false);
+            setAnimalHappy(false);
+            setResponseText('');
+
+            if (currentRound < TOTAL_ROUNDS - 1) {
+              setCurrentRound(prev => prev + 1);
+              setGameState('playing');
+            } else {
+              setGameState('celebration');
+              setGudduEmotion('celebrating');
+              celebrate();
+              setEarnedBadges(BADGES.map(b => b.id));
+            }
+          }, 500);
+        });
+      }, 500);
+    });
   }, [disabled, tap, gentle, success, celebrate, language, scenario, currentRound, schedule, speak]);
 
   /* ────────── Badge reveal animation in celebration ────────── */

@@ -261,17 +261,18 @@ export default function MoodMirror({ onComplete, onBack, language = 'en', childN
       const newResult = { correct: currentRound.correct, chosen: chosenEmotion, wasCorrect: correct };
       setRoundResults((prev) => [...prev, newResult]);
 
+      let speechDone;
       if (correct) {
         setScore((s) => s + 1);
         setShowConfetti(true);
         sound.success();
-        speak(
+        speechDone = speak(
           TEXT.correctPrefix.en(currentRound.correct),
           TEXT.correctPrefix.hi(currentRound.correct),
         );
       } else {
         sound.gentle();
-        speak(
+        speechDone = speak(
           TEXT.incorrectPrefix.en(currentRound.correct),
           TEXT.incorrectPrefix.hi(currentRound.correct),
         );
@@ -279,8 +280,9 @@ export default function MoodMirror({ onComplete, onBack, language = 'en', childN
 
       setPhase('feedback');
 
-      // After feedback pause, advance
-      feedbackTimerRef.current = setTimeout(() => {
+      // Wait for speech to finish, then advance
+      const minDelay = new Promise(r => { feedbackTimerRef.current = setTimeout(r, 1200); });
+      Promise.all([speechDone, minDelay]).then(() => {
         setShowConfetti(false);
         setShowStars(false);
         setSelected(null);
@@ -288,12 +290,11 @@ export default function MoodMirror({ onComplete, onBack, language = 'en', childN
           setRoundIndex((r) => r + 1);
           setPhase('playing');
         } else {
-          // Entering celebration: set confetti/stars eagerly
           setShowConfetti(true);
           setShowStars(true);
           setPhase('celebration');
         }
-      }, correct ? 2500 : 3000);
+      });
     },
     [phase, selected, currentRound, roundIndex, sound, speak],
   );

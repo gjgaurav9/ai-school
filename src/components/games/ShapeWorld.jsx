@@ -470,15 +470,16 @@ export default function ShapeWorld({ onComplete, onBack, language = 'en', childN
         setPicturePulse(true);
         setPhase('correct_feedback');
 
-        // Speak completion text
-        speak(currentData.completion_en, currentData.completion_hi);
+        // Speak completion text, wait for it before advancing
+        const speechDone = speak(currentData.completion_en, currentData.completion_hi);
 
         // Brief pulse then advance
         setTimeout(() => {
           setPicturePulse(false);
         }, 600);
 
-        setTimeout(() => {
+        const minDelay = new Promise(r => setTimeout(r, 1500));
+        Promise.all([speechDone, minDelay]).then(() => {
           if (round + 1 < TOTAL_ROUNDS) {
             setRound(prev => prev + 1);
             setPhase('playing');
@@ -487,7 +488,7 @@ export default function ShapeWorld({ onComplete, onBack, language = 'en', childN
             setPhase('celebration');
             setGudduEmotion('celebrating');
           }
-        }, 2200);
+        });
       }, 700); // duration of fly animation
     } else {
       // Wrong

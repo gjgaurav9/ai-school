@@ -13,7 +13,7 @@ import { useSound } from '../../hooks/useSound';
 const COLORS = [
   { id: 'red', hex: '#EF4444', label: 'Red' },
   { id: 'yellow', hex: '#FFCB05', label: 'Yellow' },
-  { id: 'blue', hex: '#0077B6', label: 'Blue' },
+  { id: 'blue', hex: '#87CEEB', label: 'Blue' },
   { id: 'green', hex: '#2DC653', label: 'Green' },
   { id: 'orange', hex: '#FF8C42', label: 'Orange' },
   { id: 'purple', hex: '#A855F7', label: 'Purple' },
@@ -37,8 +37,8 @@ const COLOR_REACTIONS = {
     hi: 'हरा जैसे पेड़! ताज़ा!',
   },
   orange: {
-    en: 'Orange like a mango! Yummy!',
-    hi: 'नारंगी जैसे आम! स्वादिष्ट!',
+    en: 'Orange like a carrot! Crunchy!',
+    hi: 'नारंगी जैसे गाजर! कुरकुरा!',
   },
   purple: {
     en: 'Purple like a butterfly! Beautiful!',

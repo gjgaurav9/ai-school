@@ -420,7 +420,7 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
     const responseText = language === 'hi' ? responseTextHi : responseTextEn;
     setFeedbackText(responseText);
     setGameState('feedback');
-    speak(responseTextEn, responseTextHi);
+    const speechDone = speak(responseTextEn, responseTextHi);
     success();
 
     // Seed drop animation
@@ -444,7 +444,9 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
       setShowCelebration(true);
     }, 1800);
 
-    schedule(() => {
+    // Wait for BOTH speech to finish AND a minimum delay before advancing
+    const minDelay = new Promise(resolve => setTimeout(resolve, 3200));
+    Promise.all([speechDone, minDelay]).then(() => {
       setShowCelebration(false);
       if (currentRound < TOTAL_ROUNDS - 1) {
         setCurrentRound(prev => prev + 1);
@@ -455,7 +457,7 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
         celebrate();
         setGudduEmotion('celebrating');
       }
-    }, 3200);
+    });
   }, [
     disabled, tap, language, scenario, speak, success, pop, celebrate,
     plantedFlowers.length, currentRound, schedule, childName,

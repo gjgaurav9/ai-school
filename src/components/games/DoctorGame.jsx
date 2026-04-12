@@ -199,7 +199,7 @@ export default function DoctorGame({ onComplete, onBack, language = 'en', childN
     const responseText = language === 'hi' ? responseTextHi : responseTextEn;
     setFeedbackText(responseText);
     setGameState('feedback');
-    speak(responseTextEn, responseTextHi);
+    const speechPromise = speak(responseTextEn, responseTextHi);
     success();
 
     schedule(() => {
@@ -215,18 +215,20 @@ export default function DoctorGame({ onComplete, onBack, language = 'en', childN
       setShowCelebration(true);
     }, 1800);
 
-    schedule(() => {
-      setShowCelebration(false);
-      if (currentRound < TOTAL_ROUNDS - 1) {
-        setCurrentRound(prev => prev + 1);
-        setGameState('playing');
-        setFeedbackText('');
-      } else {
-        setGameState('clinic_reveal');
-        celebrate();
-        setGudduEmotion('celebrating');
-      }
-    }, 3500);
+    speechPromise.then(() => {
+      schedule(() => {
+        setShowCelebration(false);
+        if (currentRound < TOTAL_ROUNDS - 1) {
+          setCurrentRound(prev => prev + 1);
+          setGameState('playing');
+          setFeedbackText('');
+        } else {
+          setGameState('clinic_reveal');
+          celebrate();
+          setGudduEmotion('celebrating');
+        }
+      }, 800);
+    });
   }, [
     disabled, tap, language, scenario, speak, success, pop, celebrate,
     healedPatients.length, currentRound, schedule, childName,

@@ -660,20 +660,22 @@ export default function SoundSafari({ onComplete, onBack, language = 'en', child
         const fact = language === 'hi' ? currentRound.fact_hi : currentRound.fact_en;
         const prefix = childName ? `Yes ${childName}! That's right! ` : '';
         const prefixHi = childName ? `हाँ ${childName}! बिल्कुल सही! ` : '';
-        setTimeout(() => speak(prefix + fact, prefixHi + currentRound.fact_hi), 300);
-
-        // Auto-advance after showing fact
-        timerRef.current = setTimeout(() => {
-          if (round + 1 < TOTAL_ROUNDS) {
-            setRound((r) => r + 1);
-            setSelected(null);
-            setOptionStates({});
-            setShowFact(false);
-            setPhase('playing');
-          } else {
-            setPhase('celebration');
-          }
-        }, 4500);
+        // Wait for speech to finish before advancing
+        setTimeout(() => {
+          const speechDone = speak(prefix + fact, prefixHi + currentRound.fact_hi);
+          const minDelay = new Promise(r => setTimeout(r, 2000));
+          Promise.all([speechDone, minDelay]).then(() => {
+            if (round + 1 < TOTAL_ROUNDS) {
+              setRound((r) => r + 1);
+              setSelected(null);
+              setOptionStates({});
+              setShowFact(false);
+              setPhase('playing');
+            } else {
+              setPhase('celebration');
+            }
+          });
+        }, 300);
       } else {
         // Incorrect
         gentle();
@@ -682,21 +684,19 @@ export default function SoundSafari({ onComplete, onBack, language = 'en', child
           [currentRound.correct]: 'highlight',
         });
 
-        speak(
+        const speechDone = speak(
           childName ? `Not quite, ${childName}. Let's listen again!` : "Let's listen again!",
           childName ? `${childName}, चलो फिर से सुनते हैं!` : 'चलो फिर से सुनते हैं!',
         );
 
-        // Replay sound and reset after delay
-        timerRef.current = setTimeout(() => {
+        // Wait for speech, then replay sound and allow retry
+        speechDone.then(() => {
           handlePlaySound();
-        }, 1500);
-
-        // Allow retry after correction feedback
-        setTimeout(() => {
-          setSelected(null);
-          setOptionStates({});
-        }, 3000);
+          setTimeout(() => {
+            setSelected(null);
+            setOptionStates({});
+          }, 1500);
+        });
       }
     },
     [selected, currentRound, round, language, success, gentle, speak, tap, handlePlaySound, childName],

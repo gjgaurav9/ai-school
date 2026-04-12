@@ -1,39 +1,47 @@
 import { useCallback, useRef, useEffect } from 'react';
 
 // ---------------------------------------------------------------------------
-// Voice scoring: pick the best Indian, warm, child-friendly voice available.
+// Voice scoring: pick the most natural, Indian, child-friendly voice.
 // ---------------------------------------------------------------------------
 function scoreVoice(voice, targetLang) {
   const name = voice.name.toLowerCase();
   const lang = voice.lang.toLowerCase();
   let score = 0;
 
-  // Exact Indian locale match (en-IN / hi-IN) is best
+  // ── Language match ──
   if (targetLang === 'hi') {
     if (lang === 'hi-in') score += 50;
     else if (lang.startsWith('hi')) score += 40;
   } else {
     if (lang === 'en-in') score += 50;
-    else if (lang === 'en-gb') score += 20;       // British closer to Indian intonation
+    else if (lang === 'en-gb') score += 15;
     else if (lang.startsWith('en')) score += 10;
   }
 
-  // Prefer female voices — warmer & more nurturing for young kids
-  if (/female|woman/i.test(name)) score += 15;
-  // Known good Indian voices by name (macOS / iOS / Chrome)
-  if (/lekha/i.test(name)) score += 30;           // hi-IN female (Apple)
-  if (/rishi/i.test(name)) score += 25;            // en-IN male (Apple)
-  if (/veena/i.test(name)) score += 25;            // en-IN female (Apple)
-  if (/google.*hindi/i.test(name)) score += 28;    // Chrome hi
-  if (/google.*india/i.test(name)) score += 28;    // Chrome en-IN
-  if (/aditi/i.test(name)) score += 25;            // Amazon Polly en-IN
-  if (/priya/i.test(name)) score += 25;            // common en-IN
-  if (/neerja/i.test(name)) score += 25;           // en-IN (Apple newer)
+  // ── Quality tiers (higher = more natural) ──
+  // Apple "Siri" voices are the most natural on macOS/iOS
+  if (/siri/i.test(name)) score += 40;
+  // Apple "premium" / "enhanced" downloaded voices
+  if (/premium|enhanced/i.test(name)) score += 35;
+  // Neural / natural voices (Edge, newer Chrome)
+  if (/neural|natural/i.test(name)) score += 35;
+  // Microsoft Online voices (Edge) — very natural
+  if (/microsoft.*online/i.test(name)) score += 30;
 
-  // Prefer high-quality / premium / enhanced voices
-  if (/premium|enhanced|natural|neural/i.test(name)) score += 12;
-  // Local voices tend to sound better than network voices
-  if (voice.localService) score += 5;
+  // ── Known good Indian voices ──
+  if (/neerja/i.test(name)) score += 32;     // en-IN female (Apple, very natural)
+  if (/veena/i.test(name)) score += 28;      // en-IN female (Apple)
+  if (/lekha/i.test(name)) score += 30;      // hi-IN female (Apple)
+  if (/rishi/i.test(name)) score += 26;      // en-IN male (Apple)
+  if (/google.*hindi/i.test(name)) score += 22;
+  if (/google.*india/i.test(name)) score += 22;
+  if (/aditi|priya|kavya/i.test(name)) score += 25;
+
+  // ── Prefer female voices — warmer for kids ──
+  if (/female|woman/i.test(name)) score += 10;
+
+  // Local service voices often have lower latency
+  if (voice.localService) score += 3;
 
   return score;
 }
@@ -55,6 +63,7 @@ export function useVoice(language = 'en') {
   const resumeIntervalRef = useRef(null);
   const cachedVoiceRef = useRef(null);
   const cachedLangRef = useRef(null);
+  const resolveRef = useRef(null);  // tracks the current speak promise
 
   // Chrome kills speechSynthesis after ~15s. Periodic pause/resume keeps it alive.
   const startKeepAlive = useCallback(() => {
@@ -71,7 +80,6 @@ export function useVoice(language = 'en') {
     clearInterval(resumeIntervalRef.current);
   }, []);
 
-  // Get (and cache) the best voice for the current language
   const getBestVoice = useCallback(() => {
     if (cachedVoiceRef.current && cachedLangRef.current === language) {
       return cachedVoiceRef.current;
@@ -93,9 +101,9 @@ export function useVoice(language = 'en') {
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = language === 'hi' ? 'hi-IN' : 'en-IN';
 
-      // Warm, friendly, slightly slower for kids
-      utterance.rate = 0.82;
-      utterance.pitch = 1.18;
+      // Natural, child-friendly speech parameters
+      utterance.rate = 0.88;
+      utterance.pitch = 1.15;
       utterance.volume = 1.0;
 
       const voice = getBestVoice();
@@ -110,54 +118,66 @@ export function useVoice(language = 'en') {
     });
   }, [language, getBestVoice, startKeepAlive, stopKeepAlive]);
 
+  // speak() now returns a Promise that resolves when speech finishes.
+  // Games can use: speak(en, hi).then(() => advanceRound())
   const speak = useCallback((textEn, textHi) => {
     const synth = window.speechSynthesis;
     if (!synth) {
       console.log('Speech:', language === 'hi' ? textHi : textEn);
-      return;
+      return Promise.resolve();
     }
 
-    // Cancel any ongoing speech
+    // Cancel any ongoing speech and its promise
     synth.cancel();
     clearTimeout(timerRef.current);
     stopKeepAlive();
+    if (resolveRef.current) { resolveRef.current(); resolveRef.current = null; }
 
-    // Delay after cancel — Chrome/Safari silently drop speak() called right after cancel()
-    timerRef.current = setTimeout(() => {
-      const text = language === 'hi' ? (textHi || textEn) : textEn;
-      speakOne(text);
-    }, 80);
+    return new Promise((resolve) => {
+      resolveRef.current = resolve;
+      timerRef.current = setTimeout(() => {
+        const text = language === 'hi' ? (textHi || textEn) : textEn;
+        speakOne(text).then(() => {
+          resolveRef.current = null;
+          resolve();
+        });
+      }, 80);
+    });
   }, [language, speakOne, stopKeepAlive]);
 
-  // Speak multiple texts in sequence without cancelling between them
+  // speakSequence returns a Promise that resolves when ALL items finish
   const speakSequence = useCallback((items) => {
-    // items: array of { en, hi } objects
     const synth = window.speechSynthesis;
-    if (!synth) return;
+    if (!synth) return Promise.resolve();
 
     synth.cancel();
     clearTimeout(timerRef.current);
     stopKeepAlive();
+    if (resolveRef.current) { resolveRef.current(); resolveRef.current = null; }
 
-    timerRef.current = setTimeout(async () => {
-      for (const item of items) {
-        const text = language === 'hi' ? (item.hi || item.en) : item.en;
-        if (text) await speakOne(text);
-      }
-    }, 80);
+    return new Promise((resolve) => {
+      resolveRef.current = resolve;
+      timerRef.current = setTimeout(async () => {
+        for (const item of items) {
+          const text = language === 'hi' ? (item.hi || item.en) : item.en;
+          if (text) await speakOne(text);
+        }
+        resolveRef.current = null;
+        resolve();
+      }, 80);
+    });
   }, [language, speakOne, stopKeepAlive]);
 
   const stop = useCallback(() => {
     clearTimeout(timerRef.current);
     stopKeepAlive();
     window.speechSynthesis?.cancel();
+    if (resolveRef.current) { resolveRef.current(); resolveRef.current = null; }
   }, [stopKeepAlive]);
 
-  // Ensure voices are loaded (some browsers fire this asynchronously)
   useEffect(() => {
     const loadVoices = () => {
       const voices = window.speechSynthesis?.getVoices() || [];
-      // Invalidate cache so next speak picks up newly loaded voices
       cachedVoiceRef.current = null;
       cachedLangRef.current = null;
       if (voices.length) {
