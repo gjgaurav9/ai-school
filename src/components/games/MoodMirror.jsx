@@ -190,7 +190,7 @@ export default function MoodMirror({ onComplete, onBack, language = 'en', childN
   const feedbackTimerRef = useRef(null);
 
   // Hooks
-  const { speak, stop } = useVoice(lang);
+  const { speak, speakSequence, stop } = useVoice(lang);
   const sound = useSound();
 
   // Current round data
@@ -220,14 +220,19 @@ export default function MoodMirror({ onComplete, onBack, language = 'en', childN
     return () => clearTimeout(timer);
   }, [phase, speak, childName]);
 
-  // ------ Start of each round: narrate scenario ------
+  // ------ Start of each round: narrate scenario + options ------
   useEffect(() => {
     if (phase !== 'playing') return;
+    const optionsEn = currentRound.options.map(e => TEXT.emotionLabels.en[e] || e).join(', ');
+    const optionsHi = currentRound.options.map(e => TEXT.emotionLabels.hi[e] || e).join(', ');
     const timer = setTimeout(() => {
-      speak(currentRound.scenario_en, currentRound.scenario_hi);
+      speakSequence([
+        { en: currentRound.scenario_en, hi: currentRound.scenario_hi },
+        { en: `Is Guddu feeling ${optionsEn}?`, hi: `क्या गुड्डू ${optionsHi} है?` },
+      ]);
     }, 400);
     return () => clearTimeout(timer);
-  }, [phase, roundIndex, currentRound, speak]);
+  }, [phase, roundIndex, currentRound, speakSequence]);
 
   // ------ Celebration: trigger sounds & narration ------
   useEffect(() => {

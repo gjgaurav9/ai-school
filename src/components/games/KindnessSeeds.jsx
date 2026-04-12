@@ -356,7 +356,7 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
   const [feedbackText, setFeedbackText] = useState('');
   const [nudgeText, setNudgeText] = useState('');
 
-  const { speak, stop } = useVoice(language);
+  const { speak, speakSequence, stop } = useVoice(language);
   const { success, tap, celebrate, gentle, pop } = useSound();
   const timeoutsRef = useRef([]);
 
@@ -394,14 +394,18 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
     }
   }, [gameState, speak, schedule]);
 
-  /* ────────── Speak scenario text when round changes ────────── */
+  /* ────────── Speak scenario text + options when round changes ────────── */
   useEffect(() => {
     if (gameState === 'playing') {
       setGudduEmotion('neutral');
       setDisabled(false);
-      speak(scenario.scene_en, scenario.scene_hi);
+      speakSequence([
+        { en: scenario.scene_en, hi: scenario.scene_hi },
+        { en: `Green heart: ${scenario.kind_option_en}`, hi: `हरा दिल: ${scenario.kind_option_hi}` },
+        { en: `Or: ${scenario.neutral_option_en}`, hi: `या: ${scenario.neutral_option_hi}` },
+      ]);
     }
-  }, [gameState, currentRound, scenario, speak]);
+  }, [gameState, currentRound, scenario, speakSequence]);
 
   /* ────────── Handle Kind Choice ────────── */
   const handleKindChoice = useCallback(() => {

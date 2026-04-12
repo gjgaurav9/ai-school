@@ -420,7 +420,7 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
   const [earnedBadges, setEarnedBadges] = useState([]);
   const [badgeRevealIndex, setBadgeRevealIndex] = useState(-1);
 
-  const { speak, stop } = useVoice(language);
+  const { speak, speakSequence, stop } = useVoice(language);
   const { success, tap, celebrate, gentle } = useSound();
   const timeoutsRef = useRef([]);
 
@@ -457,15 +457,19 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
     }
   }, [gameState, speak, schedule, childName]);
 
-  /* ────────── Speak scenario when playing ────────── */
+  /* ────────── Speak scenario + options when playing ────────── */
   useEffect(() => {
     if (gameState === 'playing') {
       setGudduEmotion('neutral');
       setAnimalHappy(false);
       setDisabled(false);
-      speak(scenario.scene_en, scenario.scene_hi);
+      speakSequence([
+        { en: scenario.scene_en, hi: scenario.scene_hi },
+        { en: `Green heart: ${scenario.kind_option_en}`, hi: `हरा दिल: ${scenario.kind_option_hi}` },
+        { en: `Or: ${scenario.other_option_en}`, hi: `या: ${scenario.other_option_hi}` },
+      ]);
     }
-  }, [gameState, currentRound, scenario, speak]);
+  }, [gameState, currentRound, scenario, speakSequence]);
 
   /* ────────── Handle Kind Choice ────────── */
   const handleKindChoice = useCallback(() => {

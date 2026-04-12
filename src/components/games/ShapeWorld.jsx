@@ -390,7 +390,7 @@ export default function ShapeWorld({ onComplete, onBack, language = 'en', childN
   const [gudduEmotion, setGudduEmotion] = useState('happy');
 
   const timerRef = useRef(null);
-  const { speak, stop } = useVoice(language);
+  const { speak, speakSequence, stop } = useVoice(language);
   const sound = useSound();
 
   // Cleanup on unmount
@@ -418,13 +418,18 @@ export default function ShapeWorld({ onComplete, onBack, language = 'en', childN
     }
   }, [phase, speak, childName]);
 
-  // Speaking round descriptions
+  // Speaking round descriptions + shape options
   useEffect(() => {
     if (phase === 'playing' && round < TOTAL_ROUNDS) {
       const data = shapesData[round];
-      speak(data.description_en, data.description_hi);
+      const optionsEn = data.options.join(', ');
+      const optionsHi = data.options.join(', ');
+      speakSequence([
+        { en: data.description_en, hi: data.description_hi },
+        { en: `Is it a ${optionsEn}?`, hi: `क्या यह ${optionsHi} है?` },
+      ]);
     }
-  }, [phase, round, speak]);
+  }, [phase, round, speakSequence]);
 
   // Celebration phase
   useEffect(() => {

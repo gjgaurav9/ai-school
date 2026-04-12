@@ -512,7 +512,7 @@ function CelebrationScene({ language, onComplete, childName }) {
 /* ------------------------------------------------------------------ */
 
 function RoutinePhase({ routine, routineKey, language, onPhaseComplete, childName }) {
-  const { speak } = useVoice(language);
+  const { speak, speakSequence } = useVoice(language);
   const { success, tap, gentle } = useSound();
 
   const [shuffledSteps, setShuffledSteps] = useState([]);
@@ -533,10 +533,16 @@ function RoutinePhase({ routine, routineKey, language, onPhaseComplete, childNam
     completedRef.current = false;
   }, [routine]);
 
-  // Speak the routine title on mount
+  // Speak the routine title + card options on mount
   useEffect(() => {
-    speak(routine.title_en, routine.title_hi);
-  }, [routine, speak]);
+    const items = [
+      { en: routine.title_en, hi: routine.title_hi },
+      { en: 'The cards are:', hi: 'कार्ड हैं:' },
+      ...routine.steps.map(s => ({ en: s.label_en, hi: s.label_hi })),
+      { en: 'Put them in the right order!', hi: 'इन्हें सही क्रम में लगाओ!' },
+    ];
+    speakSequence(items);
+  }, [routine, speakSequence]);
 
   // Find the next empty slot index
   const nextEmptySlot = placedCards.findIndex((c) => c === null);

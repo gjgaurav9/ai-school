@@ -8,6 +8,7 @@ const GAMES = [
   { id: 'sound-safari', name: 'Sound Safari', subtitle: 'Listen & Find', icon: '\u{1F3B5}', color: '#0077B6' },
   { id: 'shape-world', name: 'Shape World', subtitle: 'Build With Shapes', icon: '\u{1F537}', color: '#E91E8C' },
   { id: 'kindness-seeds', name: 'Kindness Seeds', subtitle: 'Grow Kindness', icon: '\u{1F331}', color: '#22C55E' },
+  { id: 'doctor-game', name: 'Little Doctor', subtitle: 'Home Remedies', icon: '\u{1FA7A}', color: '#E74C3C' },
 ];
 
 function darken(hex, amount = 0.25) {

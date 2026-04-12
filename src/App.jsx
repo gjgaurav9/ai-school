@@ -8,6 +8,7 @@ import AnimalFriends from './components/games/AnimalFriends'
 import SoundSafari from './components/games/SoundSafari'
 import ShapeWorld from './components/games/ShapeWorld'
 import KindnessSeeds from './components/games/KindnessSeeds'
+import DoctorGame from './components/games/DoctorGame'
 import { useProgress } from './hooks/useProgress'
 
 const GAME_COMPONENTS = {
@@ -18,6 +19,7 @@ const GAME_COMPONENTS = {
   'sound-safari': SoundSafari,
   'shape-world': ShapeWorld,
   'kindness-seeds': KindnessSeeds,
+  'doctor-game': DoctorGame,
 }
 
 function App() {

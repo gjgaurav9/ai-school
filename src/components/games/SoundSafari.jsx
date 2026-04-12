@@ -552,7 +552,7 @@ function AnimalParade({ animals, language }) {
 const TOTAL_ROUNDS = 5;
 
 export default function SoundSafari({ onComplete, onBack, language = 'en', childName = '' }) {
-  const { speak, stop } = useVoice(language);
+  const { speak, speakSequence, stop } = useVoice(language);
   const { success, celebrate, gentle, tap, playCowMoo, playBirdChirp, playRainDrops, playDogBark, playThunder } = useSound();
 
   const playSynth = useCallback((soundId) => {
@@ -604,12 +604,20 @@ export default function SoundSafari({ onComplete, onBack, language = 'en', child
   // --- Auto-play sound when entering a new round ---
   useEffect(() => {
     if (phase === 'playing') {
+      const optionsEn = currentRound.options.join(', ');
+      const optionsHi = currentRound.options.join(', ');
       const t = setTimeout(() => {
         handlePlaySound();
-        speak(
-          childName ? `${childName}, who made that sound?` : 'Who made that sound?',
-          childName ? `${childName}, यह आवाज़ किसकी है?` : 'यह आवाज़ किसकी है?',
-        );
+        // Speak after the sound finishes
+        const durMap = { thunder: 4000, cow_moo: 3000, rain_drops: 4000, dog_bark: 3000, bird_chirp: 3000 };
+        const dur = durMap[currentRound.sound] || 1500;
+        setTimeout(() => {
+          speakSequence([
+            { en: childName ? `${childName}, who made that sound?` : 'Who made that sound?',
+              hi: childName ? `${childName}, यह आवाज़ किसकी है?` : 'यह आवाज़ किसकी है?' },
+            { en: `Is it a ${optionsEn}?`, hi: `क्या यह ${optionsHi} है?` },
+          ]);
+        }, dur);
       }, 400);
       return () => clearTimeout(t);
     }
@@ -621,7 +629,7 @@ export default function SoundSafari({ onComplete, onBack, language = 'en', child
     setIsPlaying(true);
     playSynth(currentRound.sound);
     // Reset playing state after sound duration
-    const durMap = { thunder: 2500, cow_moo: 2000, rain_drops: 2500, dog_bark: 1200, bird_chirp: 1000 };
+    const durMap = { thunder: 4000, cow_moo: 3000, rain_drops: 4000, dog_bark: 3000, bird_chirp: 3000 };
     const dur = durMap[currentRound.sound] || 1000;
     if (timerRef.current) clearTimeout(timerRef.current);
     timerRef.current = setTimeout(() => setIsPlaying(false), dur);
