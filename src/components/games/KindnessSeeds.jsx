@@ -401,8 +401,8 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
       setDisabled(false);
       speakSequence([
         { en: scenario.scene_en, hi: scenario.scene_hi },
-        { en: `Green heart: ${scenario.kind_option_en}`, hi: `हरा दिल: ${scenario.kind_option_hi}` },
-        { en: `Or: ${scenario.neutral_option_en}`, hi: `या: ${scenario.neutral_option_hi}` },
+        { en: `Option 1: ${scenario.kind_option_en}`, hi: `विकल्प 1: ${scenario.kind_option_hi}` },
+        { en: `Option 2: ${scenario.neutral_option_en}`, hi: `विकल्प 2: ${scenario.neutral_option_hi}` },
       ]);
     }
   }, [gameState, currentRound, scenario, speakSequence]);
@@ -489,6 +489,15 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
     // Small pause then auto-progress to kind choice is not needed;
     // just let them tap the kind option again
   }, []);
+
+  /* ────────── Repeat the current question ────────── */
+  const handleRepeatQuestion = useCallback(() => {
+    speakSequence([
+      { en: scenario.scene_en, hi: scenario.scene_hi },
+      { en: `Option 1: ${scenario.kind_option_en}`, hi: `विकल्प 1: ${scenario.kind_option_hi}` },
+      { en: `Option 2: ${scenario.neutral_option_en}`, hi: `विकल्प 2: ${scenario.neutral_option_hi}` },
+    ]);
+  }, [scenario, speakSequence]);
 
   /* ────────── Garden reveal voice ────────── */
   useEffect(() => {
@@ -594,7 +603,7 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
                 <>
                   <OptionButton
                     onClick={handleKindChoice}
-                    icon="💚"
+                    number={1}
                     variant="kind"
                     disabled={disabled}
                   >
@@ -602,12 +611,29 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
                   </OptionButton>
                   <OptionButton
                     onClick={handleNeutralChoice}
-                    icon="🤔"
+                    number={2}
                     variant="neutral"
                     disabled={disabled}
                   >
                     {neutralText}
                   </OptionButton>
+
+                  {/* Repeat question button */}
+                  <div className="flex justify-center pt-1">
+                    <button
+                      onClick={handleRepeatQuestion}
+                      disabled={disabled}
+                      className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-gray-200 shadow-sm text-gray-500 text-sm font-semibold active:scale-95 transition-transform disabled:opacity-40"
+                      aria-label={language === 'hi' ? 'सवाल दोहराएं' : 'Repeat question'}
+                    >
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                      </svg>
+                      {language === 'hi' ? 'फिर सुनें' : 'Repeat'}
+                    </button>
+                  </div>
                 </>
               )}
             </div>
