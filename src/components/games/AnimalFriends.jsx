@@ -713,7 +713,6 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
                   <OptionButton
                     onClick={handleKindChoice}
                     number={1}
-                    variant="kind"
                     disabled={disabled}
                   >
                     {kindText}
@@ -721,7 +720,6 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
                   <OptionButton
                     onClick={handleOtherChoice}
                     number={2}
-                    variant="neutral"
                     disabled={disabled}
                   >
                     {otherText}

@@ -604,7 +604,6 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
                   <OptionButton
                     onClick={handleKindChoice}
                     number={1}
-                    variant="kind"
                     disabled={disabled}
                   >
                     {kindText}
@@ -612,7 +611,6 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
                   <OptionButton
                     onClick={handleNeutralChoice}
                     number={2}
-                    variant="neutral"
                     disabled={disabled}
                   >
                     {neutralText}

@@ -358,7 +358,6 @@ export default function DoctorGame({ onComplete, onBack, language = 'en', childN
                   <OptionButton
                     onClick={handleKindChoice}
                     number={1}
-                    variant="kind"
                     disabled={disabled}
                   >
                     {kindText}
@@ -366,7 +365,6 @@ export default function DoctorGame({ onComplete, onBack, language = 'en', childN
                   <OptionButton
                     onClick={handleNeutralChoice}
                     number={2}
-                    variant="neutral"
                     disabled={disabled}
                   >
                     {neutralText}
