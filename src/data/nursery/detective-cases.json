@@ -1,0 +1,184 @@
+[
+  {
+    "id": "birthday",
+    "title_en": "The Birthday Party",
+    "title_hi": "जन्मदिन की पार्टी",
+    "scene_en": "It's a birthday party! Guddu is jumping with joy. But look at Mor... she's standing alone in the corner.",
+    "scene_hi": "जन्मदिन की पार्टी है! गुड्डू खुशी से उछल रहा है। पर देखो मोर... वह कोने में अकेली खड़ी है।",
+    "characters": ["guddu:happy", "mor:shy"],
+    "questions": [
+      {
+        "prompt_en": "How does Mor feel?",
+        "prompt_hi": "मोर को कैसा लग रहा है?",
+        "options": [
+          { "key": "shy", "label_en": "Shy / nervous", "label_hi": "शर्मीली / घबराई हुई", "icon": "\ud83d\ude0a" },
+          { "key": "happy", "label_en": "Happy", "label_hi": "खुश", "icon": "\ud83d\ude03" },
+          { "key": "angry", "label_en": "Angry", "label_hi": "गुस्सा", "icon": "\ud83d\ude20" }
+        ],
+        "correct": "shy"
+      },
+      {
+        "prompt_en": "Why does Mor feel shy?",
+        "prompt_hi": "मोर शर्मीली क्यों है?",
+        "options": [
+          { "key": "no_friends", "label_en": "She doesn't know anyone here", "label_hi": "वह यहाँ किसी को नहीं जानती", "icon": "\ud83e\udd1d" },
+          { "key": "no_cake", "label_en": "She doesn't like cake", "label_hi": "उसे केक पसंद नहीं", "icon": "\ud83c\udf82" },
+          { "key": "tired", "label_en": "She is tired", "label_hi": "वह थकी है", "icon": "\ud83d\ude34" }
+        ],
+        "correct": "no_friends"
+      }
+    ],
+    "lesson_en": "The same party makes Guddu happy but Mor nervous. Both feelings are okay!",
+    "lesson_hi": "वही पार्टी गुड्डू को खुश और मोर को घबराई करती है। दोनों भावनाएँ सही हैं!"
+  },
+  {
+    "id": "broken_tower",
+    "title_en": "The Broken Tower",
+    "title_hi": "टूटा हुआ टावर",
+    "scene_en": "Oops! Bandar accidentally knocked over the block tower that Gillu spent a long time building.",
+    "scene_hi": "अरे! बंदर ने गिल्लू के बहुत समय में बनाए हुए टावर को गलती से गिरा दिया।",
+    "characters": ["bandar:guilty", "gillu:frustrated"],
+    "questions": [
+      {
+        "prompt_en": "How does Gillu feel?",
+        "prompt_hi": "गिल्लू को कैसा लग रहा है?",
+        "options": [
+          { "key": "frustrated", "label_en": "Frustrated", "label_hi": "परेशान", "icon": "\ud83d\ude24" },
+          { "key": "happy", "label_en": "Happy", "label_hi": "खुश", "icon": "\ud83d\ude03" },
+          { "key": "scared", "label_en": "Scared", "label_hi": "डरा हुआ", "icon": "\ud83d\ude28" }
+        ],
+        "correct": "frustrated"
+      },
+      {
+        "prompt_en": "And how does Bandar feel?",
+        "prompt_hi": "और बंदर को कैसा लग रहा है?",
+        "options": [
+          { "key": "guilty", "label_en": "Guilty / sorry", "label_hi": "अफ़सोस", "icon": "\ud83d\ude14" },
+          { "key": "proud", "label_en": "Proud", "label_hi": "गर्व", "icon": "\ud83d\ude0e" },
+          { "key": "angry", "label_en": "Angry", "label_hi": "गुस्सा", "icon": "\ud83d\ude20" }
+        ],
+        "correct": "guilty"
+      }
+    ],
+    "lesson_en": "Gillu feels frustrated because he worked hard. Bandar feels sorry because he didn't mean to. Two different feelings at the same time!",
+    "lesson_hi": "गिल्लू परेशान है क्योंकि उसने मेहनत की थी। बंदर अफ़सोस में है क्योंकि वह जानबूझकर नहीं किया। एक साथ दो अलग भावनाएँ!"
+  },
+  {
+    "id": "race",
+    "title_en": "The Race",
+    "title_hi": "दौड़",
+    "scene_en": "Guddu and Gillu had a running race. Gillu won!",
+    "scene_hi": "गुड्डू और गिल्लू ने दौड़ लगाई। गिल्लू जीत गया!",
+    "characters": ["gillu:proud", "guddu:sad"],
+    "questions": [
+      {
+        "prompt_en": "How does Gillu feel?",
+        "prompt_hi": "गिल्लू को कैसा लग रहा है?",
+        "options": [
+          { "key": "proud", "label_en": "Proud", "label_hi": "गर्व", "icon": "\ud83c\udfc6" },
+          { "key": "scared", "label_en": "Scared", "label_hi": "डरा हुआ", "icon": "\ud83d\ude28" },
+          { "key": "sad", "label_en": "Sad", "label_hi": "उदास", "icon": "\ud83d\ude22" }
+        ],
+        "correct": "proud"
+      },
+      {
+        "prompt_en": "And Guddu? He tried really hard but didn't win.",
+        "prompt_hi": "और गुड्डू? उसने बहुत कोशिश की पर जीत नहीं पाया।",
+        "options": [
+          { "key": "disappointed_ok", "label_en": "Disappointed but okay", "label_hi": "निराश पर ठीक है", "icon": "\ud83e\udd72" },
+          { "key": "angry_friend", "label_en": "Angry at Gillu", "label_hi": "गिल्लू पर गुस्सा", "icon": "\ud83d\ude20" },
+          { "key": "doesnt_care", "label_en": "Doesn't care", "label_hi": "परवाह नहीं", "icon": "\ud83d\ude44" }
+        ],
+        "correct": "disappointed_ok"
+      }
+    ],
+    "lesson_en": "It's normal to feel disappointed when we try hard and don't win. Guddu can be proud of trying AND happy for his friend!",
+    "lesson_hi": "जब हम बहुत कोशिश करते हैं और नहीं जीतते तो निराशा होना सही है। गुड्डू कोशिश पर गर्व कर सकता है और दोस्त के लिए खुश भी हो सकता है!"
+  },
+  {
+    "id": "dark_room",
+    "title_en": "The Dark Room",
+    "title_hi": "अंधेरा कमरा",
+    "scene_en": "The lights went out! Guddu is a little scared. But look — Bandar thinks it's an adventure!",
+    "scene_hi": "बत्तियाँ बुझ गईं! गुड्डू थोड़ा डरा है। पर देखो — बंदर को यह एक रोमांच लग रहा है!",
+    "characters": ["guddu:scared", "bandar:excited"],
+    "questions": [
+      {
+        "prompt_en": "Is it okay that Guddu is scared and Bandar isn't?",
+        "prompt_hi": "क्या यह सही है कि गुड्डू डरा है और बंदर नहीं?",
+        "options": [
+          { "key": "yes_different", "label_en": "Yes — everyone feels differently", "label_hi": "हाँ — हर कोई अलग महसूस करता है", "icon": "\u2705" },
+          { "key": "no_brave", "label_en": "No — Guddu should be brave", "label_hi": "नहीं — गुड्डू को बहादुर होना चाहिए", "icon": "\u274c" },
+          { "key": "no_scared", "label_en": "No — Bandar should be scared too", "label_hi": "नहीं — बंदर को भी डरना चाहिए", "icon": "\u274c" }
+        ],
+        "correct": "yes_different"
+      }
+    ],
+    "lesson_en": "There's no 'right' way to feel. Guddu being scared is just as okay as Bandar being excited. We all experience things differently!",
+    "lesson_hi": "महसूस करने का कोई 'सही' तरीका नहीं होता। गुड्डू का डरना और बंदर का उत्साहित होना दोनों सही हैं। हम सब अलग तरह से अनुभव करते हैं!"
+  },
+  {
+    "id": "new_kid",
+    "title_en": "The New Kid",
+    "title_hi": "नया दोस्त",
+    "scene_en": "Meenu is new at school. Let's see how everyone feels about the new friend!",
+    "scene_hi": "मीनू स्कूल में नई है। देखें सबको नए दोस्त के बारे में कैसा लगता है!",
+    "characters": ["meenu:shy", "guddu:curious", "mor:worried", "bandar:excited"],
+    "questions": [
+      {
+        "prompt_en": "How does Guddu feel about the new friend?",
+        "prompt_hi": "गुड्डू को नए दोस्त के बारे में कैसा लग रहा है?",
+        "options": [
+          { "key": "curious", "label_en": "Curious", "label_hi": "जिज्ञासु", "icon": "\ud83e\udd14" },
+          { "key": "scared", "label_en": "Scared", "label_hi": "डरा हुआ", "icon": "\ud83d\ude28" },
+          { "key": "angry", "label_en": "Angry", "label_hi": "गुस्सा", "icon": "\ud83d\ude20" }
+        ],
+        "correct": "curious"
+      },
+      {
+        "prompt_en": "And how does Mor feel?",
+        "prompt_hi": "और मोर को कैसा लग रहा है?",
+        "options": [
+          { "key": "worried", "label_en": "Worried she won't be special anymore", "label_hi": "चिंतित कि वह खास नहीं रहेगी", "icon": "\ud83d\ude15" },
+          { "key": "happy", "label_en": "Happy to have someone new", "label_hi": "खुश नया दोस्त मिलने पर", "icon": "\ud83d\ude03" },
+          { "key": "angry", "label_en": "Angry", "label_hi": "गुस्सा", "icon": "\ud83d\ude20" }
+        ],
+        "correct": "worried"
+      },
+      {
+        "prompt_en": "And Bandar?",
+        "prompt_hi": "और बंदर?",
+        "options": [
+          { "key": "excited", "label_en": "Excited to show off", "label_hi": "उत्साहित दिखाने के लिए", "icon": "\ud83e\udd29" },
+          { "key": "shy", "label_en": "Shy", "label_hi": "शर्मीला", "icon": "\ud83d\ude0a" },
+          { "key": "sad", "label_en": "Sad", "label_hi": "उदास", "icon": "\ud83d\ude22" }
+        ],
+        "correct": "excited"
+      }
+    ],
+    "lesson_en": "One new friend, three different feelings! Guddu is curious, Mor is a little worried, and Bandar is excited. All normal!",
+    "lesson_hi": "एक नया दोस्त, तीन अलग भावनाएँ! गुड्डू जिज्ञासु है, मोर थोड़ी चिंतित है, और बंदर उत्साहित है। सब सामान्य!"
+  },
+  {
+    "id": "goodbye",
+    "title_en": "The Goodbye",
+    "title_hi": "विदाई",
+    "scene_en": "Dadi is going back home after visiting. Guddu feels two things at the same time...",
+    "scene_hi": "दादी मिलने के बाद वापस जा रही हैं। गुड्डू एक साथ दो चीज़ें महसूस कर रहा है...",
+    "characters": ["guddu:sad"],
+    "questions": [
+      {
+        "prompt_en": "What is Guddu feeling?",
+        "prompt_hi": "गुड्डू क्या महसूस कर रहा है?",
+        "options": [
+          { "key": "sad_grateful", "label_en": "Sad AND grateful", "label_hi": "उदास और कृतज्ञ", "icon": "\ud83d\udc95" },
+          { "key": "only_sad", "label_en": "Only sad", "label_hi": "केवल उदास", "icon": "\ud83d\ude22" },
+          { "key": "only_happy", "label_en": "Only happy", "label_hi": "केवल खुश", "icon": "\ud83d\ude03" }
+        ],
+        "correct": "sad_grateful"
+      }
+    ],
+    "lesson_en": "Guddu is sad because Dadi is leaving, but ALSO grateful for the lovely time together. Did you know you can feel TWO things at once? That happens a lot!",
+    "lesson_hi": "गुड्डू उदास है क्योंकि दादी जा रही हैं, पर साथ बिताए अच्छे समय के लिए कृतज्ञ भी है। क्या तुम्हें पता है तुम एक साथ दो चीज़ें महसूस कर सकते हो? ऐसा बहुत होता है!"
+  }
+]

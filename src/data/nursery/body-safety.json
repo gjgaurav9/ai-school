@@ -1,0 +1,61 @@
+[
+  {
+    "id": "good_uncomfortable",
+    "title_en": "Good Touches & Uncomfortable Touches",
+    "title_hi": "अच्छा छूना और असहज छूना",
+    "intro_en": "Some touches feel good and safe — like a hug from Mummy or a high-five from a friend! But if a touch makes you feel scared or uncomfortable, that's your body telling you something important.",
+    "intro_hi": "कुछ छूना अच्छा और सुरक्षित लगता है — जैसे मम्मी की झप्पी या दोस्त की हाई-फाइव! पर अगर कोई छूना डर या असहज लगे, तो शरीर तुम्हें कुछ ज़रूरी बता रहा है।",
+    "prompt_en": "Tap the touches that feel SAFE and GOOD",
+    "prompt_hi": "उन छूनों पर टैप करें जो सुरक्षित और अच्छे लगते हैं",
+    "options": [
+      { "key": "mummy_hug", "label_en": "Mummy's hug", "label_hi": "मम्मी की झप्पी", "icon": "\ud83e\udd17", "safe": true },
+      { "key": "high_five", "label_en": "High-five from friend", "label_hi": "दोस्त से हाई-फाइव", "icon": "\u270b", "safe": true },
+      { "key": "doctor", "label_en": "Doctor checking with Mummy there", "label_hi": "मम्मी की मौजूदगी में डॉक्टर की जाँच", "icon": "\ud83e\udd7a", "safe": true },
+      { "key": "uncomfortable", "label_en": "Touch that makes you uncomfortable", "label_hi": "कोई असहज छूना", "icon": "\u26a0\ufe0f", "safe": false }
+    ],
+    "lesson_en": "Your body is smart! It knows when something doesn't feel right.",
+    "lesson_hi": "तुम्हारा शरीर समझदार है! वह जानता है जब कुछ सही नहीं लगता।"
+  },
+  {
+    "id": "swimsuit",
+    "title_en": "The Swimsuit Rule",
+    "title_hi": "स्विमसूट का नियम",
+    "intro_en": "The parts of your body covered by your swimsuit are PRIVATE. Nobody should touch them or ask to see them. And you shouldn't touch other people's private parts either. This is a safety rule.",
+    "intro_hi": "तुम्हारे शरीर के जो हिस्से स्विमसूट से ढके होते हैं वे निजी हैं। कोई उन्हें न छुए और न देखने माँगे। और तुम्हें भी दूसरों के निजी हिस्से नहीं छूने चाहिए। यह सुरक्षा का नियम है।",
+    "prompt_en": "Tap the shield to make it strong",
+    "prompt_hi": "ढाल को मज़बूत बनाने के लिए टैप करें",
+    "tap_target": "shield",
+    "lesson_en": "Your shield is strong! Your private parts are YOURS to protect.",
+    "lesson_hi": "तुम्हारी ढाल मज़बूत है! तुम्हारे निजी हिस्से तुम्हारे हैं — उनकी रक्षा करो।"
+  },
+  {
+    "id": "saying_no",
+    "title_en": "Saying NO!",
+    "title_hi": "नहीं कहना!",
+    "intro_en": "If ANYONE — even a grown-up, even someone you know — makes you uncomfortable, you can say NO! Your NO is powerful.",
+    "intro_hi": "अगर कोई भी — चाहे बड़ा हो, चाहे कोई जाना-पहचाना — तुम्हें असहज करे, तुम 'नहीं' कह सकते हो! तुम्हारी 'नहीं' बहुत ताक़तवर है।",
+    "prompt_en": "Tap NO! to practice your strong voice",
+    "prompt_hi": "अपनी मज़बूत आवाज़ का अभ्यास करने के लिए नहीं! पर टैप करें",
+    "tap_target": "no",
+    "lesson_en": "Your NO is powerful! You ALWAYS have the right to say it.",
+    "lesson_hi": "तुम्हारी 'नहीं' बहुत ताक़तवर है! तुम्हें हमेशा यह कहने का अधिकार है।"
+  },
+  {
+    "id": "trusted_adult",
+    "title_en": "Tell A Trusted Adult",
+    "title_hi": "किसी अपने बड़े को बताएं",
+    "intro_en": "If something makes you uncomfortable or someone tells you to keep a 'bad secret', ALWAYS tell a trusted adult. A secret that makes you feel bad is NOT a real secret.",
+    "intro_hi": "अगर कुछ तुम्हें असहज करे या कोई 'बुरा राज़' रखने को कहे, तो हमेशा अपने किसी बड़े को बताओ। जो राज़ बुरा लगे वह असली राज़ नहीं है।",
+    "prompt_en": "Who are YOUR trusted adults? Tap up to 3.",
+    "prompt_hi": "तुम्हारे अपने बड़े कौन हैं? 3 तक टैप करें।",
+    "options": [
+      { "key": "mummy", "label_en": "Mummy", "label_hi": "मम्मी", "icon": "\ud83d\udc69" },
+      { "key": "papa", "label_en": "Papa", "label_hi": "पापा", "icon": "\ud83d\udc68" },
+      { "key": "dadi", "label_en": "Dadi / Dada", "label_hi": "दादी / दादा", "icon": "\ud83d\udc75" },
+      { "key": "teacher", "label_en": "Teacher", "label_hi": "शिक्षक", "icon": "\ud83d\udc69\u200d\ud83c\udfeb" }
+    ],
+    "max_select": 3,
+    "lesson_en": "If anything ever worries you, tell your trusted adults. They will believe you and help you.",
+    "lesson_hi": "अगर कभी कुछ परेशान करे, अपने अपनों को बताओ। वे तुम पर विश्वास करेंगे और मदद करेंगे।"
+  }
+]

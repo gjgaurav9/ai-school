@@ -1,0 +1,112 @@
+[
+  {
+    "id": "kitchen",
+    "room_en": "Kitchen",
+    "room_hi": "रसोई",
+    "icon": "\ud83c\udf73",
+    "bg_color": "#FFE8C8",
+    "scene_en": "Mummy is cooking. The dishes need to be set on the table.",
+    "scene_hi": "मम्मी खाना बना रही हैं। मेज़ पर बर्तन लगाने हैं।",
+    "prompt_en": "What can Guddu help with?",
+    "prompt_hi": "गुड्डू किसमें मदद कर सकता है?",
+    "options": [
+      { "key": "set_table", "label_en": "Help put plates on the table", "label_hi": "मेज़ पर थालियाँ लगाएं", "icon": "\ud83c\udf7d\ufe0f", "correct": true },
+      { "key": "watch_tv", "label_en": "Sit and watch TV", "label_hi": "बैठकर टीवी देखें", "icon": "\ud83d\udcfa" },
+      { "key": "run_play", "label_en": "Run away and play", "label_hi": "भागकर खेलें", "icon": "\ud83c\udfc3" }
+    ],
+    "task_count": 4,
+    "task_icon": "\ud83c\udf7d\ufe0f",
+    "task_verb_en": "Place plates",
+    "task_verb_hi": "थालियाँ लगाएं",
+    "lesson_en": "Setting the table is a real help! Mummy doesn't have to do everything alone.",
+    "lesson_hi": "मेज़ लगाना सच्ची मदद है! मम्मी को सब अकेले नहीं करना पड़ता।"
+  },
+  {
+    "id": "living_room",
+    "room_en": "Living Room",
+    "room_hi": "बैठक",
+    "icon": "\ud83d\udecb\ufe0f",
+    "bg_color": "#FFE6F3",
+    "scene_en": "The living room is messy! Toys are everywhere. Papa just came home from work.",
+    "scene_hi": "बैठक में सब बिखरा है! खिलौने हर जगह हैं। पापा अभी काम से आए हैं।",
+    "prompt_en": "What can Guddu do?",
+    "prompt_hi": "गुड्डू क्या कर सकता है?",
+    "options": [
+      { "key": "pick_toys", "label_en": "Pick up the toys", "label_hi": "खिलौने उठाएँ", "icon": "\ud83e\uddf8", "correct": true },
+      { "key": "more_mess", "label_en": "Make more mess", "label_hi": "और बिखेरें", "icon": "\ud83c\udf2a\ufe0f" },
+      { "key": "ask_papa", "label_en": "Ask Papa to clean", "label_hi": "पापा से साफ़ करने को कहें", "icon": "\u2753" }
+    ],
+    "task_count": 5,
+    "task_icon": "\ud83e\uddf8",
+    "task_verb_en": "Pick up toy",
+    "task_verb_hi": "खिलौना उठाएँ",
+    "lesson_en": "Wow, the room looks so nice! When everyone helps, the house stays happy.",
+    "lesson_hi": "वाह, कमरा कितना अच्छा दिख रहा है! जब सब मदद करते हैं, तो घर खुश रहता है।"
+  },
+  {
+    "id": "garden",
+    "room_en": "Garden",
+    "room_hi": "बगीचा",
+    "icon": "\ud83c\udf3f",
+    "bg_color": "#D4F4D4",
+    "scene_en": "The plants look thirsty! They are drooping in the sun.",
+    "scene_hi": "पौधे प्यासे लग रहे हैं! धूप में मुरझा रहे हैं।",
+    "prompt_en": "What should Guddu do?",
+    "prompt_hi": "गुड्डू को क्या करना चाहिए?",
+    "options": [
+      { "key": "water", "label_en": "Water the plants", "label_hi": "पौधों को पानी दें", "icon": "\ud83d\udca7", "correct": true },
+      { "key": "pluck", "label_en": "Pluck the flowers", "label_hi": "फूल तोड़ें", "icon": "\u270c\ufe0f" },
+      { "key": "ignore", "label_en": "Ignore them", "label_hi": "ध्यान न दें", "icon": "\ud83d\ude36" }
+    ],
+    "task_count": 3,
+    "task_icon": "\ud83d\udca7",
+    "task_verb_en": "Water plant",
+    "task_verb_hi": "पौधे को पानी दें",
+    "lesson_en": "Plants need care, just like people! Taking care of living things makes us responsible.",
+    "lesson_hi": "पौधों को भी इंसानों की तरह देखभाल चाहिए! जीवों की देखभाल हमें ज़िम्मेदार बनाती है।"
+  },
+  {
+    "id": "baby",
+    "room_en": "Baby's Room",
+    "room_hi": "बच्चे का कमरा",
+    "icon": "\ud83d\udc76",
+    "bg_color": "#FFF4D4",
+    "scene_en": "Oh no, baby Chintu dropped his toy and is crying!",
+    "scene_hi": "अरे नहीं, बच्चे चिंटू ने अपना खिलौना गिरा दिया और रो रहा है!",
+    "prompt_en": "What can Guddu do?",
+    "prompt_hi": "गुड्डू क्या कर सकता है?",
+    "options": [
+      { "key": "give_back", "label_en": "Pick up the toy and give it back gently", "label_hi": "खिलौना उठाकर प्यार से वापस दें", "icon": "\ud83d\udc9d", "correct": true },
+      { "key": "cry_too", "label_en": "Cry too", "label_hi": "खुद भी रोएँ", "icon": "\ud83d\ude2d" },
+      { "key": "stop_crying", "label_en": "Tell baby to stop crying", "label_hi": "बच्चे को चुप कराएँ", "icon": "\ud83e\udd28" }
+    ],
+    "task_count": 1,
+    "task_icon": "\ud83e\udde0",
+    "task_verb_en": "Give toy back",
+    "task_verb_hi": "खिलौना वापस दें",
+    "lesson_en": "Being gentle with younger ones is so important. Guddu made Chintu happy with one small act!",
+    "lesson_hi": "छोटों के साथ नरम रहना बहुत ज़रूरी है। गुड्डू ने एक छोटी सी बात से चिंटू को खुश कर दिया!"
+  },
+  {
+    "id": "dada",
+    "room_en": "Dada's Room",
+    "room_hi": "दादा का कमरा",
+    "icon": "\ud83d\udc74",
+    "bg_color": "#E8E0FF",
+    "scene_en": "Dada is sitting by himself. He looks like he could use company.",
+    "scene_hi": "दादा अकेले बैठे हैं। उन्हें साथ की ज़रूरत लग रही है।",
+    "prompt_en": "What can Guddu do?",
+    "prompt_hi": "गुड्डू क्या कर सकता है?",
+    "options": [
+      { "key": "listen", "label_en": "Sit with Dada and listen to his stories", "label_hi": "दादा के साथ बैठकर उनकी कहानियाँ सुनें", "icon": "\ud83d\udcd6", "correct": true },
+      { "key": "walk_past", "label_en": "Walk past", "label_hi": "बिना ध्यान दिए चले जाएँ", "icon": "\ud83d\udeb6" },
+      { "key": "tv", "label_en": "Turn on the TV for him", "label_hi": "उसके लिए टीवी चलाएँ", "icon": "\ud83d\udcfa" }
+    ],
+    "task_count": 1,
+    "task_icon": "\ud83d\udcad",
+    "task_verb_en": "Listen to Dada",
+    "task_verb_hi": "दादा को सुनें",
+    "lesson_en": "Sometimes the best help isn't doing something — it's just being there. Dada feels loved when someone listens.",
+    "lesson_hi": "कभी-कभी सबसे अच्छी मदद कुछ करना नहीं — सिर्फ़ साथ होना है। जब कोई सुनता है, दादा को प्यार महसूस होता है।"
+  }
+]

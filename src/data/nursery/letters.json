@@ -1,0 +1,52 @@
+[
+  { "letter": "A", "sound": "aaa", "color": "#FF8C42", "word_en": "Apple", "word_hi": "Aam (आम)", "icon_correct": "\ud83c\udf4e", "options": [
+    { "key": "apple", "label": "Apple", "icon": "\ud83c\udf4e" },
+    { "key": "ball", "label": "Ball", "icon": "\u26bd" },
+    { "key": "cat", "label": "Cat", "icon": "\ud83d\udc31" }
+  ]},
+  { "letter": "B", "sound": "buh", "color": "#0077B6", "word_en": "Ball", "word_hi": "Bakri (बकरी)", "icon_correct": "\u26bd", "options": [
+    { "key": "ball", "label": "Ball", "icon": "\u26bd" },
+    { "key": "dog", "label": "Dog", "icon": "\ud83d\udc36" },
+    { "key": "apple", "label": "Apple", "icon": "\ud83c\udf4e" }
+  ]},
+  { "letter": "C", "sound": "kuh", "color": "#E91E8C", "word_en": "Cat", "word_hi": "Cup", "icon_correct": "\ud83d\udc31", "options": [
+    { "key": "cat", "label": "Cat", "icon": "\ud83d\udc31" },
+    { "key": "fish", "label": "Fish", "icon": "\ud83d\udc1f" },
+    { "key": "egg", "label": "Egg", "icon": "\ud83e\udd5a" }
+  ]},
+  { "letter": "D", "sound": "duh", "color": "#A855F7", "word_en": "Dog", "word_hi": "Dadi (दादी)", "icon_correct": "\ud83d\udc36", "options": [
+    { "key": "dog", "label": "Dog", "icon": "\ud83d\udc36" },
+    { "key": "hat", "label": "Hat", "icon": "\ud83c\udfa9" },
+    { "key": "ball", "label": "Ball", "icon": "\u26bd" }
+  ]},
+  { "letter": "E", "sound": "eh", "color": "#FFD93D", "word_en": "Egg", "word_hi": "Elephant", "icon_correct": "\ud83e\udd5a", "options": [
+    { "key": "egg", "label": "Egg", "icon": "\ud83e\udd5a" },
+    { "key": "cat", "label": "Cat", "icon": "\ud83d\udc31" },
+    { "key": "sun", "label": "Sun", "icon": "\u2600\ufe0f" }
+  ]},
+  { "letter": "F", "sound": "fuh", "color": "#2DC653", "word_en": "Fish", "word_hi": "Fal (फल)", "icon_correct": "\ud83d\udc1f", "options": [
+    { "key": "fish", "label": "Fish", "icon": "\ud83d\udc1f" },
+    { "key": "ant", "label": "Ant", "icon": "\ud83d\udc1c" },
+    { "key": "dog", "label": "Dog", "icon": "\ud83d\udc36" }
+  ]},
+  { "letter": "G", "sound": "guh", "color": "#FF6B6B", "word_en": "Grapes", "word_hi": "Ghar (घर)", "icon_correct": "\ud83c\udf47", "options": [
+    { "key": "grapes", "label": "Grapes", "icon": "\ud83c\udf47" },
+    { "key": "ball", "label": "Ball", "icon": "\u26bd" },
+    { "key": "hat", "label": "Hat", "icon": "\ud83c\udfa9" }
+  ]},
+  { "letter": "M", "sound": "mmm", "color": "#FF8C42", "word_en": "Mango", "word_hi": "Machli (मछली)", "icon_correct": "\ud83e\udd6d", "options": [
+    { "key": "mango", "label": "Mango", "icon": "\ud83e\udd6d" },
+    { "key": "dog", "label": "Dog", "icon": "\ud83d\udc36" },
+    { "key": "apple", "label": "Apple", "icon": "\ud83c\udf4e" }
+  ]},
+  { "letter": "S", "sound": "sss", "color": "#FFD93D", "word_en": "Sun", "word_hi": "Sitara (सितारा)", "icon_correct": "\u2600\ufe0f", "options": [
+    { "key": "sun", "label": "Sun", "icon": "\u2600\ufe0f" },
+    { "key": "cat", "label": "Cat", "icon": "\ud83d\udc31" },
+    { "key": "egg", "label": "Egg", "icon": "\ud83e\udd5a" }
+  ]},
+  { "letter": "T", "sound": "tuh", "color": "#2DC653", "word_en": "Tree", "word_hi": "Tota (तोता)", "icon_correct": "\ud83c\udf33", "options": [
+    { "key": "tree", "label": "Tree", "icon": "\ud83c\udf33" },
+    { "key": "fish", "label": "Fish", "icon": "\ud83d\udc1f" },
+    { "key": "ball", "label": "Ball", "icon": "\u26bd" }
+  ]}
+]

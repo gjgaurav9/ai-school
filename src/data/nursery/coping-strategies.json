@@ -1,0 +1,137 @@
+[
+  {
+    "id": "angry",
+    "character": "bandar",
+    "emotion": "angry",
+    "icon": "\ud83d\ude20",
+    "scene_en": "Bandar is SO angry! Someone broke his favorite toy. His body feels hot and tight.",
+    "scene_hi": "बंदर बहुत गुस्सा है! किसी ने उसका पसंदीदा खिलौना तोड़ दिया। उसका शरीर गरम और तंग महसूस हो रहा है।",
+    "prompt_en": "What can help Bandar calm down?",
+    "prompt_hi": "बंदर को शांत होने में क्या मदद करेगा?",
+    "options": [
+      { "key": "breathe", "label_en": "Take 5 deep breaths", "label_hi": "5 गहरी साँसें लें", "icon": "\ud83e\udeb5", "correct": true,
+        "feedback_en": "Breathing is like a superpower! It tells your body: I'm okay.",
+        "feedback_hi": "साँस लेना एक सुपर पावर है! यह तुम्हारे शरीर से कहता है: मैं ठीक हूँ।"
+      },
+      { "key": "hit", "label_en": "Hit something", "label_hi": "कुछ मारें", "icon": "\u270a",
+        "feedback_en": "Hitting might feel good for a second, but it can hurt others. Let's try something else.",
+        "feedback_hi": "मारना एक पल के लिए अच्छा लगे, पर इससे दूसरों को चोट लग सकती है। कुछ और करें।"
+      },
+      { "key": "scream", "label_en": "Scream really loud", "label_hi": "ज़ोर से चिल्लाएँ", "icon": "\ud83d\udce2",
+        "feedback_en": "Screaming gets the energy out, but there's a gentler way.",
+        "feedback_hi": "चीख़ने से ऊर्जा निकलती है, पर एक नरम तरीका भी है।"
+      }
+    ],
+    "tool": "breathing",
+    "tool_label_en": "Deep Breathing",
+    "tool_label_hi": "गहरी साँस"
+  },
+  {
+    "id": "scared",
+    "character": "mor",
+    "emotion": "scared",
+    "icon": "\ud83d\ude28",
+    "scene_en": "Mor is scared of the loud thunder. Her body feels shaky.",
+    "scene_hi": "मोर तेज़ बिजली की गड़गड़ाहट से डरी है। उसका शरीर काँप रहा है।",
+    "prompt_en": "What can help Mor?",
+    "prompt_hi": "मोर की क्या मदद कर सकता है?",
+    "options": [
+      { "key": "hug", "label_en": "Hug a soft toy or pillow", "label_hi": "नरम खिलौना या तकिया गले लगाएँ", "icon": "\ud83e\uddf8", "correct": true,
+        "feedback_en": "Hugging something soft makes our body feel safe.",
+        "feedback_hi": "नरम चीज़ गले लगाने से शरीर सुरक्षित महसूस करता है।"
+      },
+      { "key": "pretend", "label_en": "Pretend she's not scared", "label_hi": "बहाना करें कि नहीं डरी", "icon": "\ud83d\ude36",
+        "feedback_en": "Pretending feelings don't exist doesn't make them go away.",
+        "feedback_hi": "भावनाओं का बहाना करने से वे ख़त्म नहीं होतीं।"
+      },
+      { "key": "alone", "label_en": "Stay alone and hide", "label_hi": "अकेले छुप जाएँ", "icon": "\ud83d\ude43",
+        "feedback_en": "Being alone when scared can make it worse. It's okay to go to someone you trust.",
+        "feedback_hi": "डरकर अकेले रहना बुरा होता है। किसी अपने के पास जाना ठीक है।"
+      }
+    ],
+    "tool": "comfort",
+    "tool_label_en": "Comfort Hug",
+    "tool_label_hi": "गले लगाना"
+  },
+  {
+    "id": "sad",
+    "character": "guddu",
+    "emotion": "sad",
+    "icon": "\ud83d\ude22",
+    "scene_en": "Guddu feels sad and lonely. His best friend couldn't come to play today. His chest feels heavy.",
+    "scene_hi": "गुड्डू उदास और अकेला है। उसका सबसे अच्छा दोस्त आज खेलने नहीं आ सका। उसका सीना भारी है।",
+    "prompt_en": "What can help Guddu?",
+    "prompt_hi": "गुड्डू की क्या मदद कर सकती है?",
+    "options": [
+      { "key": "talk", "label_en": "Talk to Mummy about how he feels", "label_hi": "मम्मी से अपनी भावनाएँ बताएँ", "icon": "\ud83d\udcac", "correct": true,
+        "feedback_en": "Telling someone how you feel makes the heavy feeling lighter.",
+        "feedback_hi": "किसी को अपनी भावनाएँ बताने से भारी मन हल्का होता है।"
+      },
+      { "key": "chocolate", "label_en": "Eat lots of chocolate", "label_hi": "ढेर सारी चॉकलेट खाएँ", "icon": "\ud83c\udf6b",
+        "feedback_en": "Chocolate tastes good but doesn't fix sadness.",
+        "feedback_hi": "चॉकलेट स्वादिष्ट है पर उदासी नहीं मिटती।"
+      },
+      { "key": "bed", "label_en": "Stay in bed all day", "label_hi": "पूरा दिन बिस्तर पर रहें", "icon": "\ud83d\udecf\ufe0f",
+        "feedback_en": "Resting is okay for a bit, but talking to someone helps much more.",
+        "feedback_hi": "थोड़ा आराम ठीक है, पर किसी से बात करना ज़्यादा मदद करता है।"
+      }
+    ],
+    "tool": "talk",
+    "tool_label_en": "Talk To Someone",
+    "tool_label_hi": "किसी से बात करें"
+  },
+  {
+    "id": "frustrated",
+    "character": "gillu",
+    "emotion": "frustrated",
+    "icon": "\ud83d\ude24",
+    "scene_en": "Gillu tried 3 times but his tower keeps falling! He feels like giving up.",
+    "scene_hi": "गिल्लू ने 3 बार कोशिश की पर उसका टावर बार-बार गिर रहा है! वह छोड़ने को सोच रहा है।",
+    "prompt_en": "What can help Gillu?",
+    "prompt_hi": "गिल्लू की क्या मदद कर सकती है?",
+    "options": [
+      { "key": "pause", "label_en": "Take a break and try again later", "label_hi": "थोड़ा रुककर फिर कोशिश करें", "icon": "\u23f8\ufe0f", "correct": true,
+        "feedback_en": "Sometimes the best thing is to PAUSE. When we come back, our brain has new ideas!",
+        "feedback_hi": "कभी-कभी सबसे अच्छा है रुकना। जब हम वापस आते हैं, दिमाग़ में नए विचार होते हैं!"
+      },
+      { "key": "kick", "label_en": "Kick the blocks", "label_hi": "ब्लॉकों को लात मारें", "icon": "\ud83e\uddb6",
+        "feedback_en": "That would break the blocks! Frustration is energy — let's use it wisely.",
+        "feedback_hi": "इससे ब्लॉक टूट जाएँगे! परेशानी एक ऊर्जा है — इसे समझदारी से इस्तेमाल करें।"
+      },
+      { "key": "give_up", "label_en": "Give up forever", "label_hi": "हमेशा के लिए छोड़ दें", "icon": "\ud83d\ude2d",
+        "feedback_en": "Crying is okay! But giving up forever means we never learn.",
+        "feedback_hi": "रोना ठीक है! पर हमेशा के लिए छोड़ने से हम कभी नहीं सीखते।"
+      }
+    ],
+    "tool": "pause",
+    "tool_label_en": "Take a Pause",
+    "tool_label_hi": "एक पल रुकें"
+  },
+  {
+    "id": "excited",
+    "character": "guddu",
+    "emotion": "excited",
+    "icon": "\ud83e\udd29",
+    "scene_en": "Guddu is so excited about tomorrow's zoo trip that he can't sleep! His body is buzzing with energy.",
+    "scene_hi": "गुड्डू कल चिड़ियाघर जाने के लिए इतना उत्साहित है कि सो नहीं पा रहा! उसका शरीर ऊर्जा से भरा है।",
+    "prompt_en": "What can help Guddu?",
+    "prompt_hi": "गुड्डू की क्या मदद कर सकती है?",
+    "options": [
+      { "key": "calm", "label_en": "Think about calm things — like floating clouds", "label_hi": "शांत चीज़ें सोचें — जैसे तैरते बादल", "icon": "\u2601\ufe0f", "correct": true,
+        "feedback_en": "Even happy excitement needs calming. Thinking calm thoughts helps us rest.",
+        "feedback_hi": "खुशी का उत्साह भी शांत होना चाहिए। शांत विचार सोचने से आराम मिलता है।"
+      },
+      { "key": "jump", "label_en": "Jump on the bed", "label_hi": "बिस्तर पर कूदें", "icon": "\ud83e\uddd8",
+        "feedback_en": "Jumping makes the energy bigger, not smaller!",
+        "feedback_hi": "कूदने से ऊर्जा बड़ी होती है, छोटी नहीं!"
+      },
+      { "key": "screen", "label_en": "Watch videos on the phone", "label_hi": "फ़ोन पर वीडियो देखें", "icon": "\ud83d\udcf1",
+        "feedback_en": "Screens make it harder to sleep. Our brain needs calm.",
+        "feedback_hi": "स्क्रीन से सोना मुश्किल हो जाता है। दिमाग़ को शांति चाहिए।"
+      }
+    ],
+    "tool": "calm",
+    "tool_label_en": "Calm Thoughts",
+    "tool_label_hi": "शांत विचार"
+  }
+]

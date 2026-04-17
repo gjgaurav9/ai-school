@@ -1,0 +1,60 @@
+[
+  {
+    "id": "seed",
+    "title_en": "Planting a Seed",
+    "title_hi": "बीज लगाना",
+    "intro_en": "Help Guddu grow a flower! Put the steps in order.",
+    "intro_hi": "गुड्डू को फूल उगाने में मदद करो! कदमों को क्रम में रखो।",
+    "cards": [
+      { "id": 1, "icon": "\ud83d\udd28", "label_en": "Dig a hole", "label_hi": "गड्ढा खोदें" },
+      { "id": 2, "icon": "\ud83c\udf31", "label_en": "Plant a seed", "label_hi": "बीज लगाएं" },
+      { "id": 3, "icon": "\ud83c\udf38", "label_en": "Flower grows!", "label_hi": "फूल उगता है!" }
+    ],
+    "lesson_en": "First we dig, then we plant, then it grows! Everything has an order.",
+    "lesson_hi": "पहले खोदते हैं, फिर लगाते हैं, फिर उगता है! हर चीज़ का एक क्रम होता है।"
+  },
+  {
+    "id": "chai",
+    "title_en": "Making Chai",
+    "title_hi": "चाय बनाना",
+    "intro_en": "Mummy is making chai. Put the steps in order!",
+    "intro_hi": "मम्मी चाय बना रही हैं। कदमों को क्रम में रखो!",
+    "cards": [
+      { "id": 1, "icon": "\ud83d\udca7", "label_en": "Boil water", "label_hi": "पानी उबालें" },
+      { "id": 2, "icon": "\ud83c\udf75", "label_en": "Add tea & milk", "label_hi": "चायपत्ती और दूध डालें" },
+      { "id": 3, "icon": "\u2615", "label_en": "Pour into cup", "label_hi": "कप में डालें" }
+    ],
+    "lesson_en": "Step by step, just like Mummy makes chai!",
+    "lesson_hi": "एक के बाद एक, जैसे मम्मी चाय बनाती हैं!"
+  },
+  {
+    "id": "school",
+    "title_en": "Getting Ready For School",
+    "title_hi": "स्कूल के लिए तैयार होना",
+    "intro_en": "It's a school day! Help Guddu get ready in the right order.",
+    "intro_hi": "स्कूल का दिन है! गुड्डू को सही क्रम में तैयार होने में मदद करो।",
+    "cards": [
+      { "id": 1, "icon": "\u23f0", "label_en": "Wake up", "label_hi": "उठना" },
+      { "id": 2, "icon": "\ud83e\uddb7", "label_en": "Brush teeth", "label_hi": "दाँत साफ़ करना" },
+      { "id": 3, "icon": "\ud83e\udd5e", "label_en": "Eat breakfast", "label_hi": "नाश्ता करना" },
+      { "id": 4, "icon": "\ud83c\udf92", "label_en": "Go to school", "label_hi": "स्कूल जाना" }
+    ],
+    "lesson_en": "A longer story! You're getting really good at this!",
+    "lesson_hi": "एक लंबी कहानी! तुम इसमें बहुत अच्छे हो रहे हो!"
+  },
+  {
+    "id": "rain",
+    "title_en": "A Rainy Day Adventure",
+    "title_hi": "बारिश का रोमांच",
+    "intro_en": "It's about to rain. Put Guddu's adventure in order!",
+    "intro_hi": "बारिश होने वाली है। गुड्डू के रोमांच को क्रम में रखो!",
+    "cards": [
+      { "id": 1, "icon": "\u2601\ufe0f", "label_en": "See dark clouds", "label_hi": "काले बादल दिखें" },
+      { "id": 2, "icon": "\ud83c\udf27\ufe0f", "label_en": "Rain starts", "label_hi": "बारिश शुरू होती है" },
+      { "id": 3, "icon": "\u2602\ufe0f", "label_en": "Open umbrella", "label_hi": "छाता खोलें" },
+      { "id": 4, "icon": "\ud83d\udca6", "label_en": "Splash in puddles!", "label_hi": "पानी में छप-छप!" }
+    ],
+    "lesson_en": "The clouds came first, then rain, then umbrella, then SPLASH! Cause and effect — one thing leads to another!",
+    "lesson_hi": "पहले बादल आए, फिर बारिश, फिर छाता, फिर छप-छप! एक चीज़ दूसरी चीज़ की ओर ले जाती है!"
+  }
+]

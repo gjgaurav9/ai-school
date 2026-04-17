@@ -1,0 +1,137 @@
+[
+  {
+    "level": "easy",
+    "items": [
+      { "key": "red", "icon": "\ud83d\udd34" },
+      { "key": "blue", "icon": "\ud83d\udd35" },
+      { "key": "red", "icon": "\ud83d\udd34" },
+      { "key": "blue", "icon": "\ud83d\udd35" },
+      { "key": "red", "icon": "\ud83d\udd34" }
+    ],
+    "missing_index": 5,
+    "answer": "blue",
+    "options": [
+      { "key": "blue", "icon": "\ud83d\udd35" },
+      { "key": "red", "icon": "\ud83d\udd34" },
+      { "key": "green", "icon": "\ud83d\udfe2" }
+    ],
+    "prompt_en": "Red, blue, red, blue, red... what comes next?",
+    "prompt_hi": "लाल, नीला, लाल, नीला, लाल... आगे क्या आएगा?"
+  },
+  {
+    "level": "easy",
+    "items": [
+      { "key": "star", "icon": "\u2b50" },
+      { "key": "moon", "icon": "\ud83c\udf19" },
+      { "key": "star", "icon": "\u2b50" },
+      { "key": "moon", "icon": "\ud83c\udf19" },
+      { "key": "star", "icon": "\u2b50" }
+    ],
+    "missing_index": 5,
+    "answer": "moon",
+    "options": [
+      { "key": "moon", "icon": "\ud83c\udf19" },
+      { "key": "star", "icon": "\u2b50" },
+      { "key": "sun", "icon": "\u2600\ufe0f" }
+    ],
+    "prompt_en": "Star, moon, star, moon, star... what's next?",
+    "prompt_hi": "तारा, चाँद, तारा, चाँद, तारा... आगे क्या?"
+  },
+  {
+    "level": "easy",
+    "items": [
+      { "key": "elephant", "icon": "\ud83d\udc18" },
+      { "key": "bird", "icon": "\ud83d\udc26" },
+      { "key": "elephant", "icon": "\ud83d\udc18" },
+      { "key": "bird", "icon": "\ud83d\udc26" },
+      { "key": "?", "icon": "?" },
+      { "key": "bird", "icon": "\ud83d\udc26" }
+    ],
+    "missing_index": 4,
+    "answer": "elephant",
+    "options": [
+      { "key": "elephant", "icon": "\ud83d\udc18" },
+      { "key": "bird", "icon": "\ud83d\udc26" },
+      { "key": "monkey", "icon": "\ud83d\udc12" }
+    ],
+    "prompt_en": "Elephant, bird, elephant, bird... what goes here?",
+    "prompt_hi": "हाथी, चिड़िया, हाथी, चिड़िया... यहाँ क्या आएगा?"
+  },
+  {
+    "level": "medium",
+    "items": [
+      { "key": "tri", "icon": "\ud83d\udd3a" },
+      { "key": "circle", "icon": "\u26ab" },
+      { "key": "circle", "icon": "\u26ab" },
+      { "key": "tri", "icon": "\ud83d\udd3a" },
+      { "key": "circle", "icon": "\u26ab" },
+      { "key": "circle", "icon": "\u26ab" }
+    ],
+    "missing_index": 6,
+    "answer": "tri",
+    "options": [
+      { "key": "tri", "icon": "\ud83d\udd3a" },
+      { "key": "circle", "icon": "\u26ab" },
+      { "key": "square", "icon": "\ud83d\udfe9" }
+    ],
+    "prompt_en": "Triangle, circle, circle, triangle, circle, circle... what comes next?",
+    "prompt_hi": "त्रिभुज, गोला, गोला, त्रिभुज, गोला, गोला... आगे क्या?"
+  },
+  {
+    "level": "medium",
+    "items": [
+      { "key": "red", "icon": "\ud83d\udd34" },
+      { "key": "red", "icon": "\ud83d\udd34" },
+      { "key": "blue", "icon": "\ud83d\udd35" },
+      { "key": "red", "icon": "\ud83d\udd34" },
+      { "key": "red", "icon": "\ud83d\udd34" }
+    ],
+    "missing_index": 5,
+    "answer": "blue",
+    "options": [
+      { "key": "blue", "icon": "\ud83d\udd35" },
+      { "key": "red", "icon": "\ud83d\udd34" },
+      { "key": "yellow", "icon": "\ud83d\udfe1" }
+    ],
+    "prompt_en": "Red, red, blue, red, red... what next?",
+    "prompt_hi": "लाल, लाल, नीला, लाल, लाल... आगे क्या?"
+  },
+  {
+    "level": "challenge",
+    "items": [
+      { "key": "green", "icon": "\ud83d\udfe2" },
+      { "key": "blue", "icon": "\ud83d\udd35" },
+      { "key": "red", "icon": "\ud83d\udd34" },
+      { "key": "green", "icon": "\ud83d\udfe2" },
+      { "key": "blue", "icon": "\ud83d\udd35" }
+    ],
+    "missing_index": 5,
+    "answer": "red",
+    "options": [
+      { "key": "red", "icon": "\ud83d\udd34" },
+      { "key": "blue", "icon": "\ud83d\udd35" },
+      { "key": "green", "icon": "\ud83d\udfe2" }
+    ],
+    "prompt_en": "Green, blue, red, green, blue... what completes the pattern?",
+    "prompt_hi": "हरा, नीला, लाल, हरा, नीला... पैटर्न पूरा क्या करेगा?"
+  },
+  {
+    "level": "challenge",
+    "items": [
+      { "key": "monkey", "icon": "\ud83d\udc12" },
+      { "key": "elephant", "icon": "\ud83d\udc18" },
+      { "key": "bird", "icon": "\ud83d\udc26" },
+      { "key": "monkey", "icon": "\ud83d\udc12" },
+      { "key": "elephant", "icon": "\ud83d\udc18" }
+    ],
+    "missing_index": 5,
+    "answer": "bird",
+    "options": [
+      { "key": "bird", "icon": "\ud83d\udc26" },
+      { "key": "monkey", "icon": "\ud83d\udc12" },
+      { "key": "elephant", "icon": "\ud83d\udc18" }
+    ],
+    "prompt_en": "Monkey, elephant, bird, monkey, elephant... who's next?",
+    "prompt_hi": "बंदर, हाथी, चिड़िया, बंदर, हाथी... आगे कौन?"
+  }
+]

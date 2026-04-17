@@ -1,0 +1,79 @@
+[
+  {
+    "type": "count",
+    "item": "butterfly",
+    "icon": "\ud83e\udd8b",
+    "count": 3,
+    "options": [2, 3, 4],
+    "prompt_en": "How many butterflies can you see? Tap each one to count!",
+    "prompt_hi": "कितनी तितलियाँ दिख रही हैं? गिनने के लिए हर एक पर टैप करो!"
+  },
+  {
+    "type": "compare",
+    "icon_left": "\ud83c\udf4e",
+    "icon_right": "\ud83c\udf4e",
+    "left_count": 3,
+    "right_count": 5,
+    "more_side": "right",
+    "prompt_en": "Which side has MORE apples?",
+    "prompt_hi": "किस तरफ़ ज़्यादा सेब हैं?"
+  },
+  {
+    "type": "give",
+    "character": "chidiya",
+    "item": "seed",
+    "icon": "\ud83c\udf3e",
+    "target": 4,
+    "pool": 8,
+    "prompt_en": "Chidiya wants exactly 4 seeds. Tap to give her seeds one by one!",
+    "prompt_hi": "चिड़िया को बिल्कुल 4 बीज चाहिए। एक-एक करके बीज देने के लिए टैप करो!"
+  },
+  {
+    "type": "count",
+    "item": "flower",
+    "icon": "\ud83c\udf3c",
+    "count": 6,
+    "options": [5, 6, 7],
+    "prompt_en": "How many flowers can you see? Tap each one to count!",
+    "prompt_hi": "कितने फूल दिख रहे हैं? गिनने के लिए हर एक पर टैप करो!"
+  },
+  {
+    "type": "compare",
+    "icon_left": "\u2b50",
+    "icon_right": "\u2b50",
+    "left_count": 7,
+    "right_count": 4,
+    "more_side": "left",
+    "prompt_en": "Which side has MORE stars?",
+    "prompt_hi": "किस तरफ़ ज़्यादा सितारे हैं?"
+  },
+  {
+    "type": "give",
+    "character": "bandar",
+    "item": "banana",
+    "icon": "\ud83c\udf4c",
+    "target": 7,
+    "pool": 10,
+    "prompt_en": "Bandar wants exactly 7 bananas. Tap to give him bananas one by one!",
+    "prompt_hi": "बंदर को बिल्कुल 7 केले चाहिए। एक-एक करके केले देने के लिए टैप करो!"
+  },
+  {
+    "type": "count",
+    "item": "ladybug",
+    "icon": "\ud83d\udc1e",
+    "count": 8,
+    "options": [7, 8, 9],
+    "prompt_en": "How many ladybugs can you see? Tap each one to count!",
+    "prompt_hi": "कितनी लेडीबग दिख रही हैं? गिनने के लिए हर एक पर टैप करो!"
+  },
+  {
+    "type": "compare",
+    "icon_left": "\ud83e\udd55",
+    "icon_right": "\ud83e\udd55",
+    "left_count": 6,
+    "right_count": 9,
+    "more_side": "right",
+    "prompt_en": "Which side has MORE carrots?",
+    "prompt_hi": "किस तरफ़ ज़्यादा गाजर हैं?"
+  }
+]

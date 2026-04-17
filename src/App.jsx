@@ -9,9 +9,18 @@ import SoundSafari from './components/games/SoundSafari'
 import ShapeWorld from './components/games/ShapeWorld'
 import KindnessSeeds from './components/games/KindnessSeeds'
 import DoctorGame from './components/games/DoctorGame'
+import FeelingsDetective from './components/games/nursery/FeelingsDetective'
+import NumberGarden from './components/games/nursery/NumberGarden'
+import PatternTrain from './components/games/nursery/PatternTrain'
+import FeelingsFirstAid from './components/games/nursery/FeelingsFirstAid'
+import LetterLand from './components/games/nursery/LetterLand'
+import StorySequencer from './components/games/nursery/StorySequencer'
+import HelpfulHands from './components/games/nursery/HelpfulHands'
+import MyBodyMyRules from './components/games/nursery/MyBodyMyRules'
 import { useProgress } from './hooks/useProgress'
 
 const GAME_COMPONENTS = {
+  // SEED phase (pre-nursery, ages 2-3)
   'mood-mirror': MoodMirror,
   'color-feelings': ColorFeelings,
   'guddus-day': GuddusDay,
@@ -20,6 +29,15 @@ const GAME_COMPONENTS = {
   'shape-world': ShapeWorld,
   'kindness-seeds': KindnessSeeds,
   'doctor-game': DoctorGame,
+  // SPROUT phase (nursery, ages 4-5)
+  'feelings-detective': FeelingsDetective,
+  'number-garden': NumberGarden,
+  'pattern-train': PatternTrain,
+  'feelings-first-aid': FeelingsFirstAid,
+  'letter-land': LetterLand,
+  'story-sequencer': StorySequencer,
+  'helpful-hands': HelpfulHands,
+  'my-body-my-rules': MyBodyMyRules,
 }
 
 function App() {
@@ -33,7 +51,6 @@ function App() {
     setLanguage((prev) => (prev === 'en' ? 'hi' : 'en'))
   }
 
-  // Show welcome screen if no name set yet
   if (!childName) {
     return (
       <WelcomeScreen

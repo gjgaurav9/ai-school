@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import Guddu from '../common/Guddu';
 
-const GAMES = [
+const SEED_GAMES = [
   { id: 'mood-mirror', name: 'Mood Mirror', subtitle: 'Feelings Game', icon: '\u{1FA9E}', color: '#FFD93D' },
   { id: 'color-feelings', name: 'Color Feelings', subtitle: 'Paint Your Mood', icon: '\u{1F3A8}', color: '#A855F7' },
   { id: 'guddus-day', name: "Guddu's Day", subtitle: 'Daily Routine', icon: '\u{1F305}', color: '#FF8C42' },
@@ -9,6 +10,22 @@ const GAMES = [
   { id: 'shape-world', name: 'Shape World', subtitle: 'Build With Shapes', icon: '\u{1F537}', color: '#E91E8C' },
   { id: 'kindness-seeds', name: 'Kindness Seeds', subtitle: 'Grow Kindness', icon: '\u{1F331}', color: '#22C55E' },
   { id: 'doctor-game', name: 'Little Doctor', subtitle: 'Home Remedies', icon: '\u{1FA7A}', color: '#E74C3C' },
+];
+
+const SPROUT_GAMES = [
+  { id: 'feelings-detective', name: 'Feelings Detective', subtitle: 'Solve emotion mysteries', icon: '\u{1F50D}', color: '#A855F7' },
+  { id: 'number-garden', name: 'Number Garden', subtitle: 'Count & grow', icon: '\u{1F33B}', color: '#2DC653' },
+  { id: 'letter-land', name: 'Letter Land', subtitle: 'Sounds & letters', icon: '\u{1F520}', color: '#E91E8C' },
+  { id: 'story-sequencer', name: 'Story Sequencer', subtitle: 'Put steps in order', icon: '\u{1F4D6}', color: '#FF8C42' },
+  { id: 'helpful-hands', name: 'Helpful Hands', subtitle: 'Help at home', icon: '\u{1F91D}', color: '#22C55E' },
+  { id: 'pattern-train', name: 'Pattern Train', subtitle: 'Find what comes next', icon: '\u{1F682}', color: '#0077B6' },
+  { id: 'feelings-first-aid', name: 'Feelings First Aid', subtitle: 'Big feelings, small tools', icon: '\u{1F49A}', color: '#E74C3C' },
+  { id: 'my-body-my-rules', name: 'My Body, My Rules', subtitle: 'Body safety', icon: '\u{1F6E1}\u{FE0F}', color: '#0EA5E9' },
+];
+
+const PHASES = [
+  { id: 'seed', label_en: 'SEED', label_hi: 'बीज', subtitle_en: 'Ages 2–3', subtitle_hi: '2-3 साल', games: SEED_GAMES },
+  { id: 'sprout', label_en: 'SPROUT', label_hi: 'अंकुर', subtitle_en: 'Ages 4–5', subtitle_hi: '4-5 साल', games: SPROUT_GAMES },
 ];
 
 function darken(hex, amount = 0.25) {
@@ -20,12 +37,15 @@ function darken(hex, amount = 0.25) {
 }
 
 export default function HomeScreen({ onSelectGame, language, onToggleLanguage, stars = 0, childName = '' }) {
+  const [phaseId, setPhaseId] = useState('seed');
+  const phase = PHASES.find(p => p.id === phaseId);
+
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#FFF8E7' }}>
       {/* Header */}
       <div className="flex items-center justify-between px-4 pt-4 pb-2">
         <div className="flex items-center gap-2">
-          <Guddu emotion="happy" size={80} animate={false} />
+          <Guddu emotion="happy" size={70} animate={false} />
           <div>
             <h1 className="text-2xl font-extrabold text-gray-800 leading-tight">AI School</h1>
             <p className="text-xs text-gray-500">
@@ -45,10 +65,33 @@ export default function HomeScreen({ onSelectGame, language, onToggleLanguage, s
         </button>
       </div>
 
-      {/* Game Grid - scrollable */}
+      {/* Phase tabs */}
+      <div className="flex gap-2 px-4 pb-2">
+        {PHASES.map(p => {
+          const active = p.id === phaseId;
+          return (
+            <button
+              key={p.id}
+              onClick={() => setPhaseId(p.id)}
+              className={`flex-1 rounded-2xl px-3 py-2 transition-all active:scale-95 border-2 ${
+                active ? 'bg-white border-amber-400 shadow-md scale-105' : 'bg-white/60 border-transparent'
+              }`}
+            >
+              <div className={`text-base font-extrabold ${active ? 'text-amber-600' : 'text-gray-500'}`}>
+                {language === 'hi' ? p.label_hi : p.label_en}
+              </div>
+              <div className={`text-[10px] font-semibold ${active ? 'text-gray-700' : 'text-gray-400'}`}>
+                {language === 'hi' ? p.subtitle_hi : p.subtitle_en}
+              </div>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Game Grid */}
       <div className="flex-1 overflow-y-auto px-4 py-3">
         <div className="grid grid-cols-2 gap-3">
-          {GAMES.map((game) => (
+          {phase.games.map((game) => (
             <button
               key={game.id}
               onClick={() => onSelectGame(game.id)}
@@ -63,7 +106,7 @@ export default function HomeScreen({ onSelectGame, language, onToggleLanguage, s
                 <span className="text-sm font-bold text-white drop-shadow-sm text-center leading-tight">
                   {game.name}
                 </span>
-                <span className="text-[10px] text-white/80 mt-0.5 text-center">
+                <span className="text-[10px] text-white/80 mt-0.5 text-center px-1">
                   {game.subtitle}
                 </span>
               </div>
