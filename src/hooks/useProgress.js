@@ -10,6 +10,8 @@ const defaultProgress = {
   gardenFlowers: [],
   streak: 0,
   lastPlayed: null,
+  diaryEntries: [],
+  wordWall: [],
 };
 
 function loadProgress() {
@@ -74,5 +76,23 @@ export function useProgress() {
     });
   }, []);
 
-  return { progress, completeGame, addBadge, addFlower, getGameCount, setChildName };
+  const addDiaryEntry = useCallback((entry) => {
+    setProgress(prev => {
+      const updated = { ...prev, diaryEntries: [...(prev.diaryEntries || []), entry] };
+      saveProgress(updated);
+      return updated;
+    });
+  }, []);
+
+  const addWordToWall = useCallback((word) => {
+    setProgress(prev => {
+      const wall = prev.wordWall || [];
+      if (wall.includes(word)) return prev;
+      const updated = { ...prev, wordWall: [...wall, word] };
+      saveProgress(updated);
+      return updated;
+    });
+  }, []);
+
+  return { progress, completeGame, addBadge, addFlower, getGameCount, setChildName, addDiaryEntry, addWordToWall };
 }

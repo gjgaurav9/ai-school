@@ -1,0 +1,98 @@
+[
+  {
+    "id": "jumping",
+    "name_en": "Jumping to Conclusions",
+    "name_hi": "तुरंत निष्कर्ष पर कूदना",
+    "icon": "\ud83e\ude9d",
+    "scene_en": "Guddu waved at his friend across the street. She didn't wave back.",
+    "scene_hi": "गुड्डू ने सड़क पार दोस्त को हाथ हिलाया। उसने जवाब नहीं दिया।",
+    "thought_en": "She doesn't like me anymore!",
+    "thought_hi": "अब वह मुझे पसंद नहीं करती!",
+    "prompt_en": "Can you think of OTHER reasons she didn't wave?",
+    "prompt_hi": "क्या और कोई वजह हो सकती है?",
+    "options": [
+      { "key": "didnt_see", "label_en": "She didn't see him", "label_hi": "उसने नहीं देखा", "good": true },
+      { "key": "angry", "label_en": "She's angry at him", "label_hi": "वह नाराज़ है", "good": false },
+      { "key": "looking", "label_en": "She was looking at something else", "label_hi": "वह और कुछ देख रही थी", "good": true },
+      { "key": "hands_full", "label_en": "She had her hands full", "label_hi": "उसके हाथ भरे थे", "good": true }
+    ],
+    "lesson_en": "Jumping to the worst reason is a thinking trap. Ask first, don't assume!",
+    "lesson_hi": "सबसे बुरी वजह सोचना एक सोच का जाल है। पहले पूछो, मान मत लो!"
+  },
+  {
+    "id": "all_or_nothing",
+    "name_en": "All-or-Nothing",
+    "name_hi": "सब-या-कुछ-नहीं",
+    "icon": "\u2696\ufe0f",
+    "scene_en": "Guddu drew a picture. One part — the tree — looks too big.",
+    "scene_hi": "गुड्डू ने तस्वीर बनाई। एक हिस्सा — पेड़ — बहुत बड़ा है।",
+    "thought_en": "My WHOLE drawing is TERRIBLE!",
+    "thought_hi": "मेरी पूरी तस्वीर बेकार है!",
+    "prompt_en": "Is that fair to himself?",
+    "prompt_hi": "क्या यह उचित है?",
+    "options": [
+      { "key": "no_most", "label_en": "No — most of the drawing is great!", "label_hi": "नहीं — ज़्यादातर बहुत अच्छी है!", "good": true },
+      { "key": "yes_ruined", "label_en": "Yes — one mistake ruins everything", "label_hi": "हाँ — एक गलती सब बिगाड़ देती है", "good": false },
+      { "key": "throw", "label_en": "He should throw it away", "label_hi": "उसे फेंक देना चाहिए", "good": false }
+    ],
+    "lesson_en": "One mistake doesn't ruin everything. The flowers, the sky, the colors — all great!",
+    "lesson_hi": "एक गलती से सब नहीं बिगड़ता। फूल, आसमान, रंग — सब अच्छे हैं!"
+  },
+  {
+    "id": "blame",
+    "name_en": "Blame Game",
+    "name_hi": "दोष का खेल",
+    "icon": "\u261d\ufe0f",
+    "scene_en": "Guddu trips and falls while running.",
+    "scene_hi": "गुड्डू दौड़ते हुए गिर जाता है।",
+    "thought_en": "Stupid ground! It's the GROUND'S fault!",
+    "thought_hi": "बेकार ज़मीन! यह ज़मीन की गलती है!",
+    "prompt_en": "Was the ground really the problem?",
+    "prompt_hi": "क्या सच में ज़मीन की गलती थी?",
+    "options": [
+      { "key": "running_fast", "label_en": "He was running too fast", "label_hi": "वह बहुत तेज़ दौड़ रहा था", "good": true },
+      { "key": "ground_mean", "label_en": "Yes — the ground is mean", "label_hi": "हाँ — ज़मीन बुरी है", "good": false },
+      { "key": "rock", "label_en": "Maybe — there could have been a rock", "label_hi": "शायद — पत्थर रहा होगा", "good": true }
+    ],
+    "lesson_en": "Sometimes WE caused it. Blaming others stops us from learning.",
+    "lesson_hi": "कभी-कभी गलती हमारी होती है। दूसरों को दोष देने से हम सीख नहीं पाते।"
+  },
+  {
+    "id": "fortune",
+    "name_en": "Fortune Telling",
+    "name_hi": "भविष्य बताना",
+    "icon": "\ud83d\udd2e",
+    "scene_en": "Guddu doesn't want to try skating.",
+    "scene_hi": "गुड्डू स्केटिंग करने नहीं जाना चाहता।",
+    "thought_en": "I'll DEFINITELY fall! I just KNOW it!",
+    "thought_hi": "मैं ज़रूर गिरूँगा! मुझे पता है!",
+    "prompt_en": "Can anyone really know the future?",
+    "prompt_hi": "क्या कोई भविष्य जान सकता है?",
+    "options": [
+      { "key": "no_might_great", "label_en": "No — he might be great at it!", "label_hi": "नहीं — शायद वह बढ़िया करे!", "good": true },
+      { "key": "yes_afraid", "label_en": "Yes — he should be afraid", "label_hi": "हाँ — डरना चाहिए", "good": false },
+      { "key": "try", "label_en": "Trying is the only way to find out", "label_hi": "जानने का एक ही तरीका — कोशिश", "good": true }
+    ],
+    "lesson_en": "Your brain isn't a time machine! The only way to know is to TRY.",
+    "lesson_hi": "तुम्हारा दिमाग़ टाइम मशीन नहीं है! जानने का एक ही तरीका — कोशिश करो।"
+  },
+  {
+    "id": "shoulding",
+    "name_en": "Should-ing",
+    "name_hi": "'चाहिए-चाहिए'",
+    "icon": "\ud83c\udfaf",
+    "scene_en": "Guddu can't ride a bicycle yet.",
+    "scene_hi": "गुड्डू अभी साइकिल नहीं चला पाता।",
+    "thought_en": "I SHOULD be able to ride already! Everyone else can!",
+    "thought_hi": "मुझे अब तक चलाना आना चाहिए! बाकी सब चलाते हैं!",
+    "prompt_en": "Is that fair to himself?",
+    "prompt_hi": "क्या यह उचित है?",
+    "options": [
+      { "key": "own_speed", "label_en": "No — everyone learns at their own speed", "label_hi": "नहीं — हर कोई अपनी गति से सीखता है", "good": true },
+      { "key": "too_slow", "label_en": "Yes — he's too slow", "label_hi": "हाँ — वह बहुत धीमा है", "good": false },
+      { "key": "try_harder", "label_en": "He should try harder", "label_hi": "उसे और कोशिश करनी चाहिए", "good": false }
+    ],
+    "lesson_en": "Try saying: 'I'm learning. I'll get there!' — much kinder to yourself.",
+    "lesson_hi": "कहो: 'मैं सीख रहा हूँ। पहुँच जाऊँगा!' — अपने लिए ज़्यादा मीठा।"
+  }
+]

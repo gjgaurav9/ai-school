@@ -1,0 +1,29 @@
+{
+  "words": [
+    { "word": "CAT", "icon": "\ud83d\udc31", "sounds": ["kuh","aaa","tuh"] },
+    { "word": "DOG", "icon": "\ud83d\udc36", "sounds": ["duh","ooo","guh"] },
+    { "word": "BUS", "icon": "\ud83d\ude8c", "sounds": ["buh","uh","sss"] },
+    { "word": "SUN", "icon": "\u2600\ufe0f", "sounds": ["sss","uh","nnn"] },
+    { "word": "HEN", "icon": "\ud83d\udc14", "sounds": ["huh","eh","nnn"] },
+    { "word": "MAP", "icon": "\ud83d\uddfa\ufe0f", "sounds": ["mmm","aaa","puh"] },
+    { "word": "CUP", "icon": "\u2615", "sounds": ["kuh","uh","puh"] },
+    { "word": "BED", "icon": "\ud83d\udecf\ufe0f", "sounds": ["buh","eh","duh"] },
+    { "word": "HAT", "icon": "\ud83c\udfa9", "sounds": ["huh","aaa","tuh"] },
+    { "word": "PIG", "icon": "\ud83d\udc37", "sounds": ["puh","ih","guh"] },
+    { "word": "NET", "icon": "\ud83e\udd45", "sounds": ["nnn","eh","tuh"] },
+    { "word": "VAN", "icon": "\ud83d\ude90", "sounds": ["vvv","aaa","nnn"] },
+    { "word": "JAM", "icon": "\ud83c\udf6f", "sounds": ["juh","aaa","mmm"] },
+    { "word": "PEN", "icon": "\ud83d\udd8a\ufe0f", "sounds": ["puh","eh","nnn"] },
+    { "word": "BOX", "icon": "\ud83d\udce6", "sounds": ["buh","ooo","ks"] }
+  ],
+  "rounds": [
+    { "type": "complete", "word": "CAT", "blank_index": 0, "options": ["C","D","B"] },
+    { "type": "complete", "word": "DOG", "blank_index": 0, "options": ["D","T","M"] },
+    { "type": "complete", "word": "SUN", "blank_index": 0, "options": ["S","R","H"] },
+    { "type": "build", "word": "BUS", "extras": ["A","T"] },
+    { "type": "build", "word": "HEN", "extras": ["O","P"] },
+    { "type": "build", "word": "MAP", "extras": ["I","G"] },
+    { "type": "match", "words": ["CAT","DOG","PIG"] },
+    { "type": "match", "words": ["CUP","BED","HAT"] }
+  ]
+}

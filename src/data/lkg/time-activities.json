@@ -1,0 +1,30 @@
+{
+  "days": [
+    { "key": "Monday",    "hi": "सोमवार",    "color": "#0077B6", "icon": "\ud83c\udf92" },
+    { "key": "Tuesday",   "hi": "मंगलवार",  "color": "#2DC653", "icon": "\ud83d\udcda" },
+    { "key": "Wednesday", "hi": "बुधवार",    "color": "#FFD93D", "icon": "\ud83c\udfa8" },
+    { "key": "Thursday",  "hi": "गुरुवार",   "color": "#FF8C42", "icon": "\u26bd" },
+    { "key": "Friday",    "hi": "शुक्रवार",  "color": "#FF6B6B", "icon": "\u2b50" },
+    { "key": "Saturday",  "hi": "शनिवार",   "color": "#A855F7", "icon": "\ud83d\udc6a" },
+    { "key": "Sunday",    "hi": "रविवार",    "color": "#E91E8C", "icon": "\ud83c\udf32" }
+  ],
+  "clockReads": [
+    { "show": 7, "options": [7, 3, 12], "answer": 7, "phrase_en": "When the hand points to 7?", "phrase_hi": "जब हाथ 7 पर हो?" },
+    { "show": 4, "options": [2, 4, 6], "answer": 4, "phrase_en": "When the hand points to 4?", "phrase_hi": "जब हाथ 4 पर हो?" },
+    { "show": 10, "options": [10, 1, 8], "answer": 10, "phrase_en": "When the hand points to 10?", "phrase_hi": "जब हाथ 10 पर हो?" }
+  ],
+  "scenarioMatch": [
+    { "scenario_en": "School starts at...",  "scenario_hi": "स्कूल शुरू होता है...",     "hour": 8 },
+    { "scenario_en": "Lunch time is at...",  "scenario_hi": "खाने का समय...",         "hour": 1 },
+    { "scenario_en": "Bedtime is at...",     "scenario_hi": "सोने का समय...",         "hour": 9 },
+    { "scenario_en": "Cartoon time is at...","scenario_hi": "कार्टून का समय...",      "hour": 5 }
+  ],
+  "setClock": [4, 10, 6],
+  "planActivities": [
+    { "key": "wake",     "icon": "\u2600\ufe0f", "label_en": "Wake up & breakfast", "label_hi": "उठो और नाश्ता", "slot": "morning" },
+    { "key": "cricket",  "icon": "\ud83c\udfcf",  "label_en": "Play cricket",        "label_hi": "क्रिकेट खेलें", "slot": "afternoon" },
+    { "key": "homework", "icon": "\u270f\ufe0f", "label_en": "Homework",             "label_hi": "होमवर्क",       "slot": "afternoon" },
+    { "key": "movie",    "icon": "\ud83c\udfa5",  "label_en": "Family movie night",  "label_hi": "पारिवारिक फ़िल्म","slot": "evening" },
+    { "key": "bath",     "icon": "\ud83d\udec1",  "label_en": "Bath",                "label_hi": "नहाना",        "slot": "evening" }
+  ]
+}

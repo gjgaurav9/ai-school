@@ -1,0 +1,80 @@
+[
+  {
+    "id": "pipe",
+    "problem_en": "A pipe burst! Water is everywhere on the street!",
+    "problem_hi": "पाइप फट गया! सड़क पर पानी ही पानी!",
+    "scene_icon": "\ud83d\udca7",
+    "options": [
+      { "key": "plumber", "icon": "\ud83d\udd27", "label_en": "Plumber", "label_hi": "नल कारीगर", "correct": true },
+      { "key": "teacher", "icon": "\ud83d\udcda", "label_en": "Teacher", "label_hi": "शिक्षक" },
+      { "key": "doctor", "icon": "\ud83d\udc69\u200d\u2695\ufe0f", "label_en": "Doctor", "label_hi": "डॉक्टर" }
+    ],
+    "lesson_en": "Without plumbers, we wouldn't have clean water in our homes! They keep our pipes working.",
+    "lesson_hi": "नल कारीगरों के बिना घर में साफ़ पानी नहीं होगा! वे हमारे पाइप ठीक रखते हैं।"
+  },
+  {
+    "id": "sick",
+    "problem_en": "Little Meenu is sick with a fever.",
+    "problem_hi": "नन्ही मीनू को बुखार है।",
+    "scene_icon": "\ud83e\udd12",
+    "options": [
+      { "key": "doctor", "icon": "\ud83d\udc69\u200d\u2695\ufe0f", "label_en": "Doctor", "label_hi": "डॉक्टर", "correct": true },
+      { "key": "police", "icon": "\ud83d\udc6e", "label_en": "Police", "label_hi": "पुलिस" },
+      { "key": "farmer", "icon": "\ud83e\uddd1\u200d\ud83c\udf3e", "label_en": "Farmer", "label_hi": "किसान" }
+    ],
+    "lesson_en": "Doctors study for many years to help us feel better. Next time, say thank you!",
+    "lesson_hi": "डॉक्टर बरसों पढ़ाई करते हैं हमें ठीक करने के लिए। अगली बार धन्यवाद कहना!"
+  },
+  {
+    "id": "field",
+    "problem_en": "There's no food at the market! Where does our food come from?",
+    "problem_hi": "बाज़ार में खाना नहीं है! हमारा खाना कहाँ से आता है?",
+    "scene_icon": "\ud83c\udf3e",
+    "options": [
+      { "key": "farmer", "icon": "\ud83e\uddd1\u200d\ud83c\udf3e", "label_en": "Farmer", "label_hi": "किसान", "correct": true },
+      { "key": "police", "icon": "\ud83d\udc6e", "label_en": "Police", "label_hi": "पुलिस" },
+      { "key": "teacher", "icon": "\ud83d\udcda", "label_en": "Teacher", "label_hi": "शिक्षक" }
+    ],
+    "lesson_en": "Farmers wake up before the sun to grow our food. Every chapati starts with a farmer!",
+    "lesson_hi": "किसान सूरज से पहले उठकर हमारा खाना उगाते हैं। हर रोटी एक किसान से शुरू होती है!"
+  },
+  {
+    "id": "fire",
+    "problem_en": "There's smoke coming from a house! Who do we call?",
+    "problem_hi": "एक घर से धुआँ निकल रहा है! किसे बुलाएँ?",
+    "scene_icon": "\ud83d\udd25",
+    "options": [
+      { "key": "fire", "icon": "\ud83d\ude92", "label_en": "Firefighter", "label_hi": "अग्निशमक", "correct": true },
+      { "key": "plumber", "icon": "\ud83d\udd27", "label_en": "Plumber", "label_hi": "नल कारीगर" },
+      { "key": "doctor", "icon": "\ud83d\udc69\u200d\u2695\ufe0f", "label_en": "Doctor", "label_hi": "डॉक्टर" }
+    ],
+    "lesson_en": "Firefighters are very brave. They run INTO danger to save others. Real-life heroes!",
+    "lesson_hi": "अग्निशमक बहुत बहादुर होते हैं। वे दूसरों को बचाने ख़तरे में जाते हैं। असली हीरो!"
+  },
+  {
+    "id": "lost",
+    "problem_en": "A child is lost and crying at the mela. Who can help?",
+    "problem_hi": "एक बच्चा मेले में खो गया है और रो रहा है। कौन मदद करेगा?",
+    "scene_icon": "\ud83d\ude22",
+    "options": [
+      { "key": "police", "icon": "\ud83d\udc6e", "label_en": "Police officer", "label_hi": "पुलिस अधिकारी", "correct": true },
+      { "key": "farmer", "icon": "\ud83e\uddd1\u200d\ud83c\udf3e", "label_en": "Farmer", "label_hi": "किसान" },
+      { "key": "fire", "icon": "\ud83d\ude92", "label_en": "Firefighter", "label_hi": "अग्निशमक" }
+    ],
+    "lesson_en": "Police officers keep us safe. If you're ever lost, find someone in uniform and ask for help.",
+    "lesson_hi": "पुलिस हमें सुरक्षित रखती है। अगर कभी खो जाओ, वर्दी वाले को ढूँढो और मदद माँगो।"
+  },
+  {
+    "id": "messy",
+    "problem_en": "The streets are dirty! Who keeps our city clean?",
+    "problem_hi": "सड़कें गंदी हैं! शहर को कौन साफ़ रखता है?",
+    "scene_icon": "\ud83d\uddd1\ufe0f",
+    "options": [
+      { "key": "sanitation", "icon": "\ud83e\uddf9", "label_en": "Sanitation worker", "label_hi": "सफ़ाई कर्मी", "correct": true },
+      { "key": "doctor", "icon": "\ud83d\udc69\u200d\u2695\ufe0f", "label_en": "Doctor", "label_hi": "डॉक्टर" },
+      { "key": "teacher", "icon": "\ud83d\udcda", "label_en": "Teacher", "label_hi": "शिक्षक" }
+    ],
+    "lesson_en": "Sanitation workers do one of the MOST important jobs. Without them, we'd all get sick. They deserve our respect and thanks!",
+    "lesson_hi": "सफ़ाई कर्मी सबसे ज़रूरी काम करते हैं। उनके बिना हम सब बीमार हो जाएँ। उनका सम्मान करो!"
+  }
+]

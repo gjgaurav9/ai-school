@@ -1,0 +1,86 @@
+{
+  "emotions": [
+    { "key": "happy",   "icon": "\ud83d\ude0a", "label_en": "Happy",     "label_hi": "खुश",      "color": "#FFD93D", "valence": "pos" },
+    { "key": "sad",     "icon": "\ud83d\ude22", "label_en": "Sad",       "label_hi": "उदास",     "color": "#74B9FF", "valence": "neg" },
+    { "key": "angry",   "icon": "\ud83d\ude24", "label_en": "Angry",     "label_hi": "गुस्सा",   "color": "#FF6B6B", "valence": "neg" },
+    { "key": "worried", "icon": "\ud83d\ude30", "label_en": "Worried",   "label_hi": "चिंतित",   "color": "#A29BFE", "valence": "neg" },
+    { "key": "tired",   "icon": "\ud83d\ude34", "label_en": "Tired",     "label_hi": "थका",      "color": "#9CA3AF", "valence": "neg" },
+    { "key": "excited", "icon": "\ud83e\udd29", "label_en": "Excited",   "label_hi": "उत्साहित", "color": "#FF8C42", "valence": "pos" },
+    { "key": "okay",    "icon": "\ud83d\ude10", "label_en": "Okay/Meh",  "label_hi": "ठीक-ठाक",  "color": "#9E9E9E", "valence": "neutral" },
+    { "key": "loved",   "icon": "\ud83e\udd70", "label_en": "Loved",     "label_hi": "प्यार",    "color": "#E91E8C", "valence": "pos" }
+  ],
+  "triggers": {
+    "happy": [
+      { "key": "fun", "label_en": "Something fun happened", "label_hi": "कुछ मज़ेदार हुआ" },
+      { "key": "kindness", "label_en": "Someone was kind to me", "label_hi": "किसी ने प्यार किया" },
+      { "key": "learn", "label_en": "I learned something new", "label_hi": "कुछ नया सीखा" },
+      { "key": "family", "label_en": "I'm with people I love", "label_hi": "अपनों के साथ हूँ" },
+      { "key": "good", "label_en": "Just feeling good!", "label_hi": "बस अच्छा लग रहा है" },
+      { "key": "unknown", "label_en": "I don't know", "label_hi": "पता नहीं" }
+    ],
+    "sad": [
+      { "key": "miss", "label_en": "I miss someone", "label_hi": "किसी की याद आ रही है" },
+      { "key": "unfair", "label_en": "Something unfair happened", "label_hi": "कुछ अन्याय हुआ" },
+      { "key": "friend_mean", "label_en": "A friend was mean", "label_hi": "दोस्त ने गलत बात कही" },
+      { "key": "couldnt", "label_en": "I couldn't do something", "label_hi": "कुछ नहीं कर पाया" },
+      { "key": "unknown", "label_en": "I don't know", "label_hi": "पता नहीं" }
+    ],
+    "angry": [
+      { "key": "broken", "label_en": "Someone broke my thing", "label_hi": "किसी ने मेरी चीज़ तोड़ी" },
+      { "key": "ignored", "label_en": "I wasn't listened to", "label_hi": "मेरी बात नहीं सुनी" },
+      { "key": "unfair", "label_en": "Something was unfair", "label_hi": "कुछ अन्याय हुआ" },
+      { "key": "told_no", "label_en": "I was told no", "label_hi": "मना किया गया" },
+      { "key": "hurt", "label_en": "Someone hurt my feelings", "label_hi": "किसी ने दिल दुखाया" }
+    ],
+    "worried": [
+      { "key": "event", "label_en": "Tomorrow's test or event", "label_hi": "कल का टेस्ट या कार्यक्रम" },
+      { "key": "sick", "label_en": "A family member is sick", "label_hi": "घर में कोई बीमार है" },
+      { "key": "wrong", "label_en": "I might do something wrong", "label_hi": "कुछ ग़लत हो सकता है" },
+      { "key": "scary", "label_en": "I heard something scary", "label_hi": "कुछ डरावना सुना" },
+      { "key": "unknown", "label_en": "I don't know why", "label_hi": "पता नहीं क्यों" }
+    ],
+    "tired": [
+      { "key": "sleep", "label_en": "Didn't sleep well", "label_hi": "अच्छी नींद नहीं हुई" },
+      { "key": "homework", "label_en": "Too much homework", "label_hi": "बहुत होमवर्क" },
+      { "key": "play", "label_en": "Played too much", "label_hi": "बहुत खेला" },
+      { "key": "unwell", "label_en": "Feeling sick", "label_hi": "तबियत ठीक नहीं" },
+      { "key": "just", "label_en": "Just tired", "label_hi": "बस थका हूँ" }
+    ],
+    "excited": [
+      { "key": "coming", "label_en": "Something fun coming up", "label_hi": "कुछ मज़ेदार आने वाला है" },
+      { "key": "did_great", "label_en": "I did something great", "label_hi": "कुछ बढ़िया किया" },
+      { "key": "going", "label_en": "Going somewhere special", "label_hi": "कहीं खास जा रहा हूँ" },
+      { "key": "new", "label_en": "New toy or book", "label_hi": "नया खिलौना या किताब" },
+      { "key": "festival", "label_en": "Birthday or festival coming", "label_hi": "जन्मदिन या त्योहार पास है" }
+    ],
+    "okay": [
+      { "key": "normal", "label_en": "Normal day", "label_hi": "सामान्य दिन" },
+      { "key": "nothing", "label_en": "Nothing special happened", "label_hi": "कुछ खास नहीं हुआ" },
+      { "key": "calm", "label_en": "Feeling calm", "label_hi": "शांत महसूस हो रहा है" }
+    ],
+    "loved": [
+      { "key": "family", "label_en": "Family time", "label_hi": "परिवार के साथ समय" },
+      { "key": "nice", "label_en": "Someone said something nice", "label_hi": "किसी ने अच्छी बात कही" },
+      { "key": "hug", "label_en": "Got a hug", "label_hi": "गले लगाया गया" },
+      { "key": "helped", "label_en": "Helped someone", "label_hi": "किसी की मदद की" }
+    ]
+  },
+  "bodyZones": [
+    { "key": "head",    "label_en": "Head",         "label_hi": "सिर" },
+    { "key": "chest",   "label_en": "Chest",        "label_hi": "छाती" },
+    { "key": "tummy",   "label_en": "Tummy",        "label_hi": "पेट" },
+    { "key": "hands",   "label_en": "Hands",        "label_hi": "हाथ" },
+    { "key": "legs",    "label_en": "Legs",         "label_hi": "पैर" },
+    { "key": "all",     "label_en": "All over",     "label_hi": "हर जगह" },
+    { "key": "none",    "label_en": "Nowhere specific", "label_hi": "कहीं नहीं" }
+  ],
+  "helpers": [
+    { "key": "talk",      "icon": "\ud83d\udcac", "label_en": "Talking to someone",  "label_hi": "किसी से बात की" },
+    { "key": "breath",    "icon": "\ud83e\udeb5", "label_en": "Deep breathing",      "label_hi": "गहरी साँस ली" },
+    { "key": "play",      "icon": "\ud83c\udfae", "label_en": "Playing",             "label_hi": "खेला" },
+    { "key": "alone",     "icon": "\ud83e\uddd8", "label_en": "Being alone for a bit","label_hi": "कुछ देर अकेला रहा" },
+    { "key": "hug",       "icon": "\ud83e\udd17", "label_en": "Hugging someone",     "label_hi": "किसी को गले लगाया" },
+    { "key": "nothing",   "icon": "\u23f3",       "label_en": "Nothing yet",         "label_hi": "अभी कुछ नहीं" },
+    { "key": "okay",      "icon": "\u2705",       "label_en": "I'm okay, no help needed", "label_hi": "मैं ठीक हूँ" }
+  ]
+}

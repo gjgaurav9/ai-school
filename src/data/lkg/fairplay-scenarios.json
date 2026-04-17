@@ -1,0 +1,106 @@
+[
+  {
+    "id": "dice",
+    "title_en": "The Dice Game",
+    "title_hi": "पासे का खेल",
+    "scene_en": "Bandar's dice showed 3, but he moved 6 spaces!",
+    "scene_hi": "बंदर के पासे पर 3 आया, पर वह 6 घर चला गया!",
+    "characters": ["bandar", "guddu"],
+    "questions": [
+      {
+        "prompt_en": "Is that fair?",
+        "prompt_hi": "क्या यह उचित है?",
+        "options": [
+          { "key": "no_cheat", "label_en": "No — that's cheating", "label_hi": "नहीं — यह धोखा है", "correct": true },
+          { "key": "yes_fine", "label_en": "Yes — it's fine", "label_hi": "हाँ — ठीक है" },
+          { "key": "both_cheat", "label_en": "Only if Guddu also cheats", "label_hi": "अगर गुड्डू भी करे तो ठीक" }
+        ]
+      },
+      {
+        "prompt_en": "What should Guddu say?",
+        "prompt_hi": "गुड्डू को क्या कहना चाहिए?",
+        "options": [
+          { "key": "kindly", "label_en": "Tell Bandar kindly to go back", "label_hi": "बंदर से प्यार से कहें वापस जाना", "correct": true },
+          { "key": "flip", "label_en": "Get angry and flip the board", "label_hi": "गुस्से में बोर्ड पलट दें" },
+          { "key": "cheat_too", "label_en": "Cheat too", "label_hi": "ख़ुद भी धोखा करें" }
+        ]
+      }
+    ],
+    "lesson_en": "You can stand up for fairness without being mean. 'Hey, your dice said 3. Let's count again?' — fair AND kind.",
+    "lesson_hi": "तुम बिना ज़ुल्म किए न्याय की बात कर सकते हो। 'पासे पर 3 था, फिर गिनें?' — न्याय और प्यार दोनों।"
+  },
+  {
+    "id": "captain",
+    "title_en": "The Team Captain",
+    "title_hi": "टीम कप्तान",
+    "scene_en": "Bhaloo picked all the strong players for his team. The other team looks sad.",
+    "scene_hi": "भालू ने सब मज़बूत खिलाड़ी अपनी टीम में चुने। दूसरी टीम उदास है।",
+    "characters": ["bhaloo"],
+    "questions": [
+      {
+        "prompt_en": "Is this fair?",
+        "prompt_hi": "क्या यह उचित है?",
+        "options": [
+          { "key": "balanced", "label_en": "No — teams should be balanced", "label_hi": "नहीं — टीमें बराबर होनी चाहिए", "correct": true },
+          { "key": "his_choice", "label_en": "Yes — it's his choice", "label_hi": "हाँ — उसकी मर्ज़ी है" },
+          { "key": "doesnt_matter", "label_en": "Who cares?", "label_hi": "कोई फ़र्क़ नहीं" }
+        ]
+      }
+    ],
+    "lesson_en": "Fair teams make the game fun for EVERYONE. A game where one side always wins is boring for both sides!",
+    "lesson_hi": "बराबर टीम से खेल सबको मज़ा देता है। एक तरफ़ हमेशा जीतने वाला खेल दोनों के लिए बोरिंग है!"
+  },
+  {
+    "id": "losing",
+    "title_en": "Losing Gracefully",
+    "title_hi": "हारना सीखें",
+    "scene_en": "Guddu lost a running race. He's about to cry and stomp away.",
+    "scene_hi": "गुड्डू दौड़ हार गया। वह रोने और गुस्से में जाने वाला है।",
+    "characters": ["guddu"],
+    "questions": [
+      {
+        "prompt_en": "What should he do?",
+        "prompt_hi": "उसे क्या करना चाहिए?",
+        "options": [
+          { "key": "good_race", "label_en": "Say 'Good race!' and try harder next time", "label_hi": "'अच्छी दौड़!' कहें और अगली बार ज़्यादा कोशिश", "correct": true },
+          { "key": "quit", "label_en": "Say 'I don't want to play anymore!'", "label_hi": "'अब नहीं खेलूँगा!'" },
+          { "key": "blame", "label_en": "Blame the track for being unfair", "label_hi": "ट्रैक को दोष दें" }
+        ]
+      }
+    ],
+    "lesson_en": "Losing hurts, and it's okay to feel sad. But HOW we handle losing shows our real strength.",
+    "lesson_hi": "हारना दुखता है और उदास होना ठीक है। पर हम हार को कैसे लेते हैं — यह हमारी असली ताक़त दिखाता है।"
+  },
+  {
+    "id": "winning",
+    "title_en": "Winning Kindly",
+    "title_hi": "प्यार से जीतो",
+    "scene_en": "Gillu won the race. He shouts: 'I'm the BEST! You're all LOSERS!'",
+    "scene_hi": "गिल्लू दौड़ जीता। चिल्लाता है: 'मैं सबसे अच्छा! तुम सब हार गए!'",
+    "characters": ["gillu"],
+    "questions": [
+      {
+        "prompt_en": "Is that a kind way to win?",
+        "prompt_hi": "क्या जीतने का यह तरीका सही है?",
+        "options": [
+          { "key": "no_kind", "label_en": "No — winners should be kind", "label_hi": "नहीं — जीतने वाले को विनम्र होना चाहिए", "correct": true },
+          { "key": "earned", "label_en": "Yes — he earned it", "label_hi": "हाँ — उसने मेहनत की" },
+          { "key": "little", "label_en": "Only a little mean", "label_hi": "बस थोड़ा बुरा" }
+        ]
+      }
+    ],
+    "lesson_en": "A good winner celebrates WITHOUT putting others down. 'Great race, everyone!' — that's a champion.",
+    "lesson_hi": "अच्छा जीतने वाला दूसरों को गिराए बिना ख़ुश होता है। 'सबने अच्छा खेला!' — यही चैंपियन है।"
+  },
+  {
+    "id": "teamwork",
+    "title_en": "Teamwork Challenge",
+    "title_hi": "मिलकर काम करें",
+    "scene_en": "Guddu and Chhotu need to cross a river. There's one heavy log — too heavy for one!",
+    "scene_hi": "गुड्डू और छोटू को नदी पार करनी है। एक भारी लकड़ी है — एक के लिए बहुत भारी!",
+    "characters": ["guddu", "chhotu"],
+    "interactive": "push_log",
+    "lesson_en": "Some problems are impossible alone but easy together. That's the power of teamwork!",
+    "lesson_hi": "कुछ काम अकेले मुश्किल पर साथ में आसान। यही टीमवर्क की ताक़त है!"
+  }
+]

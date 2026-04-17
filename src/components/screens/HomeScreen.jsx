@@ -23,9 +23,21 @@ const SPROUT_GAMES = [
   { id: 'my-body-my-rules', name: 'My Body, My Rules', subtitle: 'Body safety', icon: '\u{1F6E1}\u{FE0F}', color: '#0EA5E9' },
 ];
 
+const BLOOM_GAMES = [
+  { id: 'emotion-diary', name: 'Emotion Diary', subtitle: 'Daily check-in', icon: '\u{1F4D4}', color: '#E91E8C' },
+  { id: 'word-builder', name: 'Word Builder', subtitle: 'Read CVC words', icon: '\u{1F4DD}', color: '#A855F7' },
+  { id: 'addition-stories', name: 'Addition Stories', subtitle: 'Math through stories', icon: '\u{2795}', color: '#2DC653' },
+  { id: 'thinking-traps', name: 'Thinking Traps', subtitle: 'Smarter thoughts', icon: '\u{1FA9D}', color: '#7C3AED' },
+  { id: 'community-helpers', name: 'Community Helpers', subtitle: 'Who keeps us going?', icon: '\u{1F3D8}\u{FE0F}', color: '#0EA5E9' },
+  { id: 'time-explorer', name: 'Time Explorer', subtitle: 'Days & clocks', icon: '\u{23F0}', color: '#FF8C42' },
+  { id: 'fair-play-arena', name: 'Fair Play Arena', subtitle: 'Win & lose well', icon: '\u{1F3C5}', color: '#22C55E' },
+  { id: 'hindi-akshar', name: 'Hindi Akshar', subtitle: 'हिंदी स्वर', icon: '\u{0905}', color: '#FF6B6B' },
+];
+
 const PHASES = [
   { id: 'seed', label_en: 'SEED', label_hi: 'बीज', subtitle_en: 'Ages 2–3', subtitle_hi: '2-3 साल', games: SEED_GAMES },
   { id: 'sprout', label_en: 'SPROUT', label_hi: 'अंकुर', subtitle_en: 'Ages 4–5', subtitle_hi: '4-5 साल', games: SPROUT_GAMES },
+  { id: 'bloom', label_en: 'BLOOM', label_hi: 'खिलाव', subtitle_en: 'Ages 5–6', subtitle_hi: '5-6 साल', games: BLOOM_GAMES },
 ];
 
 function darken(hex, amount = 0.25) {

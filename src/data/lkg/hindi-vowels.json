@@ -1,0 +1,62 @@
+[
+  { "char": "अ", "sound": "a",  "color": "#FF8C42", "word": "अनार",   "translit": "Anaar (Pomegranate)", "icon_correct": "\ud83c\udf45",
+    "options": [
+      { "key": "anaar",  "icon": "\ud83c\udf45", "label_en": "Pomegranate", "label_hi": "अनार" },
+      { "key": "banana", "icon": "\ud83c\udf4c", "label_en": "Banana",      "label_hi": "केला" },
+      { "key": "apple",  "icon": "\ud83c\udf4e", "label_en": "Apple",       "label_hi": "सेब" }
+    ] },
+  { "char": "आ", "sound": "aa", "color": "#E91E8C", "word": "आम",    "translit": "Aam (Mango)", "icon_correct": "\ud83e\udd6d",
+    "options": [
+      { "key": "aam",    "icon": "\ud83e\udd6d", "label_en": "Mango",  "label_hi": "आम" },
+      { "key": "grapes", "icon": "\ud83c\udf47", "label_en": "Grapes", "label_hi": "अंगूर" },
+      { "key": "orange", "icon": "\ud83c\udf4a", "label_en": "Orange", "label_hi": "संतरा" }
+    ] },
+  { "char": "इ", "sound": "i",  "color": "#A855F7", "word": "इमली",   "translit": "Imli (Tamarind)", "icon_correct": "\ud83c\udf3f",
+    "options": [
+      { "key": "imli",  "icon": "\ud83c\udf3f", "label_en": "Tamarind", "label_hi": "इमली" },
+      { "key": "mango", "icon": "\ud83e\udd6d", "label_en": "Mango",    "label_hi": "आम" },
+      { "key": "lemon", "icon": "\ud83c\udf4b", "label_en": "Lemon",    "label_hi": "नींबू" }
+    ] },
+  { "char": "ई", "sound": "ee", "color": "#0077B6", "word": "ईख",    "translit": "Eekh (Sugarcane)", "icon_correct": "\ud83c\udf3e",
+    "options": [
+      { "key": "eekh",  "icon": "\ud83c\udf3e", "label_en": "Sugarcane", "label_hi": "ईख" },
+      { "key": "wheat", "icon": "\ud83c\udf3e", "label_en": "Wheat",     "label_hi": "गेहूँ" },
+      { "key": "rice",  "icon": "\ud83c\udf5a", "label_en": "Rice",      "label_hi": "चावल" }
+    ] },
+  { "char": "उ", "sound": "u",  "color": "#2DC653", "word": "उल्लू",   "translit": "Ullu (Owl)", "icon_correct": "\ud83e\udd89",
+    "options": [
+      { "key": "ullu",   "icon": "\ud83e\udd89", "label_en": "Owl",    "label_hi": "उल्लू" },
+      { "key": "crow",   "icon": "\ud83d\udc26", "label_en": "Crow",   "label_hi": "कौआ" },
+      { "key": "parrot", "icon": "\ud83e\udd9c", "label_en": "Parrot", "label_hi": "तोता" }
+    ] },
+  { "char": "ऊ", "sound": "oo", "color": "#FFD93D", "word": "ऊँट",    "translit": "Oont (Camel)", "icon_correct": "\ud83d\udc2a",
+    "options": [
+      { "key": "oont",  "icon": "\ud83d\udc2a", "label_en": "Camel", "label_hi": "ऊँट" },
+      { "key": "horse", "icon": "\ud83d\udc0e", "label_en": "Horse", "label_hi": "घोड़ा" },
+      { "key": "cow",   "icon": "\ud83d\udc04", "label_en": "Cow",   "label_hi": "गाय" }
+    ] },
+  { "char": "ए", "sound": "e",  "color": "#FF6B6B", "word": "एड़ी",   "translit": "Edi (Heel)", "icon_correct": "\ud83e\uddb6",
+    "options": [
+      { "key": "edi",   "icon": "\ud83e\uddb6", "label_en": "Heel",  "label_hi": "एड़ी" },
+      { "key": "knee",  "icon": "\ud83e\uddb5", "label_en": "Knee",  "label_hi": "घुटना" },
+      { "key": "elbow", "icon": "\ud83d\udcaa", "label_en": "Elbow", "label_hi": "कोहनी" }
+    ] },
+  { "char": "ऐ", "sound": "ai", "color": "#0EA5E9", "word": "ऐनक",   "translit": "Ainak (Spectacles)", "icon_correct": "\ud83d\udc53",
+    "options": [
+      { "key": "ainak",    "icon": "\ud83d\udc53", "label_en": "Spectacles", "label_hi": "ऐनक" },
+      { "key": "hat",      "icon": "\ud83c\udfa9", "label_en": "Hat",        "label_hi": "टोपी" },
+      { "key": "umbrella", "icon": "\u2602\ufe0f", "label_en": "Umbrella",   "label_hi": "छाता" }
+    ] },
+  { "char": "ओ", "sound": "o",  "color": "#22C55E", "word": "ओखली",  "translit": "Okhli (Mortar)", "icon_correct": "\ud83e\udd63",
+    "options": [
+      { "key": "okhli", "icon": "\ud83e\udd63", "label_en": "Mortar", "label_hi": "ओखली" },
+      { "key": "pot",   "icon": "\ud83c\udffa", "label_en": "Pot",    "label_hi": "घड़ा" },
+      { "key": "plate", "icon": "\ud83c\udf7d\ufe0f", "label_en": "Plate", "label_hi": "थाली" }
+    ] },
+  { "char": "औ", "sound": "au", "color": "#A855F7", "word": "औरत",   "translit": "Aurat (Woman)", "icon_correct": "\ud83d\udc69",
+    "options": [
+      { "key": "aurat", "icon": "\ud83d\udc69", "label_en": "Woman", "label_hi": "औरत" },
+      { "key": "man",   "icon": "\ud83d\udc68", "label_en": "Man",   "label_hi": "आदमी" },
+      { "key": "child", "icon": "\ud83e\uddd2", "label_en": "Child", "label_hi": "बच्चा" }
+    ] }
+]

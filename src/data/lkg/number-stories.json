@@ -1,0 +1,82 @@
+[
+  {
+    "type": "add",
+    "icon": "\ud83e\udd6d",
+    "start": 2, "delta": 1, "answer": 3,
+    "scene_en": "Guddu has 2 mangoes. Chidiya gives him 1 more.",
+    "scene_hi": "गुड्डू के पास 2 आम हैं। चिड़िया एक और देती है।",
+    "question_en": "How many mangoes now?",
+    "question_hi": "अब कितने आम?",
+    "options": [2, 3, 4]
+  },
+  {
+    "type": "add",
+    "icon": "\ud83d\udc26",
+    "start": 3, "delta": 2, "answer": 5,
+    "scene_en": "3 birds sit on a branch. 2 more fly in.",
+    "scene_hi": "3 चिड़ियाँ एक डाल पर बैठी हैं। 2 और आ जाती हैं।",
+    "question_en": "How many birds now?",
+    "question_hi": "अब कितनी चिड़ियाँ?",
+    "options": [4, 5, 6]
+  },
+  {
+    "type": "subtract",
+    "icon": "\ud83c\udf4c",
+    "start": 5, "delta": 2, "answer": 3,
+    "scene_en": "There were 5 bananas. Bandar took 2.",
+    "scene_hi": "5 केले थे। बंदर ने 2 ले लिए।",
+    "question_en": "How many are left?",
+    "question_hi": "कितने बचे?",
+    "options": [2, 3, 4]
+  },
+  {
+    "type": "add",
+    "icon": "\ud83c\udf38",
+    "start": 4, "delta": 2, "answer": 6,
+    "scene_en": "4 flowers in the garden. Guddu plants 2 more.",
+    "scene_hi": "बगीचे में 4 फूल हैं। गुड्डू 2 और लगाता है।",
+    "question_en": "How many flowers now?",
+    "question_hi": "अब कितने फूल?",
+    "options": [5, 6, 7]
+  },
+  {
+    "type": "subtract",
+    "icon": "\ud83c\udf6a",
+    "start": 4, "delta": 1, "answer": 3,
+    "scene_en": "4 cookies on the plate. Guddu eats 1.",
+    "scene_hi": "थाली में 4 कुकीज़ हैं। गुड्डू 1 खाता है।",
+    "question_en": "How many are left?",
+    "question_hi": "कितनी बची?",
+    "options": [2, 3, 4]
+  },
+  {
+    "type": "add",
+    "icon": "\ud83e\uddc1",
+    "start": 1, "delta": 3, "answer": 4,
+    "scene_en": "1 chapati on the plate. Mummy puts 3 more.",
+    "scene_hi": "थाली में 1 रोटी है। मम्मी 3 और रखती हैं।",
+    "question_en": "How many chapatis now?",
+    "question_hi": "अब कितनी रोटियाँ?",
+    "options": [3, 4, 5]
+  },
+  {
+    "type": "subtract",
+    "icon": "\ud83c\udf88",
+    "start": 6, "delta": 2, "answer": 4,
+    "scene_en": "6 balloons in the air. 2 pop!",
+    "scene_hi": "हवा में 6 गुब्बारे। 2 फटते हैं!",
+    "question_en": "How many are left?",
+    "question_hi": "कितने बचे?",
+    "options": [3, 4, 5]
+  },
+  {
+    "type": "two_step",
+    "icon": "\u270f\ufe0f",
+    "start": 3, "delta": 2, "delta2": -1, "answer": 4,
+    "scene_en": "Guddu has 3 pencils. His friend gives him 2 more. Then he loses 1.",
+    "scene_hi": "गुड्डू के पास 3 पेंसिलें हैं। दोस्त 2 और देता है। फिर 1 खो जाती है।",
+    "question_en": "How many does he have now?",
+    "question_hi": "अब उसके पास कितनी हैं?",
+    "options": [3, 4, 5]
+  }
+]

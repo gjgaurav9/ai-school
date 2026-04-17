@@ -17,6 +17,14 @@ import LetterLand from './components/games/nursery/LetterLand'
 import StorySequencer from './components/games/nursery/StorySequencer'
 import HelpfulHands from './components/games/nursery/HelpfulHands'
 import MyBodyMyRules from './components/games/nursery/MyBodyMyRules'
+import EmotionDiary from './components/games/lkg/EmotionDiary'
+import WordBuilder from './components/games/lkg/WordBuilder'
+import AdditionStories from './components/games/lkg/AdditionStories'
+import ThinkingTraps from './components/games/lkg/ThinkingTraps'
+import CommunityHelpers from './components/games/lkg/CommunityHelpers'
+import TimeExplorer from './components/games/lkg/TimeExplorer'
+import FairPlayArena from './components/games/lkg/FairPlayArena'
+import HindiAkshar from './components/games/lkg/HindiAkshar'
 import { useProgress } from './hooks/useProgress'
 
 const GAME_COMPONENTS = {
@@ -38,6 +46,15 @@ const GAME_COMPONENTS = {
   'story-sequencer': StorySequencer,
   'helpful-hands': HelpfulHands,
   'my-body-my-rules': MyBodyMyRules,
+  // BLOOM phase (LKG, ages 5-6)
+  'emotion-diary': EmotionDiary,
+  'word-builder': WordBuilder,
+  'addition-stories': AdditionStories,
+  'thinking-traps': ThinkingTraps,
+  'community-helpers': CommunityHelpers,
+  'time-explorer': TimeExplorer,
+  'fair-play-arena': FairPlayArena,
+  'hindi-akshar': HindiAkshar,
 }
 
 function App() {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 // ---------------------------------------------------------------------------
-// Shared character component for Bandar, Mor, Gillu, Meenu, Chidiya
+// Shared character component for animal cast
 // Stylistic match with Guddu — round head, simple SVG, clear emotions
 // ---------------------------------------------------------------------------
 
@@ -11,6 +11,9 @@ const CHAR_COLORS = {
   gillu:   { body: '#C68642', accent: '#A06A30', face: '#E2B57A', name: 'Gillu' },
   meenu:   { body: '#B0B0B0', accent: '#888888', face: '#D8D8D8', name: 'Meenu' },
   chidiya: { body: '#FFD93D', accent: '#E0A800', face: '#FFE680', name: 'Chidiya' },
+  chhotu:  { body: '#5B2C0F', accent: '#3D1D0A', face: '#8B4A1F', name: 'Chhotu' },
+  ullu:    { body: '#7A6048', accent: '#5A4530', face: '#C9B391', name: 'Ullu' },
+  bhaloo:  { body: '#6B4423', accent: '#4A2F18', face: '#9C6F45', name: 'Bhaloo' },
 };
 
 const EMOTION_TWEAKS = {
@@ -181,6 +184,47 @@ function CharacterFeatures({ kind, cx, headY, r }) {
                   Q ${cx + r * 0.85} ${headY + r * 0.55}
                     ${cx + r * 0.65} ${headY + r * 1.0} Z`}
               fill="#E0A800" stroke="#A87C00" strokeWidth={1} />
+      </>
+    );
+  }
+  if (kind === 'chhotu') {
+    // Ant: antennae + small dot body segments
+    return (
+      <>
+        <line x1={cx - r * 0.25} y1={headY - r * 0.85} x2={cx - r * 0.45} y2={headY - r * 1.15}
+          stroke="#3D1D0A" strokeWidth={2} strokeLinecap="round" />
+        <circle cx={cx - r * 0.45} cy={headY - r * 1.15} r={3} fill="#3D1D0A" />
+        <line x1={cx + r * 0.25} y1={headY - r * 0.85} x2={cx + r * 0.45} y2={headY - r * 1.15}
+          stroke="#3D1D0A" strokeWidth={2} strokeLinecap="round" />
+        <circle cx={cx + r * 0.45} cy={headY - r * 1.15} r={3} fill="#3D1D0A" />
+      </>
+    );
+  }
+  if (kind === 'ullu') {
+    // Owl: tufted ears + big circular eye discs (drawn behind face)
+    return (
+      <>
+        <path d={`M ${cx - r * 0.65} ${headY - r * 0.95} L ${cx - r * 0.85} ${headY - r * 1.25} L ${cx - r * 0.4} ${headY - r * 1.05} Z`} fill="#5A4530" />
+        <path d={`M ${cx + r * 0.65} ${headY - r * 0.95} L ${cx + r * 0.85} ${headY - r * 1.25} L ${cx + r * 0.4} ${headY - r * 1.05} Z`} fill="#5A4530" />
+        {/* Eye discs */}
+        <circle cx={cx - r * 0.32} cy={headY - r * 0.05} r={r * 0.32} fill="#FFF8E0" stroke="#5A4530" strokeWidth={1.5} />
+        <circle cx={cx + r * 0.32} cy={headY - r * 0.05} r={r * 0.32} fill="#FFF8E0" stroke="#5A4530" strokeWidth={1.5} />
+        {/* Beak */}
+        <path d={`M ${cx} ${headY + r * 0.18} L ${cx - 5} ${headY + r * 0.34} L ${cx + 5} ${headY + r * 0.34} Z`} fill="#FFB347" stroke="#C97E1F" strokeWidth={1} />
+      </>
+    );
+  }
+  if (kind === 'bhaloo') {
+    // Bear: round ears
+    return (
+      <>
+        <circle cx={cx - r * 0.85} cy={headY - r * 0.7} r={r * 0.28} fill="#6B4423" stroke="#4A2F18" strokeWidth={1.5} />
+        <circle cx={cx - r * 0.85} cy={headY - r * 0.7} r={r * 0.15} fill="#9C6F45" />
+        <circle cx={cx + r * 0.85} cy={headY - r * 0.7} r={r * 0.28} fill="#6B4423" stroke="#4A2F18" strokeWidth={1.5} />
+        <circle cx={cx + r * 0.85} cy={headY - r * 0.7} r={r * 0.15} fill="#9C6F45" />
+        {/* Snout */}
+        <ellipse cx={cx} cy={headY + r * 0.3} rx={r * 0.45} ry={r * 0.3} fill="#9C6F45" />
+        <circle cx={cx} cy={headY + r * 0.18} r={3} fill="#222" />
       </>
     );
   }
