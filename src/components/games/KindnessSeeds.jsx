@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import Guddu from '../common/Guddu';
+import June from '../common/June';
 import Celebration from '../common/Celebration';
 import GameShell from '../common/GameShell';
 import OptionButton from '../common/OptionButton';
@@ -351,7 +351,7 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
   const [growingIndex, setGrowingIndex] = useState(null);
   const [seedDropping, setSeedDropping] = useState(false);
   const [showCelebration, setShowCelebration] = useState(false);
-  const [gudduEmotion, setGudduEmotion] = useState('neutral');
+  const [juneEmotion, setJuneEmotion] = useState('neutral');
   const [disabled, setDisabled] = useState(false);
   const [feedbackText, setFeedbackText] = useState('');
   const [nudgeText, setNudgeText] = useState('');
@@ -380,7 +380,7 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
   /* ────────── Intro ────────── */
   useEffect(() => {
     if (gameState === 'intro') {
-      setGudduEmotion('happy');
+      setJuneEmotion('happy');
       const introEn = childName
         ? `${childName}, welcome to the Kindness Garden! Let's plant flowers by being kind!`
         : "Welcome to the Kindness Garden! Let's plant flowers by being kind!";
@@ -397,7 +397,7 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
   /* ────────── Speak scenario text + options when round changes ────────── */
   useEffect(() => {
     if (gameState === 'playing') {
-      setGudduEmotion('neutral');
+      setJuneEmotion('neutral');
       setDisabled(false);
       speakSequence([
         { en: scenario.scene_en, hi: scenario.scene_hi },
@@ -412,7 +412,7 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
     if (disabled) return;
     setDisabled(true);
     tap();
-    setGudduEmotion('happy');
+    setJuneEmotion('happy');
 
     const namePrefix = childName ? `${childName}, ` : '';
     const responseTextEn = namePrefix + scenario.kind_response_en;
@@ -440,7 +440,7 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
     // After flower grows, move to next round or garden reveal
     schedule(() => {
       setGrowingIndex(null);
-      setGudduEmotion('celebrating');
+      setJuneEmotion('celebrating');
       setShowCelebration(true);
     }, 1800);
 
@@ -455,7 +455,7 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
       } else {
         setGameState('garden_reveal');
         celebrate();
-        setGudduEmotion('celebrating');
+        setJuneEmotion('celebrating');
       }
     });
   }, [
@@ -468,7 +468,7 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
     if (disabled) return;
     setDisabled(true);
     tap();
-    setGudduEmotion('sad');
+    setJuneEmotion('sad');
     gentle();
 
     const nudge = language === 'hi' ? scenario.nudge_hi : scenario.nudge_en;
@@ -561,7 +561,7 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
               }
             />
             <div className="relative">
-              <Guddu emotion="happy" size={160} animate />
+              <June emotion="happy" size={160} animate />
               <WateringCan />
             </div>
           </div>
@@ -570,7 +570,7 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
         {/* ────── PLAYING / NUDGE / FEEDBACK STATES ────── */}
         {(gameState === 'playing' || gameState === 'nudge' || gameState === 'feedback') && (
           <div className="flex-1 flex flex-col">
-            {/* Top: Guddu + speech bubble */}
+            {/* Top: June + speech bubble */}
             <div className="flex flex-col items-center pt-2 px-4">
               <SpeechBubble
                 text={
@@ -581,8 +581,8 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
                       : sceneText
                 }
               />
-              <Guddu
-                emotion={gudduEmotion}
+              <June
+                emotion={juneEmotion}
                 size={120}
                 animate
               />
@@ -687,9 +687,9 @@ export default function KindnessSeeds({ onComplete, onBack, language = 'en', chi
               </p>
             </div>
 
-            {/* Guddu celebrating */}
+            {/* June celebrating */}
             <div className="flex justify-center mt-2">
-              <Guddu emotion="celebrating" size={100} animate />
+              <June emotion="celebrating" size={100} animate />
             </div>
 
             {/* Butterflies */}

@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import GameShell from '../../common/GameShell';
 import Celebration from '../../common/Celebration';
 import ParentTip from '../../common/ParentTip';
-import Guddu from '../../common/Guddu';
+import June from '../../common/June';
 import Character from '../../common/Character';
 import { useVoice } from '../../../hooks/useVoice';
 import { useSound } from '../../../hooks/useSound';
@@ -18,7 +18,7 @@ const TEXT = {
   done: { en: 'You can now spot all 5 thinking traps!', hi: 'अब तुम पाँचों जाल पहचान सकते हो!' },
   again: { en: 'Play Again', hi: 'फिर खेलें' },
   back: { en: 'Back Home', hi: 'वापस जाएँ' },
-  thoughtBubble: { en: "Guddu's thought:", hi: 'गुड्डू सोचता है:' },
+  thoughtBubble: { en: "June's thought:", hi: 'जून सोचता है:' },
 };
 
 export default function ThinkingTraps({ onComplete, onBack, language = 'en', childName = '' }) {
@@ -45,8 +45,8 @@ export default function ThinkingTraps({ onComplete, onBack, language = 'en', chi
   useEffect(() => {
     if (phase !== 'scene') return;
     const t = setTimeout(() => speak(
-      `${trap.scene_en} Guddu thinks: ${trap.thought_en}. ${trap.prompt_en}`,
-      `${trap.scene_hi} गुड्डू सोचता है: ${trap.thought_hi}। ${trap.prompt_hi}`,
+      `${trap.scene_en} June thinks: ${trap.thought_en}. ${trap.prompt_en}`,
+      `${trap.scene_hi} जून सोचता है: ${trap.thought_hi}। ${trap.prompt_hi}`,
     ), 350);
     return () => clearTimeout(t);
   }, [phase, trapIdx, trap, speak]);
@@ -166,7 +166,7 @@ export default function ThinkingTraps({ onComplete, onBack, language = 'en', chi
 
         {/* Thought bubble */}
         <div className="flex items-start gap-2 px-2">
-          <Guddu emotion="sad" size={70} animate />
+          <June emotion="sad" size={70} animate />
           <div className="relative bg-white border-3 border-purple-300 rounded-2xl px-3 py-2 flex-1 shadow-md">
             <div className="text-[10px] font-bold text-purple-500 uppercase">{TEXT.thoughtBubble[lang]}</div>
             <div className="text-sm font-bold text-gray-800 italic">"{lang === 'hi' ? trap.thought_hi : trap.thought_en}"</div>

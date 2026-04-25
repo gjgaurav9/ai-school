@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import Guddu from '../common/Guddu';
+import June from '../common/June';
 import Celebration from '../common/Celebration';
 import GameShell from '../common/GameShell';
 import OptionButton from '../common/OptionButton';
@@ -412,7 +412,7 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
   const [currentRound, setCurrentRound] = useState(0);
   const [showHearts, setShowHearts] = useState(false);
   const [showCelebration, setShowCelebration] = useState(false);
-  const [gudduEmotion, setGudduEmotion] = useState('happy');
+  const [juneEmotion, setJuneEmotion] = useState('happy');
   const [animalHappy, setAnimalHappy] = useState(false);
   const [disabled, setDisabled] = useState(false);
   const [responseText, setResponseText] = useState('');
@@ -443,13 +443,13 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
   /* ────────── Intro ────────── */
   useEffect(() => {
     if (gameState === 'intro') {
-      setGudduEmotion('happy');
+      setJuneEmotion('happy');
       const introEn = childName
-        ? `Hi ${childName}! I'm Guddu! Welcome to my garden! Let's learn to be good friends!`
-        : "Hi! I'm Guddu! Welcome to my garden! Let's learn to be good friends!";
+        ? `Hi ${childName}! I'm June! Welcome to my garden! Let's learn to be good friends!`
+        : "Hi! I'm June! Welcome to my garden! Let's learn to be good friends!";
       const introHi = childName
-        ? `नमस्ते ${childName}! मैं गुड्डू हूँ! मेरे बगीचे में आपका स्वागत है! चलो अच्छे दोस्त बनना सीखें!`
-        : "नमस्ते! मैं गुड्डू हूँ! मेरे बगीचे में आपका स्वागत है! चलो अच्छे दोस्त बनना सीखें!";
+        ? `नमस्ते ${childName}! मैं जून हूँ! मेरे बगीचे में आपका स्वागत है! चलो अच्छे दोस्त बनना सीखें!`
+        : "नमस्ते! मैं जून हूँ! मेरे बगीचे में आपका स्वागत है! चलो अच्छे दोस्त बनना सीखें!";
       speak(introEn, introHi);
       schedule(() => {
         setGameState('playing');
@@ -460,7 +460,7 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
   /* ────────── Speak scenario + options when playing ────────── */
   useEffect(() => {
     if (gameState === 'playing') {
-      setGudduEmotion('neutral');
+      setJuneEmotion('neutral');
       setAnimalHappy(false);
       setDisabled(false);
       speakSequence([
@@ -476,7 +476,7 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
     if (disabled) return;
     setDisabled(true);
     tap();
-    setGudduEmotion('happy');
+    setJuneEmotion('happy');
     setAnimalHappy(true);
     success();
 
@@ -492,7 +492,7 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
 
     // After response, move to next round or celebration
     schedule(() => {
-      setGudduEmotion('celebrating');
+      setJuneEmotion('celebrating');
       setShowCelebration(true);
     }, 2000);
 
@@ -509,7 +509,7 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
         } else {
           // All rounds complete - celebration
           setGameState('celebration');
-          setGudduEmotion('celebrating');
+          setJuneEmotion('celebrating');
           celebrate();
           setEarnedBadges(BADGES.map(b => b.id));
         }
@@ -522,7 +522,7 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
     if (disabled) return;
     setDisabled(true);
     tap();
-    setGudduEmotion('sad');
+    setJuneEmotion('sad');
     setAnimalHappy(false);
     gentle();
 
@@ -534,7 +534,7 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
     // After nudge speech finishes, auto-guide to kind response (second chance)
     nudgeDone.then(() => {
       schedule(() => {
-        setGudduEmotion('happy');
+        setJuneEmotion('happy');
         setAnimalHappy(true);
         success();
         setShowHearts(true);
@@ -549,7 +549,7 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
 
         schedule(() => {
           setShowCelebration(true);
-          setGudduEmotion('celebrating');
+          setJuneEmotion('celebrating');
         }, 2000);
 
         responseDone.then(() => {
@@ -563,7 +563,7 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
               setGameState('playing');
             } else {
               setGameState('celebration');
-              setGudduEmotion('celebrating');
+              setJuneEmotion('celebrating');
               celebrate();
               setEarnedBadges(BADGES.map(b => b.id));
             }
@@ -648,14 +648,14 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
               text={
                 language === 'hi'
                   ? childName
-                    ? `नमस्ते ${childName}! मैं गुड्डू हूँ! चलो अच्छे दोस्त बनना सीखें!`
-                    : 'नमस्ते! मैं गुड्डू हूँ! चलो अच्छे दोस्त बनना सीखें!'
+                    ? `नमस्ते ${childName}! मैं जून हूँ! चलो अच्छे दोस्त बनना सीखें!`
+                    : 'नमस्ते! मैं जून हूँ! चलो अच्छे दोस्त बनना सीखें!'
                   : childName
-                    ? `Hi ${childName}! I'm Guddu! Let's learn to be good friends!`
-                    : "Hi! I'm Guddu! Let's learn to be good friends!"
+                    ? `Hi ${childName}! I'm June! Let's learn to be good friends!`
+                    : "Hi! I'm June! Let's learn to be good friends!"
               }
             />
-            <Guddu emotion="happy" size={160} animate />
+            <June emotion="happy" size={160} animate />
             {/* Intro animals peek in */}
             <div className="flex items-end justify-center gap-4 mt-2">
               <div className="animate-bounce-in" style={{ animationDelay: '0.3s', opacity: 0, animationFillMode: 'forwards' }}>
@@ -689,9 +689,9 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
                 }
               />
 
-              {/* Characters row: Guddu + scene animal */}
+              {/* Characters row: June + scene animal */}
               <div className="flex items-end justify-center gap-3 mt-1">
-                <Guddu emotion={gudduEmotion} size={120} animate />
+                <June emotion={juneEmotion} size={120} animate />
                 <SceneAnimal
                   scenarioId={scenario.id}
                   happy={animalHappy}
@@ -768,10 +768,10 @@ export default function AnimalFriends({ onComplete, onBack, language = 'en', chi
               </h2>
             </div>
 
-            {/* Dancing Guddu + animals */}
+            {/* Dancing June + animals */}
             <div className="flex flex-col items-center mt-2">
               <div className="animate-wiggle" style={{ animationIterationCount: 'infinite', animationDuration: '0.6s' }}>
-                <Guddu emotion="celebrating" size={110} animate />
+                <June emotion="celebrating" size={110} animate />
               </div>
               <DancingAnimals />
             </div>

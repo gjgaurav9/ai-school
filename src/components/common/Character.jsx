@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 // ---------------------------------------------------------------------------
 // Shared character component for animal cast
-// Stylistic match with Guddu — round head, simple SVG, clear emotions
+// Stylistic match with June — round head, simple SVG, clear emotions
 // ---------------------------------------------------------------------------
 
 const CHAR_COLORS = {

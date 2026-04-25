@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import Guddu from '../common/Guddu';
+import June from '../common/June';
 import Celebration from '../common/Celebration';
 import GameShell from '../common/GameShell';
 import ParentTip from '../common/ParentTip';
@@ -484,12 +484,12 @@ function OptionCard({ name, language, onClick, state, disabled }) {
 }
 
 // ---------------------------------------------------------------------------
-// Explorer hat overlay for Guddu during intro
+// Explorer hat overlay for June during intro
 // ---------------------------------------------------------------------------
-function ExplorerGuddu({ size = 120 }) {
+function ExplorerJune({ size = 120 }) {
   return (
     <div className="relative inline-block">
-      <Guddu emotion="happy" size={size} animate />
+      <June emotion="happy" size={size} animate />
       {/* Explorer hat */}
       <svg
         className="absolute"
@@ -741,7 +741,7 @@ export default function SoundSafari({ onComplete, onBack, language = 'en', child
         <div className="relative flex-1 flex flex-col">
           <JungleBG />
           <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 text-center gap-6">
-            <ExplorerGuddu size={140} />
+            <ExplorerJune size={140} />
 
             <div className="bg-white/90 rounded-2xl px-5 py-4 shadow-lg max-w-xs">
               <p className="text-base font-bold text-gray-700 leading-snug">
@@ -772,7 +772,7 @@ export default function SoundSafari({ onComplete, onBack, language = 'en', child
           <JungleBG />
           <Celebration active={showCelebration} type="confetti" />
           <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 gap-4">
-            <Guddu emotion="celebrating" size={120} animate />
+            <June emotion="celebrating" size={120} animate />
 
             <div className="bg-white/90 rounded-2xl px-5 py-4 shadow-lg max-w-xs text-center">
               <p className="text-lg font-bold text-gray-700">
@@ -815,9 +815,9 @@ export default function SoundSafari({ onComplete, onBack, language = 'en', child
         <JungleBG />
 
         <div className="relative z-10 flex-1 flex flex-col items-center px-4 pt-2 pb-4 gap-4">
-          {/* Guddu — small, in the corner */}
+          {/* June — small, in the corner */}
           <div className="self-start">
-            <Guddu
+            <June
               emotion={showFact ? 'happy' : 'surprised'}
               size={64}
               animate

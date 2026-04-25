@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import GameShell from '../../common/GameShell';
 import Celebration from '../../common/Celebration';
 import ParentTip from '../../common/ParentTip';
-import Guddu from '../../common/Guddu';
+import June from '../../common/June';
 import { useVoice } from '../../../hooks/useVoice';
 import { useSound } from '../../../hooks/useSound';
 import { useProgress } from '../../../hooks/useProgress';
@@ -212,7 +212,7 @@ export default function EmotionDiary({ onComplete, onBack, language = 'en', chil
       <GameShell onBack={onBack} title={TEXT.title[lang]} bg={bg}>
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
           <div className="text-7xl animate-bounce-in">{'\u{1F4D4}'}</div>
-          <Guddu emotion="happy" size={170} animate />
+          <June emotion="happy" size={170} animate />
           <div className="bg-white rounded-2xl px-5 py-4 shadow-md text-center text-gray-700 text-base font-semibold max-w-[320px] animate-bounce-in" style={{ animationDelay: '0.3s' }}>
             {TEXT.intro[lang](childName)}
           </div>

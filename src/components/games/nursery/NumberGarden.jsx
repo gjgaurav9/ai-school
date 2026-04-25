@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import GameShell from '../../common/GameShell';
 import Celebration from '../../common/Celebration';
 import ParentTip from '../../common/ParentTip';
-import Guddu from '../../common/Guddu';
+import June from '../../common/June';
 import Character from '../../common/Character';
 import { useVoice } from '../../../hooks/useVoice';
 import { useSound } from '../../../hooks/useSound';
@@ -11,8 +11,8 @@ import rounds from '../../../data/nursery/number-rounds.json';
 const TEXT = {
   title: { en: 'Number Garden', hi: 'नंबर बगीचा' },
   intro: {
-    en: (n) => `Welcome${n ? ', ' + n : ''}, to Guddu's Number Garden! Let's count and grow!`,
-    hi: (n) => `${n ? n + ', ' : ''}गुड्डू के नंबर बगीचे में स्वागत है! चलो गिनें और उगाएँ!`,
+    en: (n) => `Welcome${n ? ', ' + n : ''}, to June's Number Garden! Let's count and grow!`,
+    hi: (n) => `${n ? n + ', ' : ''}जून के नंबर बगीचे में स्वागत है! चलो गिनें और उगाएँ!`,
   },
   start: { en: 'Start Counting!', hi: 'गिनना शुरू!' },
   done: { en: "Your garden is blooming!", hi: 'तुम्हारा बगीचा खिल रहा है!' },
@@ -225,8 +225,8 @@ function GiveRound({ round, lang, onCorrect, onWrong, sound, speak }) {
   };
 
   const charKind = round.character;
-  const CharComp = charKind === 'guddu'
-    ? <Guddu emotion="happy" size={90} animate />
+  const CharComp = charKind === 'june'
+    ? <June emotion="happy" size={90} animate />
     : <Character kind={charKind} emotion="happy" size={90} animate showLabel />;
 
   return (
@@ -378,7 +378,7 @@ export default function NumberGarden({ onComplete, onBack, language = 'en', chil
       <GameShell onBack={onBack} title={TEXT.title[lang]} bg={bg}>
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
           <div className="text-7xl animate-bounce-in">{'\u{1F33B}'}</div>
-          <Guddu emotion="happy" size={170} animate />
+          <June emotion="happy" size={170} animate />
           <div className="bg-white rounded-2xl px-5 py-4 shadow-md text-center text-gray-700 text-base font-semibold max-w-[320px] animate-bounce-in" style={{ animationDelay: '0.3s' }}>
             {TEXT.intro[lang](childName)}
           </div>
@@ -397,7 +397,7 @@ export default function NumberGarden({ onComplete, onBack, language = 'en', chil
         <Celebration active={showConfetti} type="stars" />
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-4">
           <div className="text-7xl animate-bounce-in">{'\u{1F33C}'}</div>
-          <Guddu emotion="celebrating" size={170} animate />
+          <June emotion="celebrating" size={170} animate />
           <div className="text-center animate-bounce-in" style={{ animationDelay: '0.2s' }}>
             <h2 className="text-2xl font-bold text-gray-800">{TEXT.done[lang]}</h2>
             <p className="text-amber-700 text-base font-bold mt-1">

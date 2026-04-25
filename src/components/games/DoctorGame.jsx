@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import Guddu from '../common/Guddu';
+import June from '../common/June';
 import Celebration from '../common/Celebration';
 import GameShell from '../common/GameShell';
 import OptionButton from '../common/OptionButton';
@@ -129,7 +129,7 @@ export default function DoctorGame({ onComplete, onBack, language = 'en', childN
   const [currentRound, setCurrentRound] = useState(0);
   const [healedPatients, setHealedPatients] = useState([]);
   const [showCelebration, setShowCelebration] = useState(false);
-  const [gudduEmotion, setGudduEmotion] = useState('neutral');
+  const [juneEmotion, setJuneEmotion] = useState('neutral');
   const [disabled, setDisabled] = useState(false);
   const [feedbackText, setFeedbackText] = useState('');
   const [nudgeText, setNudgeText] = useState('');
@@ -157,7 +157,7 @@ export default function DoctorGame({ onComplete, onBack, language = 'en', childN
   /* ────────── Intro ────────── */
   useEffect(() => {
     if (gameState === 'intro') {
-      setGudduEmotion('happy');
+      setJuneEmotion('happy');
       const introEn = childName
         ? `${childName}, welcome to the Little Doctor clinic! Our friends are not feeling well. Can you help them?`
         : "Welcome to the Little Doctor clinic! Our friends are not feeling well. Can you help them?";
@@ -174,7 +174,7 @@ export default function DoctorGame({ onComplete, onBack, language = 'en', childN
   /* ────────── Speak scenario + options ────────── */
   useEffect(() => {
     if (gameState === 'playing') {
-      setGudduEmotion('neutral');
+      setJuneEmotion('neutral');
       setDisabled(false);
       setPatientHappy(false);
       speakSequence([
@@ -190,7 +190,7 @@ export default function DoctorGame({ onComplete, onBack, language = 'en', childN
     if (disabled) return;
     setDisabled(true);
     tap();
-    setGudduEmotion('happy');
+    setJuneEmotion('happy');
     setPatientHappy(true);
 
     const namePrefix = childName ? `${childName}, ` : '';
@@ -211,7 +211,7 @@ export default function DoctorGame({ onComplete, onBack, language = 'en', childN
     }, 600);
 
     schedule(() => {
-      setGudduEmotion('celebrating');
+      setJuneEmotion('celebrating');
       setShowCelebration(true);
     }, 1800);
 
@@ -225,7 +225,7 @@ export default function DoctorGame({ onComplete, onBack, language = 'en', childN
         } else {
           setGameState('clinic_reveal');
           celebrate();
-          setGudduEmotion('celebrating');
+          setJuneEmotion('celebrating');
         }
       }, 800);
     });
@@ -239,7 +239,7 @@ export default function DoctorGame({ onComplete, onBack, language = 'en', childN
     if (disabled) return;
     setDisabled(true);
     tap();
-    setGudduEmotion('sad');
+    setJuneEmotion('sad');
     gentle();
 
     const nudge = language === 'hi' ? scenario.nudge_hi : scenario.nudge_en;
@@ -313,7 +313,7 @@ export default function DoctorGame({ onComplete, onBack, language = 'en', childN
               }
             />
             <div className="relative">
-              <Guddu emotion="happy" size={160} animate />
+              <June emotion="happy" size={160} animate />
               <div className="absolute -bottom-2 -right-2">
                 <DoctorBag size={60} />
               </div>
@@ -446,7 +446,7 @@ export default function DoctorGame({ onComplete, onBack, language = 'en', childN
               ))}
             </div>
 
-            <Guddu emotion="celebrating" size={140} animate />
+            <June emotion="celebrating" size={140} animate />
 
             <p className="text-sm text-gray-600 font-medium text-center mt-2 mb-3">
               {language === 'hi'

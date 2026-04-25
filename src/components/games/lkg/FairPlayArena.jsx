@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import GameShell from '../../common/GameShell';
 import Celebration from '../../common/Celebration';
 import ParentTip from '../../common/ParentTip';
-import Guddu from '../../common/Guddu';
+import June from '../../common/June';
 import Character from '../../common/Character';
 import { useVoice } from '../../../hooks/useVoice';
 import { useSound } from '../../../hooks/useSound';
@@ -28,22 +28,22 @@ const TEXT = {
 };
 
 function CharRenderer({ kind, size = 90 }) {
-  if (kind === 'guddu') return <Guddu emotion="happy" size={size} animate />;
+  if (kind === 'june') return <June emotion="happy" size={size} animate />;
   return <Character kind={kind} emotion="neutral" size={size} animate />;
 }
 
 function PushLogInteraction({ lang, sound, onDone }) {
-  const [taps, setTaps] = useState({ guddu: 0, chhotu: 0 });
+  const [taps, setTaps] = useState({ june: 0, chhotu: 0 });
   const [done, setDone] = useState(false);
   const target = 6;
-  const total = taps.guddu + taps.chhotu;
+  const total = taps.june + taps.chhotu;
 
   const handleTap = (who) => {
     if (done) return;
     sound.playTone(440 + total * 40, 0.18, 'triangle');
     setTaps(prev => {
       const next = { ...prev, [who]: prev[who] + 1 };
-      if (next.guddu + next.chhotu >= target) {
+      if (next.june + next.chhotu >= target) {
         setDone(true);
         sound.success();
         setTimeout(onDone, 1500);
@@ -60,8 +60,8 @@ function PushLogInteraction({ lang, sound, onDone }) {
         {lang === 'hi' ? 'मिलकर लकड़ी धकेलें!' : 'Push the log together!'}
       </div>
       <div className="flex items-center gap-3">
-        <button onClick={() => handleTap('guddu')} disabled={done} className="active:scale-90 transition-transform">
-          <Guddu emotion="happy" size={90} />
+        <button onClick={() => handleTap('june')} disabled={done} className="active:scale-90 transition-transform">
+          <June emotion="happy" size={90} />
           <div className="text-xs font-bold text-amber-700 mt-1">PUSH</div>
         </button>
         <div className="flex items-center gap-1">

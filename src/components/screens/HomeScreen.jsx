@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import Guddu from '../common/Guddu';
+import June from '../common/June';
 
 const SEED_GAMES = [
   { id: 'mood-mirror', name: 'Mood Mirror', subtitle: 'Feelings Game', icon: '\u{1FA9E}', color: '#FFD93D' },
   { id: 'color-feelings', name: 'Color Feelings', subtitle: 'Paint Your Mood', icon: '\u{1F3A8}', color: '#A855F7' },
-  { id: 'guddus-day', name: "Guddu's Day", subtitle: 'Daily Routine', icon: '\u{1F305}', color: '#FF8C42' },
+  { id: 'junes-day', name: "June's Day", subtitle: 'Daily Routine', icon: '\u{1F305}', color: '#FF8C42' },
   { id: 'animal-friends', name: 'Animal Friends', subtitle: 'Sharing Garden', icon: '\u{1F33B}', color: '#2DC653' },
   { id: 'sound-safari', name: 'Sound Safari', subtitle: 'Listen & Find', icon: '\u{1F3B5}', color: '#0077B6' },
   { id: 'shape-world', name: 'Shape World', subtitle: 'Build With Shapes', icon: '\u{1F537}', color: '#E91E8C' },
@@ -57,7 +57,7 @@ export default function HomeScreen({ onSelectGame, language, onToggleLanguage, s
       {/* Header */}
       <div className="flex items-center justify-between px-4 pt-4 pb-2">
         <div className="flex items-center gap-2">
-          <Guddu emotion="happy" size={70} animate={false} />
+          <June emotion="happy" size={70} animate={false} />
           <div>
             <h1 className="text-2xl font-extrabold text-gray-800 leading-tight">AI School</h1>
             <p className="text-xs text-gray-500">

@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import GameShell from '../../common/GameShell';
 import Celebration from '../../common/Celebration';
 import ParentTip from '../../common/ParentTip';
-import Guddu from '../../common/Guddu';
+import June from '../../common/June';
 import { useVoice } from '../../../hooks/useVoice';
 import { useSound } from '../../../hooks/useSound';
 import scenarios from '../../../data/lkg/community-helpers.json';
@@ -11,7 +11,7 @@ const TEXT = {
   title: { en: 'Community Helpers', hi: 'समाज के साथी' },
   intro: {
     en: (n) => `${n ? n + ', G' : 'G'}uddu's town is full of helpers! Every person does something important. Let's meet them!`,
-    hi: (n) => `${n ? n + ', ' : ''}गुड्डू के शहर में बहुत साथी हैं! हर कोई कुछ ज़रूरी करता है। चलो मिलें!`,
+    hi: (n) => `${n ? n + ', ' : ''}जून के शहर में बहुत साथी हैं! हर कोई कुछ ज़रूरी करता है। चलो मिलें!`,
   },
   start: { en: 'Visit the Town', hi: 'शहर चलें' },
   again: { en: 'Play Again', hi: 'फिर खेलें' },
@@ -121,7 +121,7 @@ export default function CommunityHelpers({ onComplete, onBack, language = 'en', 
       <GameShell onBack={onBack} title={TEXT.title[lang]} bg={bg}>
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
           <div className="text-7xl animate-bounce-in">{'\ud83c\udfd8\ufe0f'}</div>
-          <Guddu emotion="happy" size={150} animate />
+          <June emotion="happy" size={150} animate />
           <div className="bg-white rounded-2xl px-5 py-4 shadow-md text-center text-gray-700 text-base font-semibold max-w-[320px] animate-bounce-in" style={{ animationDelay: '0.3s' }}>
             {TEXT.intro[lang](childName)}
           </div>
@@ -184,7 +184,7 @@ export default function CommunityHelpers({ onComplete, onBack, language = 'en', 
         <Celebration active type="stars" />
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-3">
           <div className="text-7xl animate-bounce-in">{'\ud83c\udfc5'}</div>
-          <Guddu emotion="celebrating" size={140} animate />
+          <June emotion="celebrating" size={140} animate />
           <h2 className="text-xl font-bold text-gray-800">{TEXT.done[lang]}</h2>
           <p className="text-amber-700 text-sm font-bold">{TEXT.badge[lang]}</p>
           <div className="flex gap-3 pt-2">

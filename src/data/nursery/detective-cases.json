@@ -3,9 +3,9 @@
     "id": "birthday",
     "title_en": "The Birthday Party",
     "title_hi": "जन्मदिन की पार्टी",
-    "scene_en": "It's a birthday party! Guddu is jumping with joy. But look at Mor... she's standing alone in the corner.",
-    "scene_hi": "जन्मदिन की पार्टी है! गुड्डू खुशी से उछल रहा है। पर देखो मोर... वह कोने में अकेली खड़ी है।",
-    "characters": ["guddu:happy", "mor:shy"],
+    "scene_en": "It's a birthday party! June is jumping with joy. But look at Mor... she's standing alone in the corner.",
+    "scene_hi": "जन्मदिन की पार्टी है! जून खुशी से उछल रहा है। पर देखो मोर... वह कोने में अकेली खड़ी है।",
+    "characters": ["june:happy", "mor:shy"],
     "questions": [
       {
         "prompt_en": "How does Mor feel?",
@@ -28,8 +28,8 @@
         "correct": "no_friends"
       }
     ],
-    "lesson_en": "The same party makes Guddu happy but Mor nervous. Both feelings are okay!",
-    "lesson_hi": "वही पार्टी गुड्डू को खुश और मोर को घबराई करती है। दोनों भावनाएँ सही हैं!"
+    "lesson_en": "The same party makes June happy but Mor nervous. Both feelings are okay!",
+    "lesson_hi": "वही पार्टी जून को खुश और मोर को घबराई करती है। दोनों भावनाएँ सही हैं!"
   },
   {
     "id": "broken_tower",
@@ -67,9 +67,9 @@
     "id": "race",
     "title_en": "The Race",
     "title_hi": "दौड़",
-    "scene_en": "Guddu and Gillu had a running race. Gillu won!",
-    "scene_hi": "गुड्डू और गिल्लू ने दौड़ लगाई। गिल्लू जीत गया!",
-    "characters": ["gillu:proud", "guddu:sad"],
+    "scene_en": "June and Gillu had a running race. Gillu won!",
+    "scene_hi": "जून और गिल्लू ने दौड़ लगाई। गिल्लू जीत गया!",
+    "characters": ["gillu:proud", "june:sad"],
     "questions": [
       {
         "prompt_en": "How does Gillu feel?",
@@ -82,8 +82,8 @@
         "correct": "proud"
       },
       {
-        "prompt_en": "And Guddu? He tried really hard but didn't win.",
-        "prompt_hi": "और गुड्डू? उसने बहुत कोशिश की पर जीत नहीं पाया।",
+        "prompt_en": "And June? He tried really hard but didn't win.",
+        "prompt_hi": "और जून? उसने बहुत कोशिश की पर जीत नहीं पाया।",
         "options": [
           { "key": "disappointed_ok", "label_en": "Disappointed but okay", "label_hi": "निराश पर ठीक है", "icon": "\ud83e\udd72" },
           { "key": "angry_friend", "label_en": "Angry at Gillu", "label_hi": "गिल्लू पर गुस्सा", "icon": "\ud83d\ude20" },
@@ -92,30 +92,30 @@
         "correct": "disappointed_ok"
       }
     ],
-    "lesson_en": "It's normal to feel disappointed when we try hard and don't win. Guddu can be proud of trying AND happy for his friend!",
-    "lesson_hi": "जब हम बहुत कोशिश करते हैं और नहीं जीतते तो निराशा होना सही है। गुड्डू कोशिश पर गर्व कर सकता है और दोस्त के लिए खुश भी हो सकता है!"
+    "lesson_en": "It's normal to feel disappointed when we try hard and don't win. June can be proud of trying AND happy for his friend!",
+    "lesson_hi": "जब हम बहुत कोशिश करते हैं और नहीं जीतते तो निराशा होना सही है। जून कोशिश पर गर्व कर सकता है और दोस्त के लिए खुश भी हो सकता है!"
   },
   {
     "id": "dark_room",
     "title_en": "The Dark Room",
     "title_hi": "अंधेरा कमरा",
-    "scene_en": "The lights went out! Guddu is a little scared. But look — Bandar thinks it's an adventure!",
-    "scene_hi": "बत्तियाँ बुझ गईं! गुड्डू थोड़ा डरा है। पर देखो — बंदर को यह एक रोमांच लग रहा है!",
-    "characters": ["guddu:scared", "bandar:excited"],
+    "scene_en": "The lights went out! June is a little scared. But look — Bandar thinks it's an adventure!",
+    "scene_hi": "बत्तियाँ बुझ गईं! जून थोड़ा डरा है। पर देखो — बंदर को यह एक रोमांच लग रहा है!",
+    "characters": ["june:scared", "bandar:excited"],
     "questions": [
       {
-        "prompt_en": "Is it okay that Guddu is scared and Bandar isn't?",
-        "prompt_hi": "क्या यह सही है कि गुड्डू डरा है और बंदर नहीं?",
+        "prompt_en": "Is it okay that June is scared and Bandar isn't?",
+        "prompt_hi": "क्या यह सही है कि जून डरा है और बंदर नहीं?",
         "options": [
           { "key": "yes_different", "label_en": "Yes — everyone feels differently", "label_hi": "हाँ — हर कोई अलग महसूस करता है", "icon": "\u2705" },
-          { "key": "no_brave", "label_en": "No — Guddu should be brave", "label_hi": "नहीं — गुड्डू को बहादुर होना चाहिए", "icon": "\u274c" },
+          { "key": "no_brave", "label_en": "No — June should be brave", "label_hi": "नहीं — जून को बहादुर होना चाहिए", "icon": "\u274c" },
           { "key": "no_scared", "label_en": "No — Bandar should be scared too", "label_hi": "नहीं — बंदर को भी डरना चाहिए", "icon": "\u274c" }
         ],
         "correct": "yes_different"
       }
     ],
-    "lesson_en": "There's no 'right' way to feel. Guddu being scared is just as okay as Bandar being excited. We all experience things differently!",
-    "lesson_hi": "महसूस करने का कोई 'सही' तरीका नहीं होता। गुड्डू का डरना और बंदर का उत्साहित होना दोनों सही हैं। हम सब अलग तरह से अनुभव करते हैं!"
+    "lesson_en": "There's no 'right' way to feel. June being scared is just as okay as Bandar being excited. We all experience things differently!",
+    "lesson_hi": "महसूस करने का कोई 'सही' तरीका नहीं होता। जून का डरना और बंदर का उत्साहित होना दोनों सही हैं। हम सब अलग तरह से अनुभव करते हैं!"
   },
   {
     "id": "new_kid",
@@ -123,11 +123,11 @@
     "title_hi": "नया दोस्त",
     "scene_en": "Meenu is new at school. Let's see how everyone feels about the new friend!",
     "scene_hi": "मीनू स्कूल में नई है। देखें सबको नए दोस्त के बारे में कैसा लगता है!",
-    "characters": ["meenu:shy", "guddu:curious", "mor:worried", "bandar:excited"],
+    "characters": ["meenu:shy", "june:curious", "mor:worried", "bandar:excited"],
     "questions": [
       {
-        "prompt_en": "How does Guddu feel about the new friend?",
-        "prompt_hi": "गुड्डू को नए दोस्त के बारे में कैसा लग रहा है?",
+        "prompt_en": "How does June feel about the new friend?",
+        "prompt_hi": "जून को नए दोस्त के बारे में कैसा लग रहा है?",
         "options": [
           { "key": "curious", "label_en": "Curious", "label_hi": "जिज्ञासु", "icon": "\ud83e\udd14" },
           { "key": "scared", "label_en": "Scared", "label_hi": "डरा हुआ", "icon": "\ud83d\ude28" },
@@ -156,20 +156,20 @@
         "correct": "excited"
       }
     ],
-    "lesson_en": "One new friend, three different feelings! Guddu is curious, Mor is a little worried, and Bandar is excited. All normal!",
-    "lesson_hi": "एक नया दोस्त, तीन अलग भावनाएँ! गुड्डू जिज्ञासु है, मोर थोड़ी चिंतित है, और बंदर उत्साहित है। सब सामान्य!"
+    "lesson_en": "One new friend, three different feelings! June is curious, Mor is a little worried, and Bandar is excited. All normal!",
+    "lesson_hi": "एक नया दोस्त, तीन अलग भावनाएँ! जून जिज्ञासु है, मोर थोड़ी चिंतित है, और बंदर उत्साहित है। सब सामान्य!"
   },
   {
     "id": "goodbye",
     "title_en": "The Goodbye",
     "title_hi": "विदाई",
-    "scene_en": "Dadi is going back home after visiting. Guddu feels two things at the same time...",
-    "scene_hi": "दादी मिलने के बाद वापस जा रही हैं। गुड्डू एक साथ दो चीज़ें महसूस कर रहा है...",
-    "characters": ["guddu:sad"],
+    "scene_en": "Dadi is going back home after visiting. June feels two things at the same time...",
+    "scene_hi": "दादी मिलने के बाद वापस जा रही हैं। जून एक साथ दो चीज़ें महसूस कर रहा है...",
+    "characters": ["june:sad"],
     "questions": [
       {
-        "prompt_en": "What is Guddu feeling?",
-        "prompt_hi": "गुड्डू क्या महसूस कर रहा है?",
+        "prompt_en": "What is June feeling?",
+        "prompt_hi": "जून क्या महसूस कर रहा है?",
         "options": [
           { "key": "sad_grateful", "label_en": "Sad AND grateful", "label_hi": "उदास और कृतज्ञ", "icon": "\ud83d\udc95" },
           { "key": "only_sad", "label_en": "Only sad", "label_hi": "केवल उदास", "icon": "\ud83d\ude22" },
@@ -178,7 +178,7 @@
         "correct": "sad_grateful"
       }
     ],
-    "lesson_en": "Guddu is sad because Dadi is leaving, but ALSO grateful for the lovely time together. Did you know you can feel TWO things at once? That happens a lot!",
-    "lesson_hi": "गुड्डू उदास है क्योंकि दादी जा रही हैं, पर साथ बिताए अच्छे समय के लिए कृतज्ञ भी है। क्या तुम्हें पता है तुम एक साथ दो चीज़ें महसूस कर सकते हो? ऐसा बहुत होता है!"
+    "lesson_en": "June is sad because Dadi is leaving, but ALSO grateful for the lovely time together. Did you know you can feel TWO things at once? That happens a lot!",
+    "lesson_hi": "जून उदास है क्योंकि दादी जा रही हैं, पर साथ बिताए अच्छे समय के लिए कृतज्ञ भी है। क्या तुम्हें पता है तुम एक साथ दो चीज़ें महसूस कर सकते हो? ऐसा बहुत होता है!"
   }
 ]

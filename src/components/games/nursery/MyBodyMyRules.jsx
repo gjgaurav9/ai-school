@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import GameShell from '../../common/GameShell';
 import Celebration from '../../common/Celebration';
 import ParentTip from '../../common/ParentTip';
-import Guddu from '../../common/Guddu';
+import June from '../../common/June';
 import { useVoice } from '../../../hooks/useVoice';
 import { useSound } from '../../../hooks/useSound';
 import lessons from '../../../data/nursery/body-safety.json';
@@ -10,8 +10,8 @@ import lessons from '../../../data/nursery/body-safety.json';
 const TEXT = {
   title: { en: 'My Body, My Rules', hi: 'मेरा शरीर, मेरे नियम' },
   intro: {
-    en: (n) => `${n ? n + ', y' : 'Y'}our body belongs to YOU! Today Guddu learns about keeping his body safe. This is very important.`,
-    hi: (n) => `${n ? n + ', ' : ''}तुम्हारा शरीर तुम्हारा है! आज गुड्डू सीखेगा अपने शरीर को सुरक्षित रखना। यह बहुत ज़रूरी है।`,
+    en: (n) => `${n ? n + ', y' : 'Y'}our body belongs to YOU! Today June learns about keeping his body safe. This is very important.`,
+    hi: (n) => `${n ? n + ', ' : ''}तुम्हारा शरीर तुम्हारा है! आज जून सीखेगा अपने शरीर को सुरक्षित रखना। यह बहुत ज़रूरी है।`,
   },
   start: { en: 'Begin', hi: 'शुरू करें' },
   next: { en: 'Next', hi: 'आगे' },
@@ -92,7 +92,7 @@ function ShieldLesson({ lesson, lang, sound, onDone }) {
         {lang === 'hi' ? lesson.prompt_hi : lesson.prompt_en}
       </div>
       <div className="relative" style={{ width: 200, height: 200 }}>
-        <Guddu emotion="happy" size={180} />
+        <June emotion="happy" size={180} />
         <div
           className="absolute inset-0 flex items-center justify-center pointer-events-none"
           style={{ transform: `scale(${1 + strength * 0.06})`, transition: 'transform 0.3s' }}
@@ -134,7 +134,7 @@ function NoLesson({ lesson, lang, sound, onDone }) {
       <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl px-3 py-2 text-center text-amber-900 text-sm font-bold">
         {lang === 'hi' ? lesson.prompt_hi : lesson.prompt_en}
       </div>
-      <Guddu emotion={taps > 0 ? 'celebrating' : 'happy'} size={140} animate />
+      <June emotion={taps > 0 ? 'celebrating' : 'happy'} size={140} animate />
       <button
         onClick={() => {
           sound.playTone(220 + taps * 80, 0.3, 'sawtooth');
@@ -253,7 +253,7 @@ export default function MyBodyMyRules({ onComplete, onBack, language = 'en', chi
       <GameShell onBack={onBack} title={TEXT.title[lang]} bg={bg}>
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
           <div className="text-7xl animate-bounce-in">{'\u{1F6E1}\u{FE0F}'}</div>
-          <Guddu emotion="happy" size={170} animate />
+          <June emotion="happy" size={170} animate />
           <div className="bg-white rounded-2xl px-5 py-4 shadow-md text-center text-gray-700 text-base font-semibold max-w-[320px] animate-bounce-in" style={{ animationDelay: '0.3s' }}>
             {TEXT.intro[lang](childName)}
           </div>
@@ -272,7 +272,7 @@ export default function MyBodyMyRules({ onComplete, onBack, language = 'en', chi
         <Celebration active type="stars" />
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-3">
           <div className="text-7xl animate-bounce-in">{'\u{1F396}\u{FE0F}'}</div>
-          <Guddu emotion="celebrating" size={140} animate />
+          <June emotion="celebrating" size={140} animate />
           <h2 className="text-xl font-bold text-gray-800">{TEXT.pledgeTitle[lang]}</h2>
           <ul className="text-sm text-gray-700 font-semibold space-y-1 bg-white rounded-2xl px-4 py-3 shadow-md max-w-[320px]">
             {TEXT.pledge.map((p, i) => (

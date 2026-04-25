@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import Guddu from '../common/Guddu';
+import June from '../common/June';
 import Celebration from '../common/Celebration';
 import GameShell from '../common/GameShell';
 import ParentTip from '../common/ParentTip';
@@ -15,15 +15,15 @@ const TOTAL_ROUNDS = 5;
 const TEXT = {
   title: { en: 'Mood Mirror', hi: 'मूड मिरर' },
   introGreet: {
-    en: (name) => name ? `Hi ${name}! I'm Guddu! Can you tell how I feel?` : "Hi! I'm Guddu! Can you tell how I feel?",
-    hi: (name) => name ? `नमस्ते ${name}! मैं गुड्डू हूँ! क्या तुम बता सकते हो मुझे कैसा लग रहा है?` : 'नमस्ते! मैं गुड्डू हूँ! क्या तुम बता सकते हो मुझे कैसा लग रहा है?',
+    en: (name) => name ? `Hi ${name}! I'm June! Can you tell how I feel?` : "Hi! I'm June! Can you tell how I feel?",
+    hi: (name) => name ? `नमस्ते ${name}! मैं जून हूँ! क्या तुम बता सकते हो मुझे कैसा लग रहा है?` : 'नमस्ते! मैं जून हूँ! क्या तुम बता सकते हो मुझे कैसा लग रहा है?',
   },
   play: { en: "Let's Play!", hi: 'खेलते हैं!' },
   correctPrefix: {
-    en: (e) => `Yes! Guddu is ${e.toUpperCase()}!`,
+    en: (e) => `Yes! June is ${e.toUpperCase()}!`,
     hi: (e) => {
       const map = { happy: 'खुश', sad: 'उदास', angry: 'गुस्सा', scared: 'डरा हुआ', surprised: 'हैरान' };
-      return `हाँ! गुड्डू ${map[e] || e} है!`;
+      return `हाँ! जून ${map[e] || e} है!`;
     },
   },
   incorrectPrefix: {
@@ -35,7 +35,7 @@ const TEXT = {
         scared: 'See his wide eyes!',
         surprised: 'See his big eyes!',
       };
-      return `Good try! Guddu is actually ${correct.toUpperCase()}! ${cues[correct] || ''}`;
+      return `Good try! June is actually ${correct.toUpperCase()}! ${cues[correct] || ''}`;
     },
     hi: (correct) => {
       const map = { happy: 'खुश', sad: 'उदास', angry: 'गुस्सा', scared: 'डरा हुआ', surprised: 'हैरान' };
@@ -46,10 +46,10 @@ const TEXT = {
         scared: 'देखो उसकी बड़ी-बड़ी आँखें!',
         surprised: 'देखो उसकी बड़ी-बड़ी आँखें!',
       };
-      return `अच्छा प्रयास! गुड्डू असल में ${map[correct] || correct} है! ${cues[correct] || ''}`;
+      return `अच्छा प्रयास! जून असल में ${map[correct] || correct} है! ${cues[correct] || ''}`;
     },
   },
-  howFeel: { en: 'How is Guddu feeling?', hi: 'गुड्डू को कैसा लग रहा है?' },
+  howFeel: { en: 'How is June feeling?', hi: 'जून को कैसा लग रहा है?' },
   amazing: {
     en: (name) => name ? `${name}, you did amazing!` : 'Amazing job!',
     hi: (name) => name ? `${name}, बहुत बढ़िया!` : 'बहुत बढ़िया!',
@@ -196,8 +196,8 @@ export default function MoodMirror({ onComplete, onBack, language = 'en', childN
   // Current round data
   const currentRound = emotions[roundIndex] || emotions[0];
 
-  // Derive Guddu's emotion from phase instead of setting it in effects
-  const gudduEmotion =
+  // Derive June's emotion from phase instead of setting it in effects
+  const juneEmotion =
     phase === 'celebration' ? 'celebrating' :
     phase === 'playing' ? currentRound.correct :
     phase === 'feedback' ? currentRound.correct :
@@ -228,7 +228,7 @@ export default function MoodMirror({ onComplete, onBack, language = 'en', childN
     const timer = setTimeout(() => {
       speakSequence([
         { en: currentRound.scenario_en, hi: currentRound.scenario_hi },
-        { en: `Is Guddu feeling ${optionsEn}?`, hi: `क्या गुड्डू ${optionsHi} है?` },
+        { en: `Is June feeling ${optionsEn}?`, hi: `क्या जून ${optionsHi} है?` },
       ]);
     }, 400);
     return () => clearTimeout(timer);
@@ -336,12 +336,12 @@ export default function MoodMirror({ onComplete, onBack, language = 'en', childN
     return (
       <GameShell onBack={onBack} title={t('title', lang)} bg={bgClass}>
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-6">
-          {/* Guddu waving */}
+          {/* June waving */}
           <div
             className="animate-bounce-in"
             style={{ animationDelay: '0.1s' }}
           >
-            <Guddu emotion="neutral" size={200} animate />
+            <June emotion="neutral" size={200} animate />
           </div>
 
           {/* Speech bubble */}
@@ -390,13 +390,13 @@ export default function MoodMirror({ onComplete, onBack, language = 'en', childN
             {lang === 'hi' ? currentRound.scenario_hi : currentRound.scenario_en}
           </div>
 
-          {/* Guddu showing body language */}
+          {/* June showing body language */}
           <div
             className="flex-shrink-0 animate-bounce-in"
-            key={`guddu-${roundIndex}`}
+            key={`june-${roundIndex}`}
             style={{ transition: 'transform 0.3s cubic-bezier(0.34,1.56,0.64,1)' }}
           >
-            <Guddu emotion={gudduEmotion} size={200} animate />
+            <June emotion={juneEmotion} size={200} animate />
           </div>
 
           {/* Feedback text (shown during feedback phase) */}
@@ -414,7 +414,7 @@ export default function MoodMirror({ onComplete, onBack, language = 'en', childN
             </div>
           )}
 
-          {/* "How is Guddu feeling?" prompt */}
+          {/* "How is June feeling?" prompt */}
           {phase === 'playing' && (
             <p className="text-gray-500 text-sm font-medium">{t('howFeel', lang)}</p>
           )}
@@ -476,9 +476,9 @@ export default function MoodMirror({ onComplete, onBack, language = 'en', childN
         <Celebration active={showStars} type="stars" />
 
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
-          {/* Guddu celebrating */}
+          {/* June celebrating */}
           <div className="animate-bounce-in">
-            <Guddu emotion="celebrating" size={200} animate />
+            <June emotion="celebrating" size={200} animate />
           </div>
 
           {/* Score message */}

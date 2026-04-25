@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import Guddu from '../common/Guddu';
+import June from '../common/June';
 import Celebration from '../common/Celebration';
 import GameShell from '../common/GameShell';
 import ParentTip from '../common/ParentTip';
@@ -387,7 +387,7 @@ export default function ShapeWorld({ onComplete, onBack, language = 'en', childN
   const [wrongShake, setWrongShake] = useState(null); // index of wrong option being wiggled
   const [flyingShape, setFlyingShape] = useState(null);
   const [picturePulse, setPicturePulse] = useState(false);
-  const [gudduEmotion, setGudduEmotion] = useState('happy');
+  const [juneEmotion, setJuneEmotion] = useState('happy');
 
   const timerRef = useRef(null);
   const { speak, speakSequence, stop } = useVoice(language);
@@ -406,11 +406,11 @@ export default function ShapeWorld({ onComplete, onBack, language = 'en', childN
     if (phase === 'intro') {
       speak(
         childName
-          ? `${childName}, Guddu is building things! Help him find the right shapes!`
-          : "Guddu is building things! Help him find the right shapes!",
+          ? `${childName}, June is building things! Help him find the right shapes!`
+          : "June is building things! Help him find the right shapes!",
         childName
-          ? `${childName}, गुड्डू चीज़ें बना रहा है! उसे सही आकार ढूँढने में मदद करो!`
-          : "गुड्डू चीज़ें बना रहा है! उसे सही आकार ढूँढने में मदद करो!"
+          ? `${childName}, जून चीज़ें बना रहा है! उसे सही आकार ढूँढने में मदद करो!`
+          : "जून चीज़ें बना रहा है! उसे सही आकार ढूँढने में मदद करो!"
       );
       timerRef.current = setTimeout(() => {
         setPhase('playing');
@@ -460,7 +460,7 @@ export default function ShapeWorld({ onComplete, onBack, language = 'en', childN
     if (shape === currentData.missing_shape) {
       // Correct!
       setFlyingShape(shape);
-      setGudduEmotion('celebrating');
+      setJuneEmotion('celebrating');
 
       // After shape flies and snaps
       timerRef.current = setTimeout(() => {
@@ -483,10 +483,10 @@ export default function ShapeWorld({ onComplete, onBack, language = 'en', childN
           if (round + 1 < TOTAL_ROUNDS) {
             setRound(prev => prev + 1);
             setPhase('playing');
-            setGudduEmotion('happy');
+            setJuneEmotion('happy');
           } else {
             setPhase('celebration');
-            setGudduEmotion('celebrating');
+            setJuneEmotion('celebrating');
           }
         });
       }, 700); // duration of fly animation
@@ -502,11 +502,11 @@ export default function ShapeWorld({ onComplete, onBack, language = 'en', childN
           ? `हम्म ${childName}, कोई और आकार आज़माओ!`
           : "हम्म, कोई और आकार आज़माओ!"
       );
-      setGudduEmotion('surprised');
+      setJuneEmotion('surprised');
 
       timerRef.current = setTimeout(() => {
         setWrongShake(null);
-        setGudduEmotion('happy');
+        setJuneEmotion('happy');
       }, 600);
     }
   }, [phase, flyingShape, currentData, round, sound, speak, childName]);
@@ -525,7 +525,7 @@ export default function ShapeWorld({ onComplete, onBack, language = 'en', childN
           {/* Workshop background hint */}
           <div className="relative">
             <div className="absolute -inset-8 bg-[#F5E6D0] rounded-3xl -z-10 opacity-60" />
-            <Guddu emotion="happy" size={160} animate />
+            <June emotion="happy" size={160} animate />
           </div>
           <div className="text-center">
             <h2 className="text-2xl font-bold text-gray-700 mb-2">
@@ -534,11 +534,11 @@ export default function ShapeWorld({ onComplete, onBack, language = 'en', childN
             <p className="text-base text-gray-500 leading-relaxed max-w-[280px] mx-auto">
               {language === 'hi'
                 ? (childName
-                    ? `${childName}, गुड्डू चीज़ें बना रहा है! उसे सही आकार ढूँढने में मदद करो!`
-                    : 'गुड्डू चीज़ें बना रहा है! उसे सही आकार ढूँढने में मदद करो!')
+                    ? `${childName}, जून चीज़ें बना रहा है! उसे सही आकार ढूँढने में मदद करो!`
+                    : 'जून चीज़ें बना रहा है! उसे सही आकार ढूँढने में मदद करो!')
                 : (childName
-                    ? `${childName}, Guddu is building things! Help him find the right shapes!`
-                    : "Guddu is building things! Help him find the right shapes!")}
+                    ? `${childName}, June is building things! Help him find the right shapes!`
+                    : "June is building things! Help him find the right shapes!")}
             </p>
           </div>
           {/* Decorative shapes floating */}
@@ -564,7 +564,7 @@ export default function ShapeWorld({ onComplete, onBack, language = 'en', childN
       <GameShell onBack={onBack} title={language === 'hi' ? 'आकार की दुनिया' : 'Shape World'} bg="bg-[#FFF5E6]">
         <Celebration active type="confetti" />
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
-          <Guddu emotion="celebrating" size={140} animate />
+          <June emotion="celebrating" size={140} animate />
           <h2 className="text-2xl font-bold text-gray-700 text-center">
             {language === 'hi'
               ? (childName ? `${childName}, तुम आकार के उस्ताद हो!` : 'तुम आकार के उस्ताद हो!')
@@ -636,10 +636,10 @@ export default function ShapeWorld({ onComplete, onBack, language = 'en', childN
       `}</style>
 
       <div className="flex-1 flex flex-col items-center justify-between px-4 pb-4">
-        {/* Guddu + speech */}
+        {/* June + speech */}
         <div className="flex items-center gap-3 w-full mt-1 mb-2">
-          <Guddu
-            emotion={gudduEmotion}
+          <June
+            emotion={juneEmotion}
             size={64}
             animate
           />

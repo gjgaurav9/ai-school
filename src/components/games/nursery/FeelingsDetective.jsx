@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import GameShell from '../../common/GameShell';
 import Celebration from '../../common/Celebration';
 import ParentTip from '../../common/ParentTip';
-import Guddu from '../../common/Guddu';
+import June from '../../common/June';
 import Character from '../../common/Character';
 import { useVoice } from '../../../hooks/useVoice';
 import { useSound } from '../../../hooks/useSound';
@@ -22,7 +22,7 @@ const TEXT = {
 
 function CharacterRenderer({ token, size = 110 }) {
   const [kind, emotion] = token.split(':');
-  if (kind === 'guddu') return <Guddu emotion={emotion} size={size} animate />;
+  if (kind === 'june') return <June emotion={emotion} size={size} animate />;
   return <Character kind={kind} emotion={emotion} size={size} animate showLabel />;
 }
 
@@ -135,7 +135,7 @@ export default function FeelingsDetective({ onComplete, onBack, language = 'en',
       <GameShell onBack={onBack} title={TEXT.title[lang]} bg={bg}>
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
           <div className="relative animate-bounce-in">
-            <Guddu emotion="happy" size={180} animate />
+            <June emotion="happy" size={180} animate />
             {/* Detective hat */}
             <div className="absolute" style={{ top: -10, left: '50%', transform: 'translateX(-50%)' }}>
               <span className="text-5xl">{'\u{1F575}\u{FE0F}\u200D\u2642\u{FE0F}'}</span>
@@ -160,7 +160,7 @@ export default function FeelingsDetective({ onComplete, onBack, language = 'en',
         <Celebration active={showConfetti} type="stars" />
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
           <div className="text-6xl animate-bounce-in">{'\u{1F50D}'}</div>
-          <Guddu emotion="celebrating" size={170} animate />
+          <June emotion="celebrating" size={170} animate />
           <div className="text-center animate-bounce-in" style={{ animationDelay: '0.2s' }}>
             <h2 className="text-2xl font-bold text-gray-800">{lang === 'hi' ? 'बधाई हो!' : 'Mystery Solved!'}</h2>
             <p className="text-gray-600 text-base mt-1">{TEXT.badge[lang]}</p>

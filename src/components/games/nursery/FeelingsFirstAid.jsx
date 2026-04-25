@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import GameShell from '../../common/GameShell';
 import Celebration from '../../common/Celebration';
 import ParentTip from '../../common/ParentTip';
-import Guddu from '../../common/Guddu';
+import June from '../../common/June';
 import Character from '../../common/Character';
 import BreathingCircle from '../../common/BreathingCircle';
 import { useVoice } from '../../../hooks/useVoice';
@@ -34,7 +34,7 @@ const TEXT = {
 };
 
 function CharacterDisplay({ kind, emotion, size = 130 }) {
-  if (kind === 'guddu') return <Guddu emotion={emotion} size={size} animate />;
+  if (kind === 'june') return <June emotion={emotion} size={size} animate />;
   return <Character kind={kind} emotion={emotion} size={size} animate showLabel />;
 }
 
@@ -261,7 +261,7 @@ export default function FeelingsFirstAid({ onComplete, onBack, language = 'en', 
       <GameShell onBack={onBack} title={TEXT.title[lang]} bg={bg}>
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
           <div className="text-7xl animate-bounce-in">{'\u{1F49A}'}</div>
-          <Guddu emotion="happy" size={170} animate />
+          <June emotion="happy" size={170} animate />
           <div className="bg-white rounded-2xl px-5 py-4 shadow-md text-center text-gray-700 text-base font-semibold max-w-[320px] animate-bounce-in" style={{ animationDelay: '0.3s' }}>
             {TEXT.intro[lang](childName)}
           </div>
@@ -279,7 +279,7 @@ export default function FeelingsFirstAid({ onComplete, onBack, language = 'en', 
         <Celebration active type="confetti" />
         <Celebration active type="stars" />
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-4">
-          <Guddu emotion="celebrating" size={150} animate />
+          <June emotion="celebrating" size={150} animate />
           <h2 className="text-2xl font-bold text-gray-800 animate-bounce-in">{TEXT.done[lang]}</h2>
           <p className="text-sm font-semibold text-gray-600">{TEXT.toolbox[lang]}</p>
           <div className="grid grid-cols-3 gap-2 max-w-[320px]">

@@ -41,7 +41,7 @@
     "description_hi": "एक आइसक्रीम! लेकिन कोन गायब है!",
     "missing_shape": "triangle",
     "options": ["triangle", "rectangle", "circle"],
-    "completion_en": "Yummy ice cream! Guddu loves it!",
-    "completion_hi": "स्वादिष्ट आइसक्रीम! गुड्डू को बहुत पसंद है!"
+    "completion_en": "Yummy ice cream! June loves it!",
+    "completion_hi": "स्वादिष्ट आइसक्रीम! जून को बहुत पसंद है!"
   }
 ]

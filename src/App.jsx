@@ -3,7 +3,7 @@ import HomeScreen from './components/screens/HomeScreen'
 import WelcomeScreen from './components/screens/WelcomeScreen'
 import MoodMirror from './components/games/MoodMirror'
 import ColorFeelings from './components/games/ColorFeelings'
-import GuddusDay from './components/games/GuddusDay'
+import JunesDay from './components/games/JunesDay'
 import AnimalFriends from './components/games/AnimalFriends'
 import SoundSafari from './components/games/SoundSafari'
 import ShapeWorld from './components/games/ShapeWorld'
@@ -31,7 +31,7 @@ const GAME_COMPONENTS = {
   // SEED phase (pre-nursery, ages 2-3)
   'mood-mirror': MoodMirror,
   'color-feelings': ColorFeelings,
-  'guddus-day': GuddusDay,
+  'junes-day': JunesDay,
   'animal-friends': AnimalFriends,
   'sound-safari': SoundSafari,
   'shape-world': ShapeWorld,

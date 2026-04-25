@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import GameShell from '../../common/GameShell';
 import Celebration from '../../common/Celebration';
 import ParentTip from '../../common/ParentTip';
-import Guddu from '../../common/Guddu';
+import June from '../../common/June';
 import { useVoice } from '../../../hooks/useVoice';
 import { useSound } from '../../../hooks/useSound';
 import letters from '../../../data/nursery/letters.json';
@@ -125,7 +125,7 @@ export default function LetterLand({ onComplete, onBack, language = 'en', childN
       <GameShell onBack={onBack} title={TEXT.title[lang]} bg={bg}>
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
           <div className="text-9xl font-extrabold animate-bounce-in" style={{ color: '#FF8C42', textShadow: '4px 4px 0 #FFE680' }}>A</div>
-          <Guddu emotion="happy" size={150} animate />
+          <June emotion="happy" size={150} animate />
           <div className="bg-white rounded-2xl px-5 py-4 shadow-md text-center text-gray-700 text-base font-semibold max-w-[320px] animate-bounce-in" style={{ animationDelay: '0.3s' }}>
             {TEXT.intro[lang](childName)}
           </div>
@@ -143,7 +143,7 @@ export default function LetterLand({ onComplete, onBack, language = 'en', childN
         <Celebration active type="confetti" />
         <Celebration active type="stars" />
         <div className="flex-1 flex flex-col items-center px-4 py-3 gap-3 overflow-y-auto">
-          <Guddu emotion="celebrating" size={140} animate />
+          <June emotion="celebrating" size={140} animate />
           <h2 className="text-2xl font-bold text-gray-800 animate-bounce-in">{TEXT.done[lang]}</h2>
           <p className="text-sm text-gray-600 font-semibold">{TEXT.collection[lang]}</p>
           <div className="grid grid-cols-3 gap-3 max-w-[330px] py-2">

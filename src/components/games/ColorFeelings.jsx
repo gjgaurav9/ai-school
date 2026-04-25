@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import Guddu from '../common/Guddu';
+import June from '../common/June';
 import Celebration from '../common/Celebration';
 import GameShell from '../common/GameShell';
 import ParentTip from '../common/ParentTip';
@@ -113,7 +113,7 @@ export default function ColorFeelings({ onComplete, onBack, language = 'en', chi
   const [phase, setPhase] = useState('intro'); // 'intro' | 'painting' | 'reveal'
   const [sections, setSections] = useState(Array(TOTAL_SECTIONS).fill(null));
   const [currentSection, setCurrentSection] = useState(0);
-  const [gudduEmotion, setGudduEmotion] = useState('happy');
+  const [juneEmotion, setJuneEmotion] = useState('happy');
   const [showCelebration, setShowCelebration] = useState(false);
   const [selectedColor, setSelectedColor] = useState(null);
 
@@ -150,7 +150,7 @@ export default function ColorFeelings({ onComplete, onBack, language = 'en', chi
       const msg = getRevealMessage(sections, childName);
       celebrate();
       setShowCelebration(true);
-      setGudduEmotion('celebrating');
+      setJuneEmotion('celebrating');
 
       // Small delay so the celebration starts before the voice
       const t = setTimeout(() => {
@@ -165,7 +165,7 @@ export default function ColorFeelings({ onComplete, onBack, language = 'en', chi
 
   const handleStartPainting = useCallback(() => {
     setPhase('painting');
-    setGudduEmotion('happy');
+    setJuneEmotion('happy');
   }, []);
 
   const handleColorTap = useCallback(
@@ -184,13 +184,13 @@ export default function ColorFeelings({ onComplete, onBack, language = 'en', chi
         return next;
       });
 
-      // Guddu reacts
+      // June reacts
       const reaction = COLOR_REACTIONS[color.id];
       speak(reaction.en, reaction.hi);
-      setGudduEmotion('surprised');
+      setJuneEmotion('surprised');
 
-      // Reset Guddu after a beat
-      setTimeout(() => setGudduEmotion('happy'), 1200);
+      // Reset June after a beat
+      setTimeout(() => setJuneEmotion('happy'), 1200);
 
       // Clear animation flag
       setTimeout(() => setAnimatingSection(null), 600);
@@ -216,7 +216,7 @@ export default function ColorFeelings({ onComplete, onBack, language = 'en', chi
     setCurrentSection(0);
     setSelectedColor(null);
     setAnimatingSection(null);
-    setGudduEmotion('happy');
+    setJuneEmotion('happy');
     setPhase('intro');
   }, [stop]);
 
@@ -229,9 +229,9 @@ export default function ColorFeelings({ onComplete, onBack, language = 'en', chi
       <Celebration active={showCelebration} type="confetti" />
 
       <div className="flex-1 flex flex-col items-center justify-between px-4 py-4 overflow-y-auto">
-        {/* Guddu — top-right corner */}
+        {/* June — top-right corner */}
         <div className="w-full flex justify-end">
-          <Guddu emotion={gudduEmotion} size={120} animate className="drop-shadow-md" />
+          <June emotion={juneEmotion} size={120} animate className="drop-shadow-md" />
         </div>
 
         {/* ========== INTRO ========== */}

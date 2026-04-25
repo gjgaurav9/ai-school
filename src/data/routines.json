@@ -1,7 +1,7 @@
 {
   "morning": {
-    "title_en": "Good morning, Guddu! Help him get ready!",
-    "title_hi": "सुप्रभात, गुड्डू! उसे तैयार होने में मदद करो!",
+    "title_en": "Good morning, June! Help him get ready!",
+    "title_hi": "सुप्रभात, जून! उसे तैयार होने में मदद करो!",
     "steps": [
       {
         "id": "wake",
@@ -30,8 +30,8 @@
     ]
   },
   "evening": {
-    "title_en": "Guddu is home! Help him with evening!",
-    "title_hi": "गुड्डू घर आ गया! शाम में उसकी मदद करो!",
+    "title_en": "June is home! Help him with evening!",
+    "title_hi": "जून घर आ गया! शाम में उसकी मदद करो!",
     "steps": [
       {
         "id": "wash",

@@ -3,7 +3,7 @@ import GameShell from '../../common/GameShell';
 import Celebration from '../../common/Celebration';
 import ParentTip from '../../common/ParentTip';
 import Character from '../../common/Character';
-import Guddu from '../../common/Guddu';
+import June from '../../common/June';
 import { useVoice } from '../../../hooks/useVoice';
 import { useSound } from '../../../hooks/useSound';
 import { useProgress } from '../../../hooks/useProgress';
@@ -323,7 +323,7 @@ export default function WordBuilder({ onComplete, onBack, language = 'en', child
         <Celebration active type="confetti" />
         <Celebration active type="stars" />
         <div className="flex-1 flex flex-col items-center px-4 py-3 gap-3 overflow-y-auto">
-          <Guddu emotion="celebrating" size={140} animate />
+          <June emotion="celebrating" size={140} animate />
           <h2 className="text-xl font-bold text-gray-800 animate-bounce-in">{TEXT.done[lang]}</h2>
           <p className="text-amber-700 text-sm font-bold">
             {lang === 'hi' ? `${data.rounds.length} में से ${score}!` : `${score} of ${data.rounds.length} correct!`}

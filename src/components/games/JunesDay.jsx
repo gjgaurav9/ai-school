@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import Guddu from '../common/Guddu';
+import June from '../common/June';
 import Celebration from '../common/Celebration';
 import GameShell from '../common/GameShell';
 import ParentTip from '../common/ParentTip';
@@ -185,34 +185,34 @@ const CARD_COLORS = {
 const WRONG_HINTS = {
   morning: {
     wake: {
-      en: 'Guddu needs to wake up first before anything else!',
-      hi: 'गुड्डू को सबसे पहले उठना होगा!',
+      en: 'June needs to wake up first before anything else!',
+      hi: 'जून को सबसे पहले उठना होगा!',
     },
     brush: {
-      en: 'Hmm, does Guddu brush teeth before waking up? Let\'s try again!',
-      hi: 'क्या गुड्डू उठने से पहले दाँत साफ़ करता है? फिर से कोशिश करो!',
+      en: 'Hmm, does June brush teeth before waking up? Let\'s try again!',
+      hi: 'क्या जून उठने से पहले दाँत साफ़ करता है? फिर से कोशिश करो!',
     },
     breakfast: {
-      en: 'Guddu should brush his teeth before eating breakfast!',
-      hi: 'गुड्डू को नाश्ते से पहले दाँत साफ़ करने चाहिए!',
+      en: 'June should brush his teeth before eating breakfast!',
+      hi: 'जून को नाश्ते से पहले दाँत साफ़ करने चाहिए!',
     },
     school: {
-      en: 'Guddu goes to school at the end! What comes first?',
-      hi: 'गुड्डू आखिर में स्कूल जाता है! पहले क्या होता है?',
+      en: 'June goes to school at the end! What comes first?',
+      hi: 'जून आखिर में स्कूल जाता है! पहले क्या होता है?',
     },
   },
   evening: {
     wash: {
-      en: 'Guddu should wash hands first when coming home!',
-      hi: 'गुड्डू को घर आकर पहले हाथ धोने चाहिए!',
+      en: 'June should wash hands first when coming home!',
+      hi: 'जून को घर आकर पहले हाथ धोने चाहिए!',
     },
     play: {
-      en: 'Does Guddu play before washing hands? Let\'s think again!',
-      hi: 'क्या गुड्डू हाथ धोने से पहले खेलता है? फिर सोचो!',
+      en: 'Does June play before washing hands? Let\'s think again!',
+      hi: 'क्या जून हाथ धोने से पहले खेलता है? फिर सोचो!',
     },
     dinner: {
-      en: 'Guddu eats dinner after playing! What\'s next?',
-      hi: 'गुड्डू खेलने के बाद खाना खाता है! आगे क्या है?',
+      en: 'June eats dinner after playing! What\'s next?',
+      hi: 'जून खेलने के बाद खाना खाता है! आगे क्या है?',
     },
     sleep: {
       en: 'Story time and sleep come at the very end!',
@@ -380,9 +380,9 @@ function IntroScene({ language, onStart, childName }) {
         </svg>
       </div>
 
-      {/* Guddu sleeping / waking */}
+      {/* June sleeping / waking */}
       <div className="mb-6">
-        <Guddu emotion={sunUp ? 'happy' : 'neutral'} size={160} animate />
+        <June emotion={sunUp ? 'happy' : 'neutral'} size={160} animate />
       </div>
 
       {/* Bed */}
@@ -396,13 +396,13 @@ function IntroScene({ language, onStart, childName }) {
 
       <p className="text-center text-gray-700 text-lg font-bold mb-2">
         {language === 'hi'
-          ? (childName ? `${childName}, सुप्रभात!` : 'सुप्रभात, गुड्डू!')
-          : (childName ? `${childName}, good morning!` : 'Good morning, Guddu!')}
+          ? (childName ? `${childName}, सुप्रभात!` : 'सुप्रभात, जून!')
+          : (childName ? `${childName}, good morning!` : 'Good morning, June!')}
       </p>
       <p className="text-center text-gray-500 text-sm mb-8">
         {language === 'hi'
-          ? 'गुड्डू को तैयार होने में मदद करो!'
-          : 'Help Guddu get ready for his day!'}
+          ? 'जून को तैयार होने में मदद करो!'
+          : 'Help June get ready for his day!'}
       </p>
 
       <button
@@ -472,9 +472,9 @@ function CelebrationScene({ language, onComplete, childName }) {
         </div>
       ))}
 
-      {/* Guddu sleeping */}
+      {/* June sleeping */}
       <div className="mb-4">
-        <Guddu emotion="happy" size={140} animate />
+        <June emotion="happy" size={140} animate />
       </div>
 
       {/* Bed */}
@@ -488,13 +488,13 @@ function CelebrationScene({ language, onComplete, childName }) {
 
       <p className="text-center text-gray-700 text-xl font-bold mb-2">
         {language === 'hi'
-          ? (childName ? `शाबाश ${childName}! तुमने गुड्डू का दिन बना दिया!` : 'शाबाश! तुमने गुड्डू का दिन बना दिया!')
-          : (childName ? `${childName}, you helped Guddu have a wonderful day!` : 'You helped Guddu have a wonderful day!')}
+          ? (childName ? `शाबाश ${childName}! तुमने जून का दिन बना दिया!` : 'शाबाश! तुमने जून का दिन बना दिया!')
+          : (childName ? `${childName}, you helped June have a wonderful day!` : 'You helped June have a wonderful day!')}
       </p>
       <p className="text-center text-gray-400 text-sm mb-8">
         {language === 'hi'
-          ? 'गुड्डू अब सो रहा है। शुभ रात्रि!'
-          : 'Guddu is sleeping now. Good night!'}
+          ? 'जून अब सो रहा है। शुभ रात्रि!'
+          : 'June is sleeping now. Good night!'}
       </p>
 
       <button
@@ -629,9 +629,9 @@ function RoutinePhase({ routine, routineKey, language, onPhaseComplete, childNam
 
   return (
     <div className="flex-1 flex flex-col px-4 pb-4">
-      {/* Guddu + title */}
+      {/* June + title */}
       <div className="flex items-center gap-3 mb-3 mt-1">
-        <Guddu
+        <June
           emotion={allPlaced ? 'celebrating' : selectedCard ? 'surprised' : 'happy'}
           size={64}
           animate
@@ -701,7 +701,7 @@ function RoutinePhase({ routine, routineKey, language, onPhaseComplete, childNam
                 language === 'hi' ? 'शाम पूरी!' : 'Evening done!'
               )}
             </p>
-            <Guddu emotion="celebrating" size={80} animate className="mx-auto mt-2" />
+            <June emotion="celebrating" size={80} animate className="mx-auto mt-2" />
           </div>
         </div>
       )}
@@ -715,7 +715,7 @@ function RoutinePhase({ routine, routineKey, language, onPhaseComplete, childNam
 /*  Main component                                                     */
 /* ------------------------------------------------------------------ */
 
-export default function GuddusDay({ onComplete, onBack, language = 'en', childName = '' }) {
+export default function JunesDay({ onComplete, onBack, language = 'en', childName = '' }) {
   const [phase, setPhase] = useState('intro');
   const { speak, stop } = useVoice(language);
   const { celebrate } = useSound();
@@ -727,7 +727,7 @@ export default function GuddusDay({ onComplete, onBack, language = 'en', childNa
 
   // Title for GameShell
   const phaseTitle = {
-    intro: language === 'hi' ? 'गुड्डू का दिन' : "Guddu's Day",
+    intro: language === 'hi' ? 'जून का दिन' : "June's Day",
     morning: language === 'hi' ? 'सुबह की दिनचर्या' : 'Morning Routine',
     evening: language === 'hi' ? 'शाम की दिनचर्या' : 'Evening Routine',
     celebration: language === 'hi' ? 'शुभ रात्रि!' : 'Good Night!',
@@ -738,11 +738,11 @@ export default function GuddusDay({ onComplete, onBack, language = 'en', childNa
     if (phase === 'intro') {
       speak(
         childName
-          ? `${childName}, good morning! Help Guddu get ready for his day!`
-          : 'Good morning, Guddu! Help him get ready for his day!',
+          ? `${childName}, good morning! Help June get ready for his day!`
+          : 'Good morning, June! Help him get ready for his day!',
         childName
-          ? `${childName}, सुप्रभात! गुड्डू को तैयार होने में मदद करो!`
-          : 'सुप्रभात, गुड्डू! उसे अपने दिन के लिए तैयार होने में मदद करो!',
+          ? `${childName}, सुप्रभात! जून को तैयार होने में मदद करो!`
+          : 'सुप्रभात, जून! उसे अपने दिन के लिए तैयार होने में मदद करो!',
       );
     }
     return () => stop();
@@ -760,11 +760,11 @@ export default function GuddusDay({ onComplete, onBack, language = 'en', childNa
     celebrate();
     speak(
       childName
-        ? `${childName}, you helped Guddu have a wonderful day!`
-        : 'You helped Guddu have a wonderful day!',
+        ? `${childName}, you helped June have a wonderful day!`
+        : 'You helped June have a wonderful day!',
       childName
-        ? `${childName}, तुमने गुड्डू का पूरा दिन बना दिया!`
-        : 'तुमने गुड्डू का पूरा दिन बना दिया!',
+        ? `${childName}, तुमने जून का पूरा दिन बना दिया!`
+        : 'तुमने जून का पूरा दिन बना दिया!',
     );
     setPhase('celebration');
   }, [celebrate, speak, childName]);

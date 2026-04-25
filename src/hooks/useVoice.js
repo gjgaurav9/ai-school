@@ -1,7 +1,8 @@
 import { useCallback, useRef, useEffect } from 'react';
 
 // ---------------------------------------------------------------------------
-// Voice scoring: pick the most natural, Indian, child-friendly voice.
+// Voice scoring: pick a young, cheerful, British-leaning female voice for June.
+// Hindi falls back to a natural Indian female voice.
 // ---------------------------------------------------------------------------
 function scoreVoice(voice, targetLang) {
   const name = voice.name.toLowerCase();
@@ -13,32 +14,37 @@ function scoreVoice(voice, targetLang) {
     if (lang === 'hi-in') score += 50;
     else if (lang.startsWith('hi')) score += 40;
   } else {
-    if (lang === 'en-in') score += 50;
-    else if (lang === 'en-gb') score += 15;
+    // Prefer British English for June's voice
+    if (lang === 'en-gb') score += 50;
+    else if (lang === 'en-au') score += 30;
+    else if (lang === 'en-ie') score += 28;
+    else if (lang === 'en-in') score += 20;
     else if (lang.startsWith('en')) score += 10;
   }
 
   // ── Quality tiers (higher = more natural) ──
-  // Apple "Siri" voices are the most natural on macOS/iOS
   if (/siri/i.test(name)) score += 40;
-  // Apple "premium" / "enhanced" downloaded voices
   if (/premium|enhanced/i.test(name)) score += 35;
-  // Neural / natural voices (Edge, newer Chrome)
   if (/neural|natural/i.test(name)) score += 35;
-  // Microsoft Online voices (Edge) — very natural
   if (/microsoft.*online/i.test(name)) score += 30;
 
-  // ── Known good Indian voices ──
-  if (/neerja/i.test(name)) score += 32;     // en-IN female (Apple, very natural)
-  if (/veena/i.test(name)) score += 28;      // en-IN female (Apple)
-  if (/lekha/i.test(name)) score += 30;      // hi-IN female (Apple)
-  if (/rishi/i.test(name)) score += 26;      // en-IN male (Apple)
+  // ── Known good British female voices ──
+  if (/karen/i.test(name) && lang.startsWith('en-gb')) score += 30;
+  if (/tessa/i.test(name)) score += 28;       // en-GB female (Apple)
+  if (/serena/i.test(name)) score += 28;      // en-GB female (Apple)
+  if (/martha/i.test(name)) score += 26;      // en-GB female (Apple)
+  if (/kate/i.test(name) && lang.startsWith('en-gb')) score += 26;
+  if (/sonia/i.test(name)) score += 24;       // en-GB Microsoft
+  if (/libby|maisie/i.test(name)) score += 26; // en-GB Microsoft Online (Edge)
+
+  // ── Known good Indian voices (Hindi fallback) ──
+  if (/lekha/i.test(name)) score += 30;       // hi-IN female (Apple)
   if (/google.*hindi/i.test(name)) score += 22;
-  if (/google.*india/i.test(name)) score += 22;
   if (/aditi|priya|kavya/i.test(name)) score += 25;
 
-  // ── Prefer female voices — warmer for kids ──
-  if (/female|woman/i.test(name)) score += 10;
+  // ── Prefer female voices — warmer/younger for kids ──
+  if (/female|woman/i.test(name)) score += 12;
+  if (/girl|child|kid/i.test(name)) score += 18;
 
   // Local service voices often have lower latency
   if (voice.localService) score += 3;
@@ -99,11 +105,11 @@ export function useVoice(language = 'en') {
       if (!synth || !text) { resolve(); return; }
 
       const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = language === 'hi' ? 'hi-IN' : 'en-IN';
+      utterance.lang = language === 'hi' ? 'hi-IN' : 'en-GB';
 
-      // Natural, child-friendly speech parameters
-      utterance.rate = 0.88;
-      utterance.pitch = 1.15;
+      // June's voice: cheerful, higher-pitched, slightly slower for clarity
+      utterance.rate = 0.92;
+      utterance.pitch = 1.45;
       utterance.volume = 1.0;
 
       const voice = getBestVoice();

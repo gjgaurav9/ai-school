@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Guddu from '../common/Guddu';
+import June from '../common/June';
 import { useVoice } from '../../hooks/useVoice';
 
 export default function WelcomeScreen({ onSubmit, language, onToggleLanguage }) {
@@ -9,8 +9,8 @@ export default function WelcomeScreen({ onSubmit, language, onToggleLanguage }) 
 
   useEffect(() => {
     speak(
-      "Hello! I'm Guddu! What's your name?",
-      "नमस्ते! मैं गुड्डू हूँ! तुम्हारा नाम क्या है?",
+      "Hello! I'm June! What's your name?",
+      "नमस्ते! मैं जून हूँ! तुम्हारा नाम क्या है?",
     );
   }, [speak]);
 
@@ -41,7 +41,7 @@ export default function WelcomeScreen({ onSubmit, language, onToggleLanguage }) 
       </button>
 
       <div className="animate-bounce-in">
-        <Guddu emotion={step === 'greet' ? 'celebrating' : 'happy'} size={180} />
+        <June emotion={step === 'greet' ? 'celebrating' : 'happy'} size={180} />
       </div>
 
       {step === 'ask' ? (
@@ -51,8 +51,8 @@ export default function WelcomeScreen({ onSubmit, language, onToggleLanguage }) 
             <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rotate-45" />
             <p className="text-center text-gray-700 font-semibold text-base leading-snug">
               {language === 'hi'
-                ? "नमस्ते! मैं गुड्डू हूँ! तुम्हारा नाम क्या है?"
-                : "Hello! I'm Guddu! What's your name?"}
+                ? "नमस्ते! मैं जून हूँ! तुम्हारा नाम क्या है?"
+                : "Hello! I'm June! What's your name?"}
             </p>
           </div>
 

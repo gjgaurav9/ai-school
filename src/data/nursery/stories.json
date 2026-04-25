@@ -3,8 +3,8 @@
     "id": "seed",
     "title_en": "Planting a Seed",
     "title_hi": "बीज लगाना",
-    "intro_en": "Help Guddu grow a flower! Put the steps in order.",
-    "intro_hi": "गुड्डू को फूल उगाने में मदद करो! कदमों को क्रम में रखो।",
+    "intro_en": "Help June grow a flower! Put the steps in order.",
+    "intro_hi": "जून को फूल उगाने में मदद करो! कदमों को क्रम में रखो।",
     "cards": [
       { "id": 1, "icon": "\ud83d\udd28", "label_en": "Dig a hole", "label_hi": "गड्ढा खोदें" },
       { "id": 2, "icon": "\ud83c\udf31", "label_en": "Plant a seed", "label_hi": "बीज लगाएं" },
@@ -31,8 +31,8 @@
     "id": "school",
     "title_en": "Getting Ready For School",
     "title_hi": "स्कूल के लिए तैयार होना",
-    "intro_en": "It's a school day! Help Guddu get ready in the right order.",
-    "intro_hi": "स्कूल का दिन है! गुड्डू को सही क्रम में तैयार होने में मदद करो।",
+    "intro_en": "It's a school day! Help June get ready in the right order.",
+    "intro_hi": "स्कूल का दिन है! जून को सही क्रम में तैयार होने में मदद करो।",
     "cards": [
       { "id": 1, "icon": "\u23f0", "label_en": "Wake up", "label_hi": "उठना" },
       { "id": 2, "icon": "\ud83e\uddb7", "label_en": "Brush teeth", "label_hi": "दाँत साफ़ करना" },
@@ -46,8 +46,8 @@
     "id": "rain",
     "title_en": "A Rainy Day Adventure",
     "title_hi": "बारिश का रोमांच",
-    "intro_en": "It's about to rain. Put Guddu's adventure in order!",
-    "intro_hi": "बारिश होने वाली है। गुड्डू के रोमांच को क्रम में रखो!",
+    "intro_en": "It's about to rain. Put June's adventure in order!",
+    "intro_hi": "बारिश होने वाली है। जून के रोमांच को क्रम में रखो!",
     "cards": [
       { "id": 1, "icon": "\u2601\ufe0f", "label_en": "See dark clouds", "label_hi": "काले बादल दिखें" },
       { "id": 2, "icon": "\ud83c\udf27\ufe0f", "label_en": "Rain starts", "label_hi": "बारिश शुरू होती है" },

@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import GameShell from '../../common/GameShell';
 import Celebration from '../../common/Celebration';
 import ParentTip from '../../common/ParentTip';
-import Guddu from '../../common/Guddu';
+import June from '../../common/June';
 import { useVoice } from '../../../hooks/useVoice';
 import { useSound } from '../../../hooks/useSound';
 import stories from '../../../data/nursery/stories.json';
@@ -135,7 +135,7 @@ export default function StorySequencer({ onComplete, onBack, language = 'en', ch
       <GameShell onBack={onBack} title={TEXT.title[lang]} bg={bg}>
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-5">
           <div className="text-7xl animate-bounce-in">{'\u{1F4D6}'}</div>
-          <Guddu emotion="happy" size={170} animate />
+          <June emotion="happy" size={170} animate />
           <div className="bg-white rounded-2xl px-5 py-4 shadow-md text-center text-gray-700 text-base font-semibold max-w-[320px] animate-bounce-in" style={{ animationDelay: '0.3s' }}>
             {TEXT.intro[lang](childName)}
           </div>
@@ -154,7 +154,7 @@ export default function StorySequencer({ onComplete, onBack, language = 'en', ch
         <Celebration active type="stars" />
         <div className="flex-1 flex flex-col items-center justify-center px-6 gap-4">
           <div className="text-7xl animate-bounce-in">{'\u{1F3C5}'}</div>
-          <Guddu emotion="celebrating" size={150} animate />
+          <June emotion="celebrating" size={150} animate />
           <h2 className="text-2xl font-bold text-gray-800 animate-bounce-in">{TEXT.done[lang]}</h2>
           <p className="text-amber-700 text-base font-bold">
             {lang === 'hi' ? `तुमने ${completedStories} कहानियाँ ठीक कीं!` : `You fixed ${completedStories} stories!`}

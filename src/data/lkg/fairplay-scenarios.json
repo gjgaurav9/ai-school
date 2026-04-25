@@ -5,7 +5,7 @@
     "title_hi": "पासे का खेल",
     "scene_en": "Bandar's dice showed 3, but he moved 6 spaces!",
     "scene_hi": "बंदर के पासे पर 3 आया, पर वह 6 घर चला गया!",
-    "characters": ["bandar", "guddu"],
+    "characters": ["bandar", "june"],
     "questions": [
       {
         "prompt_en": "Is that fair?",
@@ -13,12 +13,12 @@
         "options": [
           { "key": "no_cheat", "label_en": "No — that's cheating", "label_hi": "नहीं — यह धोखा है", "correct": true },
           { "key": "yes_fine", "label_en": "Yes — it's fine", "label_hi": "हाँ — ठीक है" },
-          { "key": "both_cheat", "label_en": "Only if Guddu also cheats", "label_hi": "अगर गुड्डू भी करे तो ठीक" }
+          { "key": "both_cheat", "label_en": "Only if June also cheats", "label_hi": "अगर जून भी करे तो ठीक" }
         ]
       },
       {
-        "prompt_en": "What should Guddu say?",
-        "prompt_hi": "गुड्डू को क्या कहना चाहिए?",
+        "prompt_en": "What should June say?",
+        "prompt_hi": "जून को क्या कहना चाहिए?",
         "options": [
           { "key": "kindly", "label_en": "Tell Bandar kindly to go back", "label_hi": "बंदर से प्यार से कहें वापस जाना", "correct": true },
           { "key": "flip", "label_en": "Get angry and flip the board", "label_hi": "गुस्से में बोर्ड पलट दें" },
@@ -54,9 +54,9 @@
     "id": "losing",
     "title_en": "Losing Gracefully",
     "title_hi": "हारना सीखें",
-    "scene_en": "Guddu lost a running race. He's about to cry and stomp away.",
-    "scene_hi": "गुड्डू दौड़ हार गया। वह रोने और गुस्से में जाने वाला है।",
-    "characters": ["guddu"],
+    "scene_en": "June lost a running race. He's about to cry and stomp away.",
+    "scene_hi": "जून दौड़ हार गया। वह रोने और गुस्से में जाने वाला है।",
+    "characters": ["june"],
     "questions": [
       {
         "prompt_en": "What should he do?",
@@ -96,9 +96,9 @@
     "id": "teamwork",
     "title_en": "Teamwork Challenge",
     "title_hi": "मिलकर काम करें",
-    "scene_en": "Guddu and Chhotu need to cross a river. There's one heavy log — too heavy for one!",
-    "scene_hi": "गुड्डू और छोटू को नदी पार करनी है। एक भारी लकड़ी है — एक के लिए बहुत भारी!",
-    "characters": ["guddu", "chhotu"],
+    "scene_en": "June and Chhotu need to cross a river. There's one heavy log — too heavy for one!",
+    "scene_hi": "जून और छोटू को नदी पार करनी है। एक भारी लकड़ी है — एक के लिए बहुत भारी!",
+    "characters": ["june", "chhotu"],
     "interactive": "push_log",
     "lesson_en": "Some problems are impossible alone but easy together. That's the power of teamwork!",
     "lesson_hi": "कुछ काम अकेले मुश्किल पर साथ में आसान। यही टीमवर्क की ताक़त है!"
