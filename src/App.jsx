@@ -93,6 +93,7 @@ function App() {
         onToggleLanguage={handleToggleLanguage}
         stars={progress.stars}
         childName={childName}
+        lotusLevel={progress.bhavanaPath?.lotusLevel ?? 0}
       />
     )
   }

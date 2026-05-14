@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import June from '../common/June';
+import LotusProgress from '../common/LotusProgress';
 
 const SEED_GAMES = [
   { id: 'mood-mirror', name: 'Mood Mirror', subtitle: 'Feelings Game', icon: '\u{1FA9E}', color: '#FFD93D' },
@@ -34,10 +35,16 @@ const BLOOM_GAMES = [
   { id: 'hindi-akshar', name: 'Hindi Akshar', subtitle: 'हिंदी स्वर', icon: '\u{0905}', color: '#FF6B6B' },
 ];
 
+const BHAVANA_GAMES = [
+  { id: 'maitri-circle', name: 'Maitri Circle', subtitle: 'Four feelings', icon: '\u{1FAB7}', color: '#FF9933' },
+  { id: 'vaani-vatika', name: 'Word Garden', subtitle: 'Kind words bloom', icon: '\u{1F33C}', color: '#D4A017' },
+];
+
 const PHASES = [
-  { id: 'seed', label_en: 'SEED', label_hi: 'बीज', subtitle_en: 'Ages 2–3', subtitle_hi: '2-3 साल', games: SEED_GAMES },
-  { id: 'sprout', label_en: 'SPROUT', label_hi: 'अंकुर', subtitle_en: 'Ages 4–5', subtitle_hi: '4-5 साल', games: SPROUT_GAMES },
-  { id: 'bloom', label_en: 'BLOOM', label_hi: 'खिलाव', subtitle_en: 'Ages 5–6', subtitle_hi: '5-6 साल', games: BLOOM_GAMES },
+  { id: 'seed', label_en: 'SEED', label_hi: 'बीज', subtitle_en: 'Ages 2–3', subtitle_hi: '2-3 साल', games: SEED_GAMES, accent: '#FFCB05' },
+  { id: 'sprout', label_en: 'SPROUT', label_hi: 'अंकुर', subtitle_en: 'Ages 4–5', subtitle_hi: '4-5 साल', games: SPROUT_GAMES, accent: '#FFCB05' },
+  { id: 'bloom', label_en: 'BLOOM', label_hi: 'खिलाव', subtitle_en: 'Ages 5–6', subtitle_hi: '5-6 साल', games: BLOOM_GAMES, accent: '#FFCB05' },
+  { id: 'bhavana', label_en: 'BHAVANA', label_hi: 'भावना', subtitle_en: 'Ages 5–12', subtitle_hi: '5-12 साल', games: BHAVANA_GAMES, accent: '#FF9933' },
 ];
 
 function darken(hex, amount = 0.25) {
@@ -48,12 +55,16 @@ function darken(hex, amount = 0.25) {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-export default function HomeScreen({ onSelectGame, language, onToggleLanguage, stars = 0, childName = '' }) {
+export default function HomeScreen({ onSelectGame, language, onToggleLanguage, stars = 0, childName = '', lotusLevel = 0 }) {
   const [phaseId, setPhaseId] = useState('seed');
   const phase = PHASES.find(p => p.id === phaseId);
+  const isBhavana = phaseId === 'bhavana';
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#FFF8E7' }}>
+    <div
+      className="min-h-screen flex flex-col transition-colors duration-300"
+      style={{ backgroundColor: isBhavana ? '#FFF5F0' : '#FFF8E7' }}
+    >
       {/* Header */}
       <div className="flex items-center justify-between px-4 pt-4 pb-2">
         <div className="flex items-center gap-2">
@@ -78,27 +89,57 @@ export default function HomeScreen({ onSelectGame, language, onToggleLanguage, s
       </div>
 
       {/* Phase tabs */}
-      <div className="flex gap-2 px-4 pb-2">
+      <div className="flex gap-1.5 px-3 pb-2">
         {PHASES.map(p => {
           const active = p.id === phaseId;
+          const activeStyle = active
+            ? { borderColor: p.accent, color: p.accent }
+            : {};
           return (
             <button
               key={p.id}
               onClick={() => setPhaseId(p.id)}
-              className={`flex-1 rounded-2xl px-3 py-2 transition-all active:scale-95 border-2 ${
-                active ? 'bg-white border-amber-400 shadow-md scale-105' : 'bg-white/60 border-transparent'
+              className={`flex-1 rounded-2xl px-2 py-2 transition-all active:scale-95 border-2 ${
+                active ? 'bg-white shadow-md scale-105' : 'bg-white/60 border-transparent'
               }`}
+              style={activeStyle}
             >
-              <div className={`text-base font-extrabold ${active ? 'text-amber-600' : 'text-gray-500'}`}>
+              <div
+                className="text-[13px] font-extrabold leading-tight"
+                style={active ? { color: p.accent } : { color: '#6B7280' }}
+              >
                 {language === 'hi' ? p.label_hi : p.label_en}
               </div>
-              <div className={`text-[10px] font-semibold ${active ? 'text-gray-700' : 'text-gray-400'}`}>
+              <div className={`text-[9px] font-semibold ${active ? 'text-gray-700' : 'text-gray-400'}`}>
                 {language === 'hi' ? p.subtitle_hi : p.subtitle_en}
               </div>
             </button>
           );
         })}
       </div>
+
+      {/* Bhavana lotus banner */}
+      {isBhavana && (
+        <div className="mx-4 mb-2 rounded-2xl bg-gradient-to-r from-[#FFF0E6] to-[#FFE5D0] border-2 border-[#FF9933]/40 px-4 py-2 flex items-center gap-3 shadow-sm">
+          <LotusProgress level={lotusLevel} size={48} label={false} language={language} />
+          <div className="flex-1 min-w-0">
+            <p className="text-[11px] font-extrabold text-[#9D174D] tracking-wide uppercase">
+              {language === 'hi' ? 'भावना पथ' : 'Bhavana Path'}
+            </p>
+            <p className="text-[10px] text-gray-600 font-semibold leading-tight">
+              {language === 'hi'
+                ? 'चरित्र निर्माण — हर उम्र के लिए'
+                : 'Character building — across every age'}
+            </p>
+          </div>
+          <div
+            className="text-[10px] font-bold px-2 py-1 rounded-full text-white"
+            style={{ backgroundColor: '#FF9933' }}
+          >
+            {lotusLevel}/4
+          </div>
+        </div>
+      )}
 
       {/* Game Grid */}
       <div className="flex-1 overflow-y-auto px-4 py-3">
