@@ -25,7 +25,10 @@ import CommunityHelpers from './components/games/lkg/CommunityHelpers'
 import TimeExplorer from './components/games/lkg/TimeExplorer'
 import FairPlayArena from './components/games/lkg/FairPlayArena'
 import HindiAkshar from './components/games/lkg/HindiAkshar'
+import MaitriCircle from './components/games/bhavana/MaitriCircle'
 import { useProgress } from './hooks/useProgress'
+
+const BHAVANA_GAME_IDS = new Set(['maitri-circle'])
 
 const GAME_COMPONENTS = {
   // SEED phase (pre-nursery, ages 2-3)
@@ -55,12 +58,14 @@ const GAME_COMPONENTS = {
   'time-explorer': TimeExplorer,
   'fair-play-arena': FairPlayArena,
   'hindi-akshar': HindiAkshar,
+  // BHAVANA path (cross-cutting, ages 5-12)
+  'maitri-circle': MaitriCircle,
 }
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState('home')
   const [language, setLanguage] = useState('en')
-  const { progress, completeGame, setChildName } = useProgress()
+  const { progress, completeGame, completeBhavanaGame, setChildName } = useProgress()
 
   const childName = progress.childName
 
@@ -100,7 +105,11 @@ function App() {
   return (
     <GameComponent
       onComplete={(data) => {
-        completeGame(currentScreen, data)
+        if (BHAVANA_GAME_IDS.has(currentScreen)) {
+          completeBhavanaGame(currentScreen, data)
+        } else {
+          completeGame(currentScreen, data)
+        }
         setCurrentScreen('home')
       }}
       onBack={() => setCurrentScreen('home')}

@@ -1,0 +1,112 @@
+{
+  "teachings": [
+    {
+      "id": "maitri",
+      "name_en": "Maitri",
+      "name_hi": "मैत्री",
+      "meaning_en": "Friendship & warmth for all beings",
+      "meaning_hi": "सभी प्राणियों के लिए मित्रता और स्नेह",
+      "color": "#D4A017",
+      "trigger_en": "When you see any living being — a person, a dog, an ant — feel warmth. They want to be happy, just like you!",
+      "trigger_hi": "जब तुम कोई जीवित प्राणी देखो — इंसान, कुत्ता, चींटी — दिल में गर्मजोशी महसूस करो। वे भी खुश रहना चाहते हैं, तुम्हारी तरह!",
+      "tagline_en": "I wish you happiness, whoever you are.",
+      "tagline_hi": "मैं तुम्हारी खुशी की कामना करता हूँ, तुम जो भी हो।",
+      "practice_beings": [
+        { "icon": "🧒", "label_en": "a friend", "label_hi": "एक दोस्त" },
+        { "icon": "🐕", "label_en": "a dog", "label_hi": "एक कुत्ता" },
+        { "icon": "🦋", "label_en": "a butterfly", "label_hi": "एक तितली" }
+      ]
+    },
+    {
+      "id": "karuna",
+      "name_en": "Karuna",
+      "name_hi": "करुणा",
+      "meaning_en": "Compassion for the suffering",
+      "meaning_hi": "दुखी प्राणियों के लिए करुणा",
+      "color": "#0077B6",
+      "trigger_en": "When you see someone sad, hurt, or struggling — don't look away. Let your heart feel soft for them.",
+      "trigger_hi": "जब तुम किसी को दुखी, घायल, या परेशान देखो — मुँह मत मोड़ो। उनके लिए दिल में नर्मी लाओ।",
+      "tagline_en": "I see your pain, and I care.",
+      "tagline_hi": "मैं तुम्हारा दर्द देखता हूँ, और मैं परवाह करता हूँ।",
+      "practice_beings": [
+        { "icon": "😢", "label_en": "a crying child", "label_hi": "रोता बच्चा" },
+        { "icon": "🐦", "label_en": "a hurt bird", "label_hi": "घायल पक्षी" },
+        { "icon": "🐕‍🦺", "label_en": "a hungry dog", "label_hi": "भूखा कुत्ता" }
+      ]
+    },
+    {
+      "id": "pramod",
+      "name_en": "Pramod",
+      "name_hi": "प्रमोद",
+      "meaning_en": "Joy at others' goodness & success",
+      "meaning_hi": "दूसरों की अच्छाई और सफलता में आनंद",
+      "color": "#2DC653",
+      "trigger_en": "This is the HARDEST one! When your friend wins a prize, can you feel happy FOR them — even if you didn't win?",
+      "trigger_hi": "यह सबसे कठिन है! जब तुम्हारा दोस्त इनाम जीते, क्या तुम उनके लिए खुश हो सकते हो — भले ही तुम न जीते हो?",
+      "tagline_en": "Your joy is my joy!",
+      "tagline_hi": "तुम्हारी खुशी मेरी खुशी!",
+      "scenes": [
+        { "icon": "🏃", "label_en": "Friend wins the race", "label_hi": "दोस्त दौड़ जीता" },
+        { "icon": "🎨", "label_en": "Classmate's beautiful drawing", "label_hi": "सहपाठी की सुंदर ड्राइंग" },
+        { "icon": "🌟", "label_en": "Sibling praised by parents", "label_hi": "भाई/बहन की तारीफ हुई" }
+      ]
+    },
+    {
+      "id": "madhyastha",
+      "name_en": "Madhyastha",
+      "name_hi": "माध्यस्थ",
+      "meaning_en": "Equanimity toward the difficult",
+      "meaning_hi": "कठिन लोगों के प्रति समभाव",
+      "color": "#8B5CF6",
+      "trigger_en": "Some people say mean things. You can't control THEM. But you CAN control how you feel inside.",
+      "trigger_hi": "कुछ लोग बुरी बातें कहते हैं। तुम उन्हें नहीं बदल सकते। लेकिन तुम अपनी भावना ज़रूर संभाल सकते हो।",
+      "tagline_en": "I feel — but I don't let the feeling control me.",
+      "tagline_hi": "मैं महसूस करता हूँ — लेकिन भावना मुझ पर हावी नहीं होती।",
+      "scenes": [
+        { "icon": "🗣️", "label_en": "A bully calls you a name", "label_hi": "किसी ने नाम पुकार कर चिढ़ाया" },
+        { "icon": "🚶", "label_en": "Someone cuts in line", "label_hi": "किसी ने लाइन तोड़ी" },
+        { "icon": "✏️", "label_en": "Kid breaks your pencil on purpose", "label_hi": "बच्चे ने जानबूझकर पेंसिल तोड़ी" }
+      ]
+    }
+  ],
+  "practice_scenarios": [
+    {
+      "id": "new_student",
+      "scene_en": "A new kid joins your class. They look nervous, standing alone in the corner.",
+      "scene_hi": "एक नया बच्चा तुम्हारी कक्षा में आया है। वह घबराया हुआ, कोने में अकेला खड़ा है।",
+      "icon": "🧒",
+      "correct": "maitri",
+      "feedback_en": "Maitri says: 'Welcome, I hope you'll be happy here.' That's friendship even before you know someone.",
+      "feedback_hi": "मैत्री कहती है: 'स्वागत है, मुझे उम्मीद है तुम यहाँ खुश रहोगे।' यह उस इंसान से दोस्ती है जिसे तुम अभी जानते भी नहीं।"
+    },
+    {
+      "id": "hurt_kitten",
+      "scene_en": "A kitten is limping on the road, meowing in pain.",
+      "scene_hi": "एक बिल्ली का बच्चा सड़क पर लंगड़ा रहा है, दर्द में म्याऊं कर रहा है।",
+      "icon": "🐱",
+      "correct": "karuna",
+      "feedback_en": "Karuna says: 'I see your pain. Let me help or find someone who can.' Compassion is noticing suffering and wanting to help.",
+      "feedback_hi": "करुणा कहती है: 'मैं तुम्हारा दर्द देख रहा हूँ। मैं मदद करता हूँ या किसी को बुलाता हूँ।' करुणा का मतलब है दर्द देखना और मदद करना चाहना।"
+    },
+    {
+      "id": "friend_won",
+      "scene_en": "Your best friend won the spelling bee! You came second. They're celebrating.",
+      "scene_hi": "तुम्हारे सबसे अच्छे दोस्त ने प्रतियोगिता जीत ली! तुम दूसरे आए। वे जश्न मना रहे हैं।",
+      "icon": "🏆",
+      "correct": "pramod",
+      "feedback_en": "Pramod says: 'Your joy is my joy!' This is the hardest — and most beautiful — feeling to practice.",
+      "feedback_hi": "प्रमोद कहता है: 'तुम्हारी खुशी मेरी खुशी!' यह सबसे कठिन — और सबसे सुंदर — भावना है।"
+    },
+    {
+      "id": "made_fun",
+      "scene_en": "A classmate laughs at your drawing and says it looks silly.",
+      "scene_hi": "एक सहपाठी तुम्हारी ड्राइंग पर हँसता है और कहता है 'बेकार है!'",
+      "icon": "😠",
+      "correct": "madhyastha",
+      "feedback_en": "Madhyastha says: 'Their words don't change what I made. My peace is my strength.'",
+      "feedback_hi": "माध्यस्थ कहता है: 'उनके शब्द मेरी बनाई चीज़ नहीं बदलते। मेरी शांति मेरी ताकत है।'"
+    }
+  ],
+  "parent_tip_en": "The Four Bhavanas (Maitri, Karuna, Pramod, Madhyastha) come from Jain philosophy but are universal contemplative principles. They map to what modern psychology calls unconditional positive regard, compassion, compersion (opposite of jealousy), and equanimity. The HARDEST for most humans is Pramod — genuinely feeling happy at others' success. Practice this at home: when a sibling or friend succeeds, explicitly say 'I'm so happy for you!' and discuss what that feels like. Model it yourself.",
+  "parent_tip_hi": "चार भावनाएं (मैत्री, करुणा, प्रमोद, माध्यस्थ) जैन दर्शन से हैं लेकिन ये सार्वभौमिक सिद्धांत हैं। सबसे कठिन है प्रमोद — दूसरों की सफलता में सच्चे मन से खुश होना। घर पर अभ्यास करें: जब भाई-बहन या दोस्त सफल हों, कहें 'मुझे तुम्हारे लिए बहुत खुशी है!' और चर्चा करें कि यह कैसा लगता है। खुद उदाहरण बनें।"
+}
