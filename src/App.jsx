@@ -26,9 +26,10 @@ import TimeExplorer from './components/games/lkg/TimeExplorer'
 import FairPlayArena from './components/games/lkg/FairPlayArena'
 import HindiAkshar from './components/games/lkg/HindiAkshar'
 import MaitriCircle from './components/games/bhavana/MaitriCircle'
+import VaaniVatika from './components/games/bhavana/VaaniVatika'
 import { useProgress } from './hooks/useProgress'
 
-const BHAVANA_GAME_IDS = new Set(['maitri-circle'])
+const BHAVANA_GAME_IDS = new Set(['maitri-circle', 'vaani-vatika'])
 
 const GAME_COMPONENTS = {
   // SEED phase (pre-nursery, ages 2-3)
@@ -60,6 +61,7 @@ const GAME_COMPONENTS = {
   'hindi-akshar': HindiAkshar,
   // BHAVANA path (cross-cutting, ages 5-12)
   'maitri-circle': MaitriCircle,
+  'vaani-vatika': VaaniVatika,
 }
 
 function App() {

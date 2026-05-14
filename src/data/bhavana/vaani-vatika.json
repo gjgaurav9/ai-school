@@ -1,0 +1,241 @@
+{
+  "demo": {
+    "scene_en": "Your friend won't share a toy. You feel frustrated.",
+    "scene_hi": "तुम्हारा दोस्त खिलौना नहीं दे रहा। तुम्हें गुस्सा आ रहा है।",
+    "harsh_thought_en": "You're SO mean!",
+    "harsh_thought_hi": "तुम बहुत बुरे हो!",
+    "options": [
+      {
+        "text_en": "Can I please have a turn next?",
+        "text_hi": "क्या मेरी बारी अब आ सकती है?",
+        "type": "flower_full",
+        "points": 3
+      },
+      {
+        "text_en": "I'll wait until you're done.",
+        "text_hi": "मैं रुकता हूँ जब तक तुम खेल लो।",
+        "type": "flower_bud",
+        "points": 2
+      },
+      {
+        "text_en": "You're SO mean!",
+        "text_hi": "तुम बहुत बुरे हो!",
+        "type": "thorn",
+        "points": 0
+      }
+    ],
+    "insight_en": "See? Same feeling — frustration — but very different words. Asking opens a door. Calling names slams it shut.",
+    "insight_hi": "देखा? वही भावना — गुस्सा — लेकिन बहुत अलग शब्द। पूछना दरवाज़ा खोलता है। बुरा कहना उसे बंद कर देता है।",
+    "catch_time_seconds": 4
+  },
+  "scenarios": [
+    {
+      "id": "broken_toy",
+      "scene_en": "Bandar accidentally broke your favorite toy car.",
+      "scene_hi": "बंदर ने गलती से तुम्हारी पसंदीदा खिलौना कार तोड़ दी।",
+      "actor": "bandar",
+      "harsh_thought_en": "I HATE you! You break EVERYTHING!",
+      "harsh_thought_hi": "मुझे तुमसे नफरत है! तुम सब तोड़ देते हो!",
+      "options": [
+        {
+          "text_en": "I'm really sad about my car. Please be more careful next time.",
+          "text_hi": "मुझे अपनी कार के बारे में बहुत दुख है। अगली बार ध्यान रखना।",
+          "type": "flower_full",
+          "points": 3
+        },
+        {
+          "text_en": "That was my favorite! I need a minute to calm down.",
+          "text_hi": "वह मेरी पसंदीदा थी! मुझे शांत होने के लिए एक मिनट चाहिए।",
+          "type": "flower_bud",
+          "points": 2
+        },
+        {
+          "text_en": "You ALWAYS ruin things!",
+          "text_hi": "तुम हमेशा सब बर्बाद करते हो!",
+          "type": "thorn",
+          "points": 0
+        }
+      ],
+      "insight_en": "Being angry is OKAY. But 'I hate you' attacks the PERSON. 'I'm sad about my car' talks about the FEELING. Big difference!",
+      "insight_hi": "गुस्सा आना ठीक है। लेकिन 'मुझे तुमसे नफरत है' व्यक्ति पर हमला है। 'मुझे अपनी कार के बारे में दुख है' भावना बताता है। बड़ा फर्क!",
+      "catch_time_seconds": 3.5
+    },
+    {
+      "id": "wrong_answer",
+      "scene_en": "In class, Mor gives a wrong answer. Some kids start laughing.",
+      "scene_hi": "कक्षा में मोर ने गलत जवाब दिया। कुछ बच्चे हँसने लगे।",
+      "actor": "mor",
+      "harsh_thought_en": "Haha, you're so DUMB!",
+      "harsh_thought_hi": "हाहा, तुम कितने बेवकूफ हो!",
+      "options": [
+        {
+          "text_en": "Stay quiet — wrong answers aren't funny.",
+          "text_hi": "चुप रहो — गलत जवाब मज़ाकिया नहीं हैं।",
+          "type": "flower_full",
+          "points": 3
+        },
+        {
+          "text_en": "Good try! I get things wrong too sometimes.",
+          "text_hi": "अच्छी कोशिश! मुझसे भी कभी गलती होती है।",
+          "type": "flower_bud",
+          "points": 2
+        },
+        {
+          "text_en": "Haha WRONG!",
+          "text_hi": "हाहा गलत!",
+          "type": "thorn",
+          "points": 0
+        }
+      ],
+      "insight_en": "Laughing at mistakes makes people afraid to try. Kindness in the classroom makes EVERYONE braver.",
+      "insight_hi": "गलतियों पर हँसना लोगों को कोशिश करने से डराता है। कक्षा में दयालुता सबको बहादुर बनाती है।",
+      "catch_time_seconds": 3
+    },
+    {
+      "id": "slow_player",
+      "scene_en": "Team game. Gillu is slow and the team is losing.",
+      "scene_hi": "टीम का खेल। गिल्लू धीमा है और टीम हार रही है।",
+      "actor": "gillu",
+      "harsh_thought_en": "You're SO useless! You're ruining it for everyone!",
+      "harsh_thought_hi": "तुम बिल्कुल बेकार हो! तुम सबका खेल बिगाड़ रहे हो!",
+      "options": [
+        {
+          "text_en": "You've got this, Gillu! Keep trying!",
+          "text_hi": "तुम कर सकते हो गिल्लू! कोशिश करते रहो!",
+          "type": "flower_full",
+          "points": 3
+        },
+        {
+          "text_en": "Let's figure out a strategy together.",
+          "text_hi": "चलो मिलकर कोई तरीका सोचते हैं।",
+          "type": "flower_bud",
+          "points": 2
+        },
+        {
+          "text_en": "You're making us LOSE!",
+          "text_hi": "तुम्हारी वजह से हम हार रहे हैं!",
+          "type": "thorn",
+          "points": 0
+        }
+      ],
+      "insight_en": "Harsh words under pressure don't improve performance — they make people give up. Encouragement is the real performance booster.",
+      "insight_hi": "दबाव में कड़वे शब्द प्रदर्शन नहीं सुधारते — वे लोगों को हार मनवाते हैं। प्रोत्साहन असली ताकत है।",
+      "catch_time_seconds": 3
+    },
+    {
+      "id": "unfair_teacher",
+      "scene_en": "A teacher punishes you for something you didn't do.",
+      "scene_hi": "टीचर ने तुम्हें उस बात की सज़ा दी जो तुमने की ही नहीं।",
+      "actor": "teacher",
+      "harsh_thought_en": "You're the WORST teacher! This is SO unfair!",
+      "harsh_thought_hi": "आप सबसे खराब टीचर हैं! यह बहुत अनफेयर है!",
+      "options": [
+        {
+          "text_en": "Ma'am, I didn't do it. Can I explain what happened?",
+          "text_hi": "मैम, मैंने नहीं किया। क्या मैं बता सकता हूँ क्या हुआ?",
+          "type": "flower_full",
+          "points": 3
+        },
+        {
+          "text_en": "Stay calm now, talk to parents later.",
+          "text_hi": "अभी शांत रहो, बाद में माता-पिता से बात करो।",
+          "type": "flower_bud",
+          "points": 2
+        },
+        {
+          "text_en": "This is so UNFAIR! You never listen!",
+          "text_hi": "यह बहुत गलत है! आप कभी सुनते ही नहीं!",
+          "type": "thorn",
+          "points": 0
+        }
+      ],
+      "insight_en": "Even when something IS unfair, HOW you respond matters. 'Can I explain?' opens a door. 'You never listen!' slams it shut.",
+      "insight_hi": "जब कुछ सच में अनफेयर हो, तब भी आपकी प्रतिक्रिया मायने रखती है। 'क्या मैं बता सकता हूँ?' दरवाज़ा खोलता है। 'आप कभी सुनते नहीं!' बंद कर देता है।",
+      "catch_time_seconds": 2.5
+    },
+    {
+      "id": "sibling_fight",
+      "scene_en": "Your younger sibling took your tablet without asking.",
+      "scene_hi": "तुम्हारे छोटे भाई/बहन ने बिना पूछे तुम्हारा टैबलेट ले लिया।",
+      "actor": "sibling",
+      "harsh_thought_en": "You're such a BRAT! Don't EVER touch my stuff!",
+      "harsh_thought_hi": "तुम कितने बदमाश हो! मेरा सामान कभी मत छूना!",
+      "options": [
+        {
+          "text_en": "I'm angry that you took my tablet without asking. Please ask next time.",
+          "text_hi": "मुझे गुस्सा है कि तुमने बिना पूछे मेरा टैबलेट लिया। अगली बार पूछना।",
+          "type": "flower_full",
+          "points": 3
+        },
+        {
+          "text_en": "Take a deep breath and walk away for now.",
+          "text_hi": "गहरी साँस लो और अभी के लिए दूर चलो।",
+          "type": "flower_bud",
+          "points": 2
+        },
+        {
+          "text_en": "I'm telling Mummy! You ALWAYS do this!",
+          "text_hi": "मैं मम्मी को बता रहा हूँ! तुम हमेशा ऐसा करते हो!",
+          "type": "thorn",
+          "points": 0
+        }
+      ],
+      "insight_en": "'You always' and 'You never' are word traps! Talking about THIS moment is specific, true, and solvable.",
+      "insight_hi": "'तुम हमेशा' और 'तुम कभी नहीं' शब्द-जाल हैं! इस पल की बात करना सही, सच और हल करने योग्य है।",
+      "catch_time_seconds": 2.5
+    },
+    {
+      "id": "gossip",
+      "scene_en": "Friends are gossiping about an absent friend's haircut.",
+      "scene_hi": "दोस्त गैरहाज़िर दोस्त के बालों के बारे में बातें बना रहे हैं।",
+      "actor": "absent_friend",
+      "harsh_thought_en": "Yeah, and her clothes are even worse!",
+      "harsh_thought_hi": "हाँ, और उसके कपड़े तो और भी बेकार हैं!",
+      "options": [
+        {
+          "text_en": "I don't think we should talk about her when she's not here.",
+          "text_hi": "मुझे नहीं लगता हमें उसके बारे में बात करनी चाहिए जब वह यहाँ नहीं है।",
+          "type": "flower_full",
+          "points": 3
+        },
+        {
+          "text_en": "Change the topic to something else.",
+          "text_hi": "विषय बदल दो किसी और चीज़ पर।",
+          "type": "flower_bud",
+          "points": 2
+        },
+        {
+          "text_en": "Yeah and also her bag is weird!",
+          "text_hi": "हाँ और उसका बैग भी अजीब है!",
+          "type": "thorn",
+          "points": 0
+        }
+      ],
+      "insight_en": "Refusing to join others in being unkind takes real courage. It might feel awkward, but you'll respect yourself more.",
+      "insight_hi": "दूसरों के साथ बुराई में शामिल न होना असली हिम्मत है। अजीब लग सकता है, लेकिन आप खुद की ज़्यादा इज़्ज़त करेंगे।",
+      "catch_time_seconds": 2
+    }
+  ],
+  "three_gates": [
+    {
+      "name_en": "Is it TRUE?",
+      "name_hi": "क्या यह सत्य है?",
+      "explanation_en": "Is what you're about to say actually true? Or are you exaggerating or guessing?",
+      "explanation_hi": "क्या जो तुम कहने वाले हो वह सच है? या बढ़ा-चढ़ाकर, अनुमान से बोल रहे हो?"
+    },
+    {
+      "name_en": "Is it NECESSARY?",
+      "name_hi": "क्या यह ज़रूरी है?",
+      "explanation_en": "Even if it's true, does it need to be said? Sometimes silence is the kindest choice.",
+      "explanation_hi": "सच होने पर भी, क्या इसे कहना ज़रूरी है? कभी-कभी चुप रहना सबसे दयालु विकल्प है।"
+    },
+    {
+      "name_en": "Is it KIND?",
+      "name_hi": "क्या यह दयालु है?",
+      "explanation_en": "Even if true and necessary, can you say it in a kind way?",
+      "explanation_hi": "सच और ज़रूरी होने पर भी, क्या इसे प्यार से कह सकते हो?"
+    }
+  ],
+  "parent_tip_en": "This game teaches Non-Violent Communication (NVC), created by psychologist Marshall Rosenberg, which echoes the Jain vow of 'satya' (truthfulness with kindness). The key insight: expressing FEELINGS ('I feel hurt') is always more effective than attacking CHARACTER ('You're mean'). Model this at home — instead of 'You're so messy!' try 'I feel frustrated when the room isn't cleaned.' Children mirror what they see.",
+  "parent_tip_hi": "यह खेल अहिंसक संवाद (NVC) सिखाता है, जो जैन सत्य-व्रत की गूँज है। मुख्य बात: 'मुझे दुख हुआ' कहना हमेशा 'तुम बुरे हो' से बेहतर है। भावना बताएं, चरित्र पर हमला नहीं। घर पर खुद अभ्यास करें — 'तुम कितने गंदे हो!' की जगह 'जब कमरा साफ नहीं होता तो मुझे परेशानी होती है' कहें।"
+}
